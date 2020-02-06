@@ -1,0 +1,19 @@
+{
+  "name": "gale-savage",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "acc": "pa11y --reporter csv ./index.html > pa11y_report.csv",
+    "local": "http-server -c-1 -p 8081"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dom-navigator": "^1.0.3"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.1"
+  }
+}
