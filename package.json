@@ -10,9 +10,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "dom-navigator": "^1.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "http-server": "^0.12.1"
   }

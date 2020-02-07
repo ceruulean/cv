@@ -1,4 +1,5 @@
 //Auto Mounty Version
+
 class Component{
   constructor(root, tabbable){
     this.root = root;
@@ -29,10 +30,12 @@ class Reveal extends Component{
   accessibleHeading(header){
     if (!header) header = this.root.querySelector("h1, h2, h3, h4, h5, h6");
     if (!header) throw new Error(`${this.constructor.name} requires a Header tag within its section`);
-    let hid = randomID("r");
-    header.setAttribute('id', hid);
+    if (isEmpty(header.getAttribute('id'))){
+      let hid = randomID("r");
+      header.setAttribute('id', hid);
+    };
     header.className = 'title';
-    this.root.setAttribute('aria-labelledby', hid);
+    this.root.setAttribute('aria-labelledby', header.id);
     return header;
   }
 }
@@ -40,11 +43,40 @@ class Reveal extends Component{
 class UnderlineReveal extends Reveal{
   constructor(root, header){
     super(root, true);
-    root.setAttribute('aria-label', 'More Info');
+    root.setAttribute('aria-label', `More Info`);
+    if (root.classList.contains('auto')){
+      
+      let appear = (entries, observer) =>{
+        entries.forEach((entry)=>{
+          let bottomWindow = entry.boundingClientRect.bottom;
+          let bottomDocument = document.body.offsetHeight;
+          let rockBottom = (window.innerHeight + window.pageYOffset) >= bottomDocument;
+          let showing = entry.intersectionRatio > 0;
+          if (bottomWindow > 0 && !showing && document.activeElement != this.caption){
+            this.hide();
+          } else if (rockBottom ||  showing) {
+            this.show();
+          }
+        })
+      }
+
+      this.observer = new IntersectionObserver(appear, {
+        threshold:[0, 1],
+        rootMargin: "0px 0px -50% 0px"
+      });
+
+      this.observer.observe(root);
+      addClickHandler(root, function(e){
+          this.show();
+      }.bind(this))
+    }
     // CREATE
     let h = this.accessibleHeading(header);
     root.removeChild(h);
-    this.caption = createElementAttr('caption', {"disabled":true,class:'inner'}, root.innerHTML);
+    this.caption = createElementAttr('caption',
+    {"aria-hidden":true,
+      class:'inner',
+    tabIndex: 0}, root.innerHTML);
     //CLEAR inner
     root.innerHTML = null;
     //APPEND
@@ -57,7 +89,7 @@ class UnderlineReveal extends Reveal{
   show(){
     if (this.defer(this.show, this.timing)) return;
     this.transitioning = true;
-    this.caption.setAttribute('disabled', false);
+    this.caption.setAttribute('aria-hidden', false);
     this.root.classList.add('extend');
     setTimeout(()=>{
       this.root.style.height = `${this.caption.clientHeight}px`;
@@ -67,10 +99,11 @@ class UnderlineReveal extends Reveal{
   hide(){
     if (this.defer(this.hide, this.timing)) return;
     this.transitioning = true;
+    this.caption.blur();
     this.root.style.height = "4px";
     setTimeout(()=>{
       this.root.classList.remove('extend');
-      this.caption.setAttribute('disabled', true);
+      this.caption.setAttribute('aria-hidden', true);
       this.transitioning = false;
     }, this.timing)
   }
@@ -134,14 +167,17 @@ class JengaReveal extends Reveal{
   }
 
   show(){
-    this.root.classList.remove(this.direction);
     this.root.classList.add('active');
     this.note.setAttribute("aria-disabled", false);
-    this.note.focus();
     this.button.setAttribute("aria-label", `Close note`);
+    this.root.classList.remove(this.direction);
+    setTimeout(()=>{
+      this.note.focus();
+    }, 1000) // setting the focus makes the CSS transition act weird, so just gonna delay it
   }
   hide(){
     this.slide(this.direction);
+    this.note.blur();
   }
 
   slide(direction){
@@ -152,12 +188,86 @@ class JengaReveal extends Reveal{
   }
 }
 
+/**
+ * headingLevels is an optional int anywhere from 1-n for which headings (h1 - hn) should autogenerate a menu link
+ */
+class DotMenu extends Component{
+  constructor(root, headingLevels){
+    super(root, true);
+    this.ul = createElementAttr('ul');
+    this.active = null;
+
+    //on default only <h1> become links
+    let query = "h1";
+    if (headingLevels > 1) {
+      for (let q = 2; q <= headingLevels; q++){
+        query += ` h${q}`;
+      }
+    }
+    
+    //Get anchors     
+    this.anchors = document.querySelectorAll(query);
+
+    // IntersectionObserver init
+    
+    let appear = (entries, observer) =>{
+      entries.forEach((entry)=>{
+        let correLink = this.ul.children[entry.target.getAttribute('index')];
+
+          let dTop = entry.boundingClientRect.top;
+        if (dTop > 0) { //has gone below the viewport
+          correLink.classList.remove('visited');
+        } else {
+          correLink.classList.add('visited');
+        }
+        if ((entry.intersectionRatio > 0.5)) {
+          if (this.active) {
+            correLink.classList.add('visited');
+            this.active.classList.remove('active');
+          }
+          this.active = correLink;
+          this.active.classList.add('active');
+        }
+      })
+    }
+
+    this.observer = new IntersectionObserver(appear, {
+      threshold:[0, 0.5, 1],
+     rootMargin: "0% 0px -50% 0px"
+    });
+
+
+    this.anchors.forEach((node, index)=>{
+      if (isEmpty(node.getAttribute('id'))){
+        node.setAttribute('id', randomID('n'));
+      }
+      node.setAttribute('index', index);
+      let a1 = createElementAttr('a', {href:`#${node.id}`});
+
+      let name = node.getAttribute('name');
+      if (isEmpty(name)){
+        name = node.innerText
+      }
+      let a2 = createElementAttr('li');
+      a2.appendChild(createElementAttr('span', {class:'ghost'}, name))
+      a1.appendChild(a2);
+      this.ul.appendChild(a1);
+      this.observer.observe(node);
+    })
+
+    this.root.appendChild(this.ul);
+  }
+}
+
 const COMPONENTS = {
   'jenga-reveal' : function(ele){
     return new JengaReveal(ele);
   },
   'underline-reveal' : function(ele){
     return new UnderlineReveal(ele);
+  },
+  'dot-menu' : function(ele){
+    return new DotMenu(ele);
   },
 }
 
@@ -175,31 +285,15 @@ function init(classNam){
   loopOver(COMPONENTS[classNam]);
 }
 
-let appear = (entries, observer) =>{
-  entries.forEach((entry)=>{
-    let topWindow =  entry.boundingClientRect.top;
-    let topDocument = entry.rootBounds.height;
-    let bottomWindow = entry.boundingClientRect.bottom;
-    let bottomDocument = document.body.offsetHeight;
-    let rockBottom = (window.innerHeight + window.pageYOffset) >= bottomDocument;
-    let showing = entry.intersectionRatio > 0;
-    if (bottomWindow > 0 && !showing){
-      u.hide();
-    } else if (rockBottom || (topWindow < (topDocument + topWindow / 2)) && showing) {
-      u.show();
-    }
-  })
-}
-
-let observer = new IntersectionObserver(appear, {
-  threshold:[0, 1]
-});
 
 
 init('jenga-reveal');
+init('dot-menu');
+var scroll = new SmoothScroll('a[href*="#"]',{
+  easing:'easeInQuad'
+});
 
 let u = new UnderlineReveal(document.querySelector('.underline-reveal'));
-observer.observe(u.root);
 
 
 // ================================================
@@ -232,7 +326,7 @@ function setAttributes(element, attrList){
 }
 
 function isEmpty(vbl){
-  return (vbl === undefined || vbl === null)
+  return (vbl === undefined || vbl === null || vbl === "")
 }
 
 //Thanks man: https://gist.github.com/gordonbrander/2230317
