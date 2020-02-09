@@ -7,8 +7,9 @@
     "acc": "pa11y --reporter csv ./index.html > pa11y_report.csv",
     "serve": "http-server -c-1 -p 8081",
     "dist": "gulp --gulpfile gulpfile.js",
+    "diststatic": "gulp --gulpfule gulpfile.js static",
     "roll": "rollup -c --compact",
-    "test": "tape test/*.js",
+    "build":"npm run dist && npm run static",
     "watch": "npm-watch run-src",
     "run-src-serve": "npm run dist && npm run serve",
     "run-src": "npm run dist"

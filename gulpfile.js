@@ -36,4 +36,4 @@ gulp.task('static', function() {
       .pipe(gulp.dest('public/static'));
 });
 
-gulp.task('default', gulp.series('index','static','bundle'));
+gulp.task('default', gulp.series('index','bundle'));
