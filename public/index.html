@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>The Gale</title>
+  <meta name="author" content="Diana">
+  <meta name="description" content="Portfolio CV of Gale">
+  <meta name="keywords" content="portfolio, cv, gale">
+  <link rel="shortcut icon" href="favicon.ico" type="">
+  <link rel="stylesheet" href="dist.css" type="text/css">
+  </head>
+  <body>
+    <nav class="dot-menu">
+    </nav>
+    <header role="banner">
+      <h1 id="TITLE" name="top">PURSUIT<span style="text-transform:lowercase;vertical-align:top;font-style:italic;font-size:0.8em;"><br/> of <br/></span>SHINY</h1>
+    </header>
+    <main role="main" id="main">
+      <div class="underline"></div>
+      <br/>
+      <h2>Hi, I'm Gale.</h2>
+      <h3 style="font-style:italic;">Frontend UI Developer</h3>
+      <br/><br/><br/>
+      <div class="underline"></div>
+      <h1 id="portfolio" name="portfolio">Stuff:</h1>
+      <figure class="jagger">
+        <section data-micromodal-trigger="modal-1">
+          <h2 style="transform:rotate(-14deg) translate(10%,200%)">Mockups</h2>
+        </section>
+        <aside>
+          WTF1
+        </aside>
+        <section data-micromodal-trigger="modal-2">
+          <h2 style="transform:rotate(-10deg)">Components</h2>
+        </section>
+        <aside>
+          @@@@@2222
+        </aside>
+        <section data-micromodal-trigger="modal-3">
+          <h2 style="transform:rotate(4deg)">Performance</h2>
+        </section>
+        <aside>
+
+        </aside>
+        <section data-micromodal-trigger="modal-4">
+          <h2 style="transform:rotate(10deg) translate(-6%,200%)">Access</h2>
+        </section>
+        <aside>
+          FOUR
+        </aside>
+      </figure>
+
+      <section class="jenga-reveal left see-more">
+        <h2>See more</h2>
+        <div class="outer"></div>
+        <div class="inner" style="display:flex;
+        justify-content: space-evenly;">
+          <div>Directus CMS</div>
+          <div>ddddd</div>
+          <div>Offline Work</div>
+        </div>
+      </section>
+<!--
+      <div class="icon">
+        <span></span>
+      </div>-->
+      <section class="jenga-reveal bottom about active">
+          <h2 style="top:0;">
+            About Me
+          </h2>
+          
+          <div class="outer rayimage">
+            <ul>
+                <li>
+                  Attended college at <a href="https://www.reddit.com/r/iastate/">r/iastate</a>
+                </li>
+                <li>
+                  B.S. in Technical Communications
+                </li>
+                <li>
+                    My <a href="http://www.elizabethcastro.com/html4_4e/html44ebookframe.html">first encounter with HTML</a>
+                  </li>
+                <li>
+                  <a href="https://ceruulean.github.io/skyrim-play-as-a-dragon/">Skyrim taught me to program</a>
+                </li>
+                <br/>
+                <li>
+                    I may have a good eye, but I still need glasses.
+                </li>
+                <li>
+                    I like chickens, they are cute animals.
+                </li>
+                <li>
+                    <a href="https://the-gale.com/gallery">I do art sometimes.</a>
+                </li>
+              </ul>
+          </div>
+          <div class="inner">
+            <h2 class="techstack">Tech Stack</h2>
+            <figure id="periodic" class="periodic">
+            </figure>
+
+          </div>
+      </section>
+    </main>
+    <footer role="contentinfo">
+        <section class="underline-reveal auto">
+            <h1 id="contact" name="contact">Contact Me</h1>
+            <form>
+              <label for="name">
+                Name
+                <input type="text">
+              </label>
+              <label for="email">
+                Email
+                <input type="email" name="email">
+              </label>
+              <label for="message">
+                  Message
+                  <input type="textarea" name="message">
+                </label>
+            </form>
+        </section>
+    </footer>
+  
+<!-- MODAL TIME -->
+<div id="m-blocker" class="hide">
+
+  <section id="modal-1" class="modal" aria-hidden="true">
+    <div tabindex="-1" class='m-blocker' data-micromodal-close>
+      <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+        <header>
+          <h2 id="modal-1-title">
+            Modal Title
+          </h2>
+          <button aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <div id="modal-1-content">
+          Modal Content
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="modal-2" class="modal" aria-hidden="true">
+    <div tabindex="-1" class='m-blocker' data-micromodal-close>
+      <div role="dialog" aria-modal="true" aria-labelledby="modal-2-title" >
+        <header>
+          <h2 id="modal-2-title">
+            Modal Title
+          </h2>
+          <button aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <div id="modal-2-content">
+          Modal Content
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="modal-3" class="modal" aria-hidden="true">
+    <div tabindex="-1" class='m-blocker' data-micromodal-close>
+      <div role="dialog" aria-modal="true" aria-labelledby="modal-3-title" >
+        <header>
+          <h2 id="modal-3-title">
+            Performance
+          </h2>
+          <h3>Insta(gram)Dict(tionary)</h3>
+          What Instagram thinks each word means.
+          <button aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <div id="modal-3-content">
+            <iframe src="instadict.html" id="instadict" frameborder="0" >
+            </iframe>
+          <ul>
+            <li>Live search with debounce and throttling</li>
+            <li>Placeholder skeletons and lazy loading</li>
+            <li>Semantic UI for styling</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="modal-4" class="modal" aria-hidden="true">
+    <div tabindex="-1" class='m-blocker' data-micromodal-close>
+      <div role="dialog" aria-modal="true" aria-labelledby="modal-4-title" >
+        <header>
+          <h2 id="modal-4-title">
+            Modal Title
+          </h2>
+          <button aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <div id="modal-4-content">
+          Modal Content
+        </div>
+      </div>
+    </div>
+  </section>
+</div>      
+  <script src="./dist.js"></script>
+  </body>
+</html>

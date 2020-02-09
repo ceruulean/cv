@@ -50,3 +50,31 @@ HTML:
 
 `<section class="underline-reveal auto">`
 Will add an automatic reveal when in the top 50% of the viewport. Customizable options later?
+
+
+## Menu
+### Dot Menu
+The DotMenu will automatically retrieve <h> tags and add them to the navigation component.
+You can set how the navigation link name will look.
+`<h1 name="navLinkName"><h1>`
+
+For example;
+`<h1 name="About">About Me: EVERYTHING<h1>`
+
+Can also set the id for anchor points: `www.myurl/#about`
+
+`<h1 id="about" name="About">About Me: EVERYTHING<h1>`
+
+JS:
+```
+/*
+n is the level of heading that you want to be included as nav links
+By default only h1 headers will be linked, but up to any n
+(so h1 - hn)*/
+init('dot-menu', n)
+```
+HTML:
+```
+<nav class="dot-menu">
+</nav>
+```

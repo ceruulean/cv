@@ -18,6 +18,7 @@ class Reveal extends Component{
   hide(){} //Abstract method; needs implement
   get toggleHandler(){
     return () => {
+      console.log("WTF");
       if (!this.active){
         this.show();
         this.active = true;
@@ -36,42 +37,48 @@ class Reveal extends Component{
     };
     header.className = 'title';
     this.root.setAttribute('aria-labelledby', header.id);
+    this.header = header;
     return header;
   }
 }
 
 class UnderlineReveal extends Reveal{
-  constructor(root, header){
+  constructor(root, IntersectionObsOptions){
     super(root, true);
     root.setAttribute('aria-label', `More Info`);
-    if (root.classList.contains('auto')){
-      
+
+    //Setup IntersectionObserver
+    let auto = root.classList.contains('auto');
+    if (auto || !isEmpty(IntersectionObsOptions)){
       let appear = (entries, observer) =>{
         entries.forEach((entry)=>{
           let bottomWindow = entry.boundingClientRect.bottom;
           let bottomDocument = document.body.offsetHeight;
           let rockBottom = (window.innerHeight + window.pageYOffset) >= bottomDocument;
           let showing = entry.intersectionRatio > 0;
-          if (bottomWindow > 0 && !showing && document.activeElement != this.caption){
-            this.hide();
-          } else if (rockBottom ||  showing) {
+          if (rockBottom || showing) {
             this.show();
+          } else if (bottomWindow > 0 && !showing && document.activeElement != this.caption){
+            this.hide();
           }
         })
       }
-
-      this.observer = new IntersectionObserver(appear, {
-        threshold:[0, 1],
-        rootMargin: "0px 0px -50% 0px"
-      });
+      if (auto){
+        IntersectionObsOptions = {
+          threshold:[0, 1],
+          rootMargin: "0px 0px -50% 0px"
+        }
+      }
+      this.observer = new IntersectionObserver(appear, IntersectionObsOptions);
 
       this.observer.observe(root);
       addClickHandler(root, function(e){
           this.show();
       }.bind(this))
     }
+
     // CREATE
-    let h = this.accessibleHeading(header);
+    let h = this.accessibleHeading();
     root.removeChild(h);
     this.caption = createElementAttr('caption',
     {"aria-hidden":true,
@@ -85,9 +92,13 @@ class UnderlineReveal extends Reveal{
 
     this.timing = getCSSVar('underlineRevealTransitionDuration');
     this.transitioning = false;
+    this.header.onclick = this.toggleHandler;
+    this.header.style.cursor = 'pointer';
   }
   show(){
+    if (this.active || this.transitioning) return;
     if (this.defer(this.show, this.timing)) return;
+    this.active = true;
     this.transitioning = true;
     this.caption.setAttribute('aria-hidden', false);
     this.root.classList.add('extend');
@@ -97,7 +108,9 @@ class UnderlineReveal extends Reveal{
     }, this.timing)
   }
   hide(){
+    if (!this.active || this.transitioning) return;
     if (this.defer(this.hide, this.timing)) return;
+    this.active = false;
     this.transitioning = true;
     this.caption.blur();
     this.root.style.height = "4px";
@@ -116,13 +129,21 @@ class UnderlineReveal extends Reveal{
       return true;
     } return false
   }
+  get toggleHandler(){
+    return () => {
+      if (!this.active){
+        this.show();
+      } else {
+        this.hide();
+      }
+    }
+  }
 }
 
 class JengaReveal extends Reveal{
   constructor(root){
     super(root, true);
     let classes = root.classList;
-    console.log(classes.contains('top'));
     for (let c in classes) {
       if (classes[c] == 'top'){
         this.direction = 'top';
@@ -140,7 +161,6 @@ class JengaReveal extends Reveal{
     }
     if (!this.direction) this.direction = 'left';
     classes.add(this.direction);
-
 
     //CREATE ELEMENTS
     let h = this.accessibleHeading();
@@ -162,7 +182,15 @@ class JengaReveal extends Reveal{
     this.root.appendChild(swatch);
 
     // EVENTS
-    this.active = false;
+    //default open/active
+    if (classes.contains('active')){
+      this.active = true;
+      this.root.classList.remove(this.direction);
+      this.note.setAttribute("aria-disabled", false);
+      this.button.setAttribute("aria-label", `Close note`);
+    } else {
+      this.active = false;
+    }
     this.button.onclick = this.toggleHandler;
   }
 
@@ -201,7 +229,7 @@ class DotMenu extends Component{
     let query = "h1";
     if (headingLevels > 1) {
       for (let q = 2; q <= headingLevels; q++){
-        query += ` h${q}`;
+        query += `,h${q}`;
       }
     }
     
@@ -259,42 +287,48 @@ class DotMenu extends Component{
   }
 }
 
+/** Jagger Aside Displays */
+class Jagger extends Component{
+  constructor(root){
+    super(root, true);
+    this.sections = root.querySelectorAll('section');
+    for (let s of this.sections.values()){
+      s.appendChild(createElementAttr('div'));
+    }
+  }
+}
+
+
 const COMPONENTS = {
   'jenga-reveal' : function(ele){
     return new JengaReveal(ele);
   },
-  'underline-reveal' : function(ele){
-    return new UnderlineReveal(ele);
+  'underline-reveal' : function(ele, InterObserverOptions){
+    return new UnderlineReveal(ele, InterObserverOptions);
   },
-  'dot-menu' : function(ele){
-    return new DotMenu(ele);
+  'dot-menu' : function(ele, headingLevel){
+    return new DotMenu(ele, headingLevel);
   },
+  'jagger': function(ele){
+    return new Jagger(ele);
+  }
 }
 
 /** ALL CLASS Declarations ABOVE*/
 
-function init(classNam){
+function init(){
+  let otherargs = [...arguments];
+  let classNam = otherargs.shift();
   let comps = document.getElementsByClassName(classNam);
-
-  let loopOver = (callback) => {
+  let objects = [];
+  let loopOver = (callback, args) => {
     for (let i = 0; i < comps.length; i++) {
-      callback(comps.item(i));
+      objects.push(callback(comps.item(i), ...args));
     }
   }
-
-  loopOver(COMPONENTS[classNam]);
+  loopOver(COMPONENTS[classNam], otherargs);
+  return objects;
 }
-
-
-
-init('jenga-reveal');
-init('dot-menu');
-var scroll = new SmoothScroll('a[href*="#"]',{
-  easing:'easeInQuad'
-});
-
-let u = new UnderlineReveal(document.querySelector('.underline-reveal'));
-
 
 // ================================================
 // =========== UTILITY FUNCTIONS
@@ -320,7 +354,7 @@ function createElementAttr(element, attrList, innards){
 
 function setAttributes(element, attrList){
   let entries = Object.entries(attrList);
-  for (en in entries){
+  for (let en in entries){
     element.setAttribute(entries[en][0], entries[en][1]);
   }
 }
@@ -348,7 +382,6 @@ function delayDisable(time, ele) {
 }
 
 function a11yClick(event){
-  console.log('wtf')
   if(event.type === 'keydown'){
       var code = event.charCode || event.keyCode;
       if((code === 32)|| (code === 13)){ //Space and Enter
@@ -389,3 +422,5 @@ function getCSSVar(varName){
     return val;
   };
 }
+
+export {createElementAttr, init};

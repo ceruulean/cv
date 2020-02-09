@@ -1,3 +1,5 @@
+import {createElementAttr} from './entoyment';
+
 let programs = [
 ["html5","k",``, true],
 ["figma","k","", true],
@@ -23,12 +25,12 @@ let programs = [
 ["apache", "x","",],
 
 ["empty","o","",],
-["empty","o","",],
+["gulp","o","",],
 ["electron","o","",],
 
 ["vue","h","", true],
-["react","h","",],
-["webpack","h","",],
+["react","h","", true],
+["webpack","h","", true],
 
 ["css3","n","", true],
 ["js","n","",true],

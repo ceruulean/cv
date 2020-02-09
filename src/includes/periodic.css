@@ -87,11 +87,11 @@ div[class*="g"] > div{
 }
 
 #apache{
-  background-image: url('./static/icon-apache.svg');
+  background-image: url('../static/icon-apache.svg');
 }
 div[id^="ado"]{
   background-size: 632% !important;
-  background-image: url('./static/adobe-icons.png');
+  background-image: url('../static/adobe-icons.png');
 }
 #adoai{
   background-position:44.3% -8%;
@@ -107,68 +107,71 @@ div[id^="ado"]{
 }
 #css3{
   background-size: cover;
-  background-image: url('./static/icon-css3.svg');
+  background-image: url('../static/icon-css3.svg');
 }
 #directus{
-  background-image: url('./static/icon-directus.svg');
+  background-image: url('../static/icon-directus.svg');
 }
 #electron{
-  background-image: url('./static/icon-electron.svg');
+  background-image: url('../static/icon-electron.svg');
 }
 #eclipse{
-  background-image: url('./static/icon-eclipse.png');
+  background-image: url('../static/icon-eclipse.png');
 }
 #figma{
   background-size: 170%;
-  background-image: url('./static/icon-figma.svg');
+  background-image: url('../static/icon-figma.svg');
 }
 #gimp{
-  background-image: url('./static/icon-gimp.png');
+  background-image: url('../static/icon-gimp.png');
 }
 #git{
-  background-image: url('./static/icon-git.svg');
+  background-image: url('../static/icon-git.svg');
+}
+#gulp{
+  background-image: url('../static/icon-gulp.svg');
 }
 #html5{
   background-size: cover;
-  background-image: url('./static/icon-html5.svg');
+  background-image: url('../static/icon-html5.svg');
 }
 #inkscape{
-  background-image: url('./static/icon-inkscape.svg');
+  background-image: url('../static/icon-inkscape.svg');
 }
 #java{
-  background-image: url('./static/icon-java.svg');
+  background-image: url('../static/icon-java.svg');
 }
 #js{
-  background-image: url('./static/icon-js.svg');
+  background-image: url('../static/icon-js.svg');
 }
 #node{
-  background-image: url('./static/icon-node.svg');
+  background-image: url('../static/icon-node.svg');
 }
 #php{
   background-size: cover;
-  background-image: url('./static/icon-php.svg');
+  background-image: url('../static/icon-php.svg');
 }
 #react{
-  background-image: url('./static/icon-react.svg');
+  background-image: url('../static/icon-react.svg');
 }
 #sql{
   background-size: cover;
-  background-image: url('./static/icon-sql.png');
+  background-image: url('../static/icon-sql.png');
 }
 #ts{
-  background-image: url('./static/icon-ts.svg');
+  background-image: url('../static/icon-ts.svg');
 }
 #visualcode{
-  background-image: url('./static/icon-visualcode.svg');
+  background-image: url('../static/icon-visualcode.svg');
 }
 #vue{
-  background-image: url('./static/icon-vue.svg');
+  background-image: url('../static/icon-vue.svg');
 }
 #w3c{
-  background-image: url('./static/icon-w3c.svg');
+  background-image: url('../static/icon-w3c.svg');
 }
 #webpack{
-  background-image: url('./static/icon-webpack.svg');
+  background-image: url('../static/icon-webpack.svg');
 }
 
 @media only screen and (max-width:750px){
