@@ -18,7 +18,6 @@ class Reveal extends Component{
   hide(){} //Abstract method; needs implement
   get toggleHandler(){
     return () => {
-      console.log("WTF");
       if (!this.active){
         this.show();
         this.active = true;
@@ -54,7 +53,7 @@ class UnderlineReveal extends Reveal{
         entries.forEach((entry)=>{
           let bottomWindow = entry.boundingClientRect.bottom;
           let bottomDocument = document.body.offsetHeight;
-          let rockBottom = (window.innerHeight + window.pageYOffset) >= bottomDocument;
+          let rockBottom = bottomWindow == bottomDocument//(window.innerHeight + window.pageYOffset) >= bottomDocument;
           let showing = entry.intersectionRatio > 0;
           if (rockBottom || showing) {
             this.show();
@@ -166,13 +165,16 @@ class JengaReveal extends Reveal{
     let h = this.accessibleHeading();
     let swatch = createElementAttr('div', {class: "swatch"});
     this.note = root.querySelector('.inner');
+    this.outer = root.querySelector('.outer');
     if (!this.note) throw new Error(`${this.constructor.name} requires a child element with class '.inner'`);
 
-    setAttributes(this.note, {role:"note", "aria-disabled":true, 'tabIndex':-1});
+    setAttributes(this.note, {role:"note", "aria-disabled":true,
+    // 'tabIndex':-1
+    });
     this.root.removeChild(this.note);
     this.button = createElementAttr('button', {
       class:`tabby ${this.direction}`,
-      "aria-label": `Open to read`,
+      "aria-label": `Read more`,
       'tabIndex':0,
     });
 
@@ -185,9 +187,10 @@ class JengaReveal extends Reveal{
     //default open/active
     if (classes.contains('active')){
       this.active = true;
-      this.root.classList.remove(this.direction);
       this.note.setAttribute("aria-disabled", false);
-      this.button.setAttribute("aria-label", `Close note`);
+      this.button.setAttribute("aria-label", `Read More`);
+      this.note.setAttribute("aria-disabled", false);
+      this.root.classList.remove(this.direction);
     } else {
       this.active = false;
     }
@@ -197,7 +200,7 @@ class JengaReveal extends Reveal{
   show(){
     this.root.classList.add('active');
     this.note.setAttribute("aria-disabled", false);
-    this.button.setAttribute("aria-label", `Close note`);
+    this.button.setAttribute("aria-label", `Read Less`);
     this.root.classList.remove(this.direction);
     setTimeout(()=>{
       this.note.focus();
@@ -212,7 +215,7 @@ class JengaReveal extends Reveal{
     this.root.classList.add(direction);
     this.root.classList.remove('active');
     this.note.setAttribute("aria-disabled", true);
-    this.button.setAttribute("aria-label", `Open to read`);
+    this.button.setAttribute("aria-label", `Read More`);
   }
 }
 

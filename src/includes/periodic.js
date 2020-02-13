@@ -24,7 +24,7 @@ let programs = [
 ["sql","x","",],
 ["apache", "x","",],
 
-["empty","o","",],
+["wordpress","o","",],
 ["gulp","o","",],
 ["electron","o","",],
 
@@ -45,9 +45,9 @@ let programs = [
 // ". x x x x . . .";
 
 let periodic = document.getElementById('periodic');
-periodic.setAttribute('tabIndex', 0);
+//periodic.setAttribute('tabIndex', 0);
 periodic.setAttribute('role', `figure`);
-periodic.setAttribute('aria-label', `My Toolset`);
+periodic.setAttribute('aria-labelledby', `caption1`);
 
 let sect = {
   k : createElementAttr('div',
@@ -61,18 +61,21 @@ x : createElementAttr('div', {class:`gx`,role:`row`}),
 }
 
 Object.values(sect).forEach(e => {
-  e.setAttribute('tabIndex', -1);
+  //e.setAttribute('tabIndex', -1);
   periodic.appendChild(e);
 })
 
 let cells = [];
+
+
+let caption = "";
 
 let createDiv = (name, block, text, fav) => {
   let c = createElementAttr('div',
   {
     id: name,
     class: (fav ? 'fav': null),
-    tabIndex: -1,
+   // tabIndex: -1,
     role: `cell`,
     'aria-label':name,
   });
@@ -85,39 +88,43 @@ let createDiv = (name, block, text, fav) => {
 
   uh.innerHTML = text;
   c.appendChild(uh);
+  caption += ` ${name}`;
 }
 
 for (let p in programs){
   createDiv(programs[p][0], programs[p][1],programs[p][2], programs[p][3]);
 }
-let bTabbable = false;
-periodic.addEventListener('click', function(e){
-  if (bTabbable) return;
-  tabbable(cells);
-}, {capture:false})
 
-let childLength = periodic.children.length-1;
-let childLength2 = periodic.children[childLength].children.length - 1;
 
-periodic.children[childLength].children[childLength2].addEventListener('focusout', function(e){
-  untabbable(cells);
-})
+periodic.appendChild(createElementAttr('caption', {id: "caption1"}, caption));
+// let bTabbable = false;
+// periodic.addEventListener('click', function(e){
+//   if (bTabbable) return;
+//   tabbable(cells);
+// }, {capture:false})
 
-function tabbable(eles){
-  bTabbable = true;
-  eles.forEach((c)=>{
-    c.tabIndex = 0;
-    c.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      c.children[0].focus();
-    })
-  });
-}
+// let childLength = periodic.children.length-1;
+// let childLength2 = periodic.children[childLength].children.length - 1;
 
-function untabbable(eles){
-  eles.forEach((c)=>{
-    c.tabIndex = -1;
-  });
-  bTabbable = false;
-}
+// periodic.children[childLength].children[childLength2].addEventListener('focusout', function(e){
+//   untabbable(cells);
+// })
+
+// function tabbable(eles){
+//   bTabbable = true;
+//   eles.forEach((c)=>{
+//     c.tabIndex = 0;
+//     c.addEventListener('click', function(e){
+//       e.preventDefault();
+//       e.stopPropagation();
+//       c.children[0].focus();
+//     })
+//   });
+// }
+
+// function untabbable(eles){
+//   eles.forEach((c)=>{
+//     c.tabIndex = -1;
+//   });
+//   bTabbable = false;
+// }

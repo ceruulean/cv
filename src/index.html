@@ -9,7 +9,7 @@
   <meta name="description" content="Portfolio CV of Gale">
   <meta name="keywords" content="portfolio, cv, gale">
   <link rel="shortcut icon" href="favicon.ico" type="">
-  <link rel="stylesheet" href="./includes/entoyment.css" type="text/css">
+  <link rel="stylesheet" href="./includes/entoyment.css?version=1" type="text/css">
   </head>
   <body>
     <nav class="dot-menu">
@@ -26,40 +26,58 @@
       <div class="underline"></div>
       <h1 id="portfolio" name="portfolio">Stuff:</h1>
       <figure class="jagger">
-        <section data-micromodal-trigger="modal-1">
-          <h2 style="transform:rotate(-14deg) translate(10%,200%)">Mockups</h2>
+        <section data-micromodal-trigger="modal-1" tabIndex="0"
+          aria-labelledby="aj342258">
+          <h2 id="aj342258" style="transform:rotate(7deg) translate(10%,350%)">
+            Mockups
+          </h2>
         </section>
-        <aside>
-          WTF1
+        <aside aria-live="polite">
+          Thanks Figma ✏️📋🎨
         </aside>
-        <section data-micromodal-trigger="modal-2">
-          <h2 style="transform:rotate(-10deg)">Components</h2>
+        <section data-micromodal-trigger="modal-2" tabIndex="0"
+          aria-labelledby="aj342257">
+          <h2 id="aj342257" style="transform:rotate(-10deg)">
+            Modules
+          </h2>
         </section>
-        <aside>
-          @@@@@2222
+        <aside aria-live="polite">
+          UX Beep boop ⚙️🤖🎉
         </aside>
-        <section data-micromodal-trigger="modal-3">
-          <h2 style="transform:rotate(4deg)">Performance</h2>
+        <section id="modal3" data-micromodal-trigger="modal-3" tabIndex="0"
+          aria-labelledby="aj342256">
+          <h2 id="aj342256" style="transform:rotate(4deg)">
+            Performance
+          </h2>
         </section>
-        <aside>
-
+        <aside aria-live="polite">
+          It's psychological 👁️🔍
         </aside>
-        <section data-micromodal-trigger="modal-4">
-          <h2 style="transform:rotate(10deg) translate(-6%,200%)">Access</h2>
+        <section data-micromodal-trigger="modal-4" tabIndex="0"
+          aria-labelledby="aj342255">
+          <h2 id="aj342255" style="transform:rotate(10deg) translate(-6%,200%)">
+            Animation
+          </h2>
         </section>
-        <aside>
-          FOUR
+        <aside aria-live="polite">
+          🎯 Move it
         </aside>
       </figure>
 
-      <section class="jenga-reveal left see-more">
+      <section class="jenga-reveal top see-more">
         <h2>See more</h2>
         <div class="outer"></div>
-        <div class="inner" style="display:flex;
+        <div class="inner">
+        <ul style="display:flex;
+        flex-flow:row wrap;
         justify-content: space-evenly;">
-          <div>Directus CMS</div>
-          <div>ddddd</div>
-          <div>Offline Work</div>
+          <li>Directus CMS</li>
+          <li><a href="https://www.the-gale.com/old/">Old Site
+            <br/>
+            <img src="./static/oldpreview.jpg" alt="Thumbnail of the old website's homepage"/>
+          </a></li>
+          <li><a href="https://www.the-gale.com/old/gallery">Artwork</a></li>
+        </ul>
         </div>
       </section>
 <!--
@@ -103,26 +121,55 @@
             </figure>
 
           </div>
+          <div class="random" role="caption">This image depicts array of hope</div>
+      </section>
+    <h1 id="contact" name="contact">Contact Me</h1>
+    <div class="underline"></div>
+    <section style="position:relative;">
+    <form id="contactform" action=""
+        role="form">
+          <label for="message">
+              Message
+              <textarea name="message" placeholder="Enter message..."
+              role="textbox"></textarea>
+          </label>
+          <label for="fname">
+              <input type="text" name="fname"
+              role="textbox">
+              <br/>Name
+            </label>
+            <label for="email">
+              <input type="email" name="email" required
+              role="textbox">
+              <br/>Email
+            </label>
+            <button name="contactSend" type="submit" id="submitBtn"
+              aria-label="Send"
+              role="textbox"></button>
+            <div id="loader" class="loadinidcator"></div>
+        </form>
+        <section id="validation"><h2>TEST</h2></section>
       </section>
     </main>
     <footer role="contentinfo">
-        <section class="underline-reveal auto">
-            <h1 id="contact" name="contact">Contact Me</h1>
-            <form>
-              <label for="name">
-                Name
-                <input type="text">
-              </label>
-              <label for="email">
-                Email
-                <input type="email" name="email">
-              </label>
-              <label for="message">
-                  Message
-                  <input type="textarea" name="message">
-                </label>
-            </form>
-        </section>
+       <section class="underline-reveal">
+         <h2 style="display:none">Socials</h2>
+        <div class="social">
+          <a href="https://github.com/ceruulean/"
+          aria-label="github"><dile-social-icon icon="github"/></a>
+          <a href="https://www.linkedin.com/in/diana-w-215219100/"
+          aria-label="linkedin"><dile-social-icon icon="linkedin"/></a>
+          <a href="https://www.instagram.com/galegone/"
+          aria-label="instagram"><dile-social-icon icon="instagram"/></a>
+        </div>
+      </section>
+        <div class="cr">
+          Copyright © 2020<script>
+            let year = new Date().getFullYear();
+            if (year != '2020') document.write(`-${year}`)
+            </script>
+          <br/> Diana Wu
+        </div>
     </footer>
   
 <!-- MODAL TIME -->
@@ -133,12 +180,18 @@
       <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
         <header>
           <h2 id="modal-1-title">
-            Modal Title
+            From Prototype to Site
           </h2>
+          <h3>Mobile-first design</h3>
           <button aria-label="Close modal" data-micromodal-close></button>
         </header>
         <div id="modal-1-content">
-          Modal Content
+          <img src="static/maxproto0.png" alt="Figma screenshot of prototyping a doggy daycare website">
+          <ul tabIndex="0" aria-label="Additional details">
+            <li>Copious flexbox</li>
+            <li>Gulp precompile for static sites</li>
+            <li><a href="https://www.the-gale.com/maxproto/" target="_blank">See Demo</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -149,12 +202,21 @@
       <div role="dialog" aria-modal="true" aria-labelledby="modal-2-title" >
         <header>
           <h2 id="modal-2-title">
-            Modal Title
+            A very extra datepicker
           </h2>
+          <h3></h3>
           <button aria-label="Close modal" data-micromodal-close></button>
         </header>
         <div id="modal-2-content">
-          Modal Content
+            <iframe id="calendar" class="lazy placeholder" data-src="./static/playground/calendar.html"
+            allowTransparency="false" frameborder="0"
+            aria-label="An embedded calendar datepicker" >
+              </iframe>
+          <ul tabIndex="0" aria-label="Additional details">
+              <li>Pick dates from extraneous months</li>
+              <li>Pick multiple dates</li>
+              <li>Part of a calendar maker app (Work-In-Progress)</li>
+            </ul>
         </div>
       </div>
     </div>
@@ -172,9 +234,10 @@
           <button aria-label="Close modal" data-micromodal-close></button>
         </header>
         <div id="modal-3-content">
-            <iframe src="instadict.html" id="instadict" frameborder="0" >
+            <iframe id="instadict" class="lazy placeholder" data-src="instadict.html" frameborder="0"
+              aria-label="A livesearch implementation">
             </iframe>
-          <ul>
+          <ul tabIndex="0" aria-label="Additional details">
             <li>Live search with debounce and throttling</li>
             <li>Placeholder skeletons and lazy loading</li>
             <a href="https://fomantic-ui.com/"><li>Semantic UI for styling</li></a>
@@ -190,17 +253,24 @@
       <div role="dialog" aria-modal="true" aria-labelledby="modal-4-title" >
         <header>
           <h2 id="modal-4-title">
-            Modal Title
+            Parrot
           </h2>
+          Pseudo 3D
           <button aria-label="Close modal" data-micromodal-close></button>
         </header>
         <div id="modal-4-content">
-          Modal Content
+          <iframe id="parrotframe" class="lazy placeholder" data-src="./static/playground/parrot.html" frameborder="0" 
+            aria-label="Canvas showing a parrot graphic that can fold its wings">
+          </iframe>
+          <ul tabIndex="0" aria-label="Additional details">
+            <li>Ola interpolation library</li>
+            <li>Illusory 3D rendering with Zdog</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 </div>      
-  <script src="./dist.js"></script>
+  <script src="./dist.min.js"></script>
   </body>
 </html>

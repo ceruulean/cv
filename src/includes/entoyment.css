@@ -143,6 +143,7 @@ caption{
   width:20vw;
   cursor:pointer;
   order:1;
+  transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .jagger section:first-child{
@@ -159,38 +160,49 @@ caption{
   height:500px;
   width:100%;
   background-color:pink;
-  filter:blur(0.3);
-  opacity:0.3;
+  opacity:0.4;
+  filter:blur(3px);
   transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .jagger section:first-child > div{
-  transform:translate(10%);
+  transform:translate(1vw);
   clip-path: polygon(0% 30%, 90% 20%, 97% 100%, 20% 96%);
+  -webkit-clip-path: polygon(0% 30%, 90% 20%, 97% 100%, 20% 96%);
 }
 
 .jagger section:nth-child(3) > div{
   clip-path: polygon(4% 10%, 76% 0%, 87% 98%, 2% 90%);
-  transform:translate(10%);
+  -webkit-clip-path: polygon(4% 10%, 76% 0%, 87% 98%, 2% 90%);
+  transform:translate(3vw);
 }
 
 .jagger section:nth-child(5) > div{
   clip-path: polygon(0% 0%, 90% 3%, 80% 93%, 7% 100%);
+  -webkit-clip-path: polygon(0% 0%, 90% 3%, 80% 93%, 7% 100%);
+  transform:translate(1vw);
 }
 
 .jagger section:nth-child(7) > div{
   clip-path: polygon(20% 20%, 90% 15%, 97% 100%, 2% 96%);
-  transform:translate(-15%);
+  -webkit-clip-path: polygon(20% 20%, 90% 15%, 97% 100%, 2% 96%);
+  transform:translate(-2vw);
 }
 
+.jagger section:focus, .jagger section:hover{
+  transform:scale(1.1);
+}
 
-.jagger section:focus > div, .jagger section:hover > div, .jagger section:active > div{
+.jagger section:focus > div, .jagger section:hover > div{
 filter:none;
 opacity:1;
-transform:scale(1.1);
 }.jagger section:focus + aside, .jagger section:hover + aside{
   opacity:1;
   visibility:visible;
+}
+
+.jagger section:hover + aside{
+  z-index:2;
 }
 
 .jagger h2{
@@ -200,10 +212,11 @@ transform:scale(1.1);
 .jagger aside{
   grid-area: e;
   order:5;
-  max-width:60rem;
   visibility:hidden;
   opacity:0;
   transition:opacity 300ms cubic-bezier(0.19, 1, 0.22, 1);
+  text-align: center;
+  margin-top: 2rem;
 }
 
 
@@ -493,7 +506,7 @@ z-index:2;
 
 @media only screen and (max-width:500px){
   .dot-menu{
-    top:4em;
+    top:10vh;
     transform:initial;
   }
 }
