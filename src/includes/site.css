@@ -62,6 +62,17 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 4px;
 }
 
+#about{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#about p{
+  margin:1em;
+  max-width:76ch;
+}
+
 #contact{
   margin-top:7rem;
 }
@@ -188,6 +199,21 @@ a:active dile-social-icon{
   --dile-social-icon-color:var(--accent1Color);
 }
 
+.social-icon{
+  max-height:3rem;
+  width:3rem;
+  fill:var(--secondaryColor);
+  margin:1rem 2vw;
+}
+
+.social-icon:hover, a:focus .social-icon{
+  fill:var(--linkColor);
+  transform:scale(1.05);
+}
+a:active.social-icon{
+  fill:var(--accent1Color);
+}
+
 .hide{
   opacity:0;
   visibility:hidden;
@@ -229,16 +255,18 @@ font-style: italic;
   background-color:var(--secondaryColor);
 }
 .jagger section:first-child div{
-  background-image:url('./static/maxproto0.png');
-  background-position:40%, 20%;
+  background-image:url('http://api.the-gale.com/uploads/_/originals/HYPE_raster.png');
+  background-position:35% -20%;
 }
 
 .jagger section:nth-child(3) div{
-  background-image:url('../static/calprot.png');
+  background-image:url('https://api.the-gale.com/uploads/_/originals/card_misterfoxx.png');
+  background-position:center center;
 }
 
 .jagger section:nth-child(5) div{
-  background-image:url('../static/browser-placeholder.svg');
+  background-image:url('https://api.the-gale.com/uploads/_/originals/FshipE_display.png');
+  background-position:right top;
 }
 
 /* Image by Pexels on Pixabay */
@@ -305,10 +333,12 @@ display:flex;
 flex-flow:row nowrap;
 border-radius:3px;
 overflow:hidden;
+max-height:calc(98vh);
 }
 
 [aria-modal="true"]{
   margin:0 3vw 1vh 3vw;
+  position: relative;
 }
 
 .modal .lazy{

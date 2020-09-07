@@ -409,132 +409,7 @@ function getCSSVar(varName){
     return intify(val);
   } else {
     return val;
-  }}let programs = [
-["html5","k",``, true],
-["figma","k","", true],
-["adoai","k","", true],
-["inkscape","k","",],
-
-["w3c","i","", true],
-["adops","i","",],
-["gimp","i","",],
-
-["adoindesign","t","",],
-["eclipse", "t","",],
-
-["adopremiere","t","",],
-["visualcode", "t","",],
-
-["directus","t","",],
-["php","t","",],
-
-["git","x","",],
-["java","x","",],
-["sql","x","",],
-["apache", "x","",],
-
-["wordpress","o","",],
-["gulp","o","",],
-["electron","o","",],
-
-["vue","h","", true],
-["react","h","", true],
-["webpack","h","", true],
-
-["css3","n","", true],
-["js","n","",true],
-["ts","n","",],
-["node","n","",],
-];
-
-// "k . . . . . . n"
-// "k i . . . o h n"
-// "k i t t t o h n"
-// "k i t t t o h n"
-// ". x x x x . . .";
-
-let periodic = document.getElementById('periodic');
-//periodic.setAttribute('tabIndex', 0);
-periodic.setAttribute('role', `figure`);
-periodic.setAttribute('aria-labelledby', `caption1`);
-
-let sect = {
-  k : createElementAttr('div',
-  {class:`gk`, role:`column`}),
- i : createElementAttr('div', {class:`gi`,role:`column`}),
-t : createElementAttr('div', {class:`gt`,role:`rowgroup`}),
-o : createElementAttr('div', {class:`go`,role:`column`}),
- h : createElementAttr('div', {class:`gh`,role:`column`}),
-n : createElementAttr('div', {class:`gn`,role:`column`}),
-x : createElementAttr('div', {class:`gx`,role:`row`}),
-};
-
-Object.values(sect).forEach(e => {
-  //e.setAttribute('tabIndex', -1);
-  periodic.appendChild(e);
-});
-
-
-let caption = "";
-
-let createDiv = (name, block, text, fav) => {
-  let c = createElementAttr('div',
-  {
-    id: name,
-    class: (fav ? 'fav': null),
-   // tabIndex: -1,
-    role: `cell`,
-    'aria-label':name,
-  });
-  sect[block].appendChild(c);
-
-  let uh = createElementAttr('aside', {
-    'aria-label': `aside`,
-  });
-
-  uh.innerHTML = text;
-  c.appendChild(uh);
-  caption += ` ${name}`;
-};
-
-for (let p in programs){
-  createDiv(programs[p][0], programs[p][1],programs[p][2], programs[p][3]);
-}
-
-
-periodic.appendChild(createElementAttr('caption', {id: "caption1"}, caption));
-// let bTabbable = false;
-// periodic.addEventListener('click', function(e){
-//   if (bTabbable) return;
-//   tabbable(cells);
-// }, {capture:false})
-
-// let childLength = periodic.children.length-1;
-// let childLength2 = periodic.children[childLength].children.length - 1;
-
-// periodic.children[childLength].children[childLength2].addEventListener('focusout', function(e){
-//   untabbable(cells);
-// })
-
-// function tabbable(eles){
-//   bTabbable = true;
-//   eles.forEach((c)=>{
-//     c.tabIndex = 0;
-//     c.addEventListener('click', function(e){
-//       e.preventDefault();
-//       e.stopPropagation();
-//       c.children[0].focus();
-//     })
-//   });
-// }
-
-// function untabbable(eles){
-//   eles.forEach((c)=>{
-//     c.tabIndex = -1;
-//   });
-//   bTabbable = false;
-// }
-/**
+  }}/**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
  * This code may only be used under the BSD style license found at
@@ -3501,25 +3376,12 @@ MicroModal.init({
   awaitOpenAnimation: false, // [7]
   awaitCloseAnimation: false, // [8]
 });
-//yes the order matters, entoyment must be first f
-
-function throttle(callback, interval) {
-  var isRunning;
-
-  return () => {
-    if (!isRunning) {
-      isRunning = true;
-      callback(...arguments);
-      setTimeout(()=> {isRunning = false;}, interval);
-    }
-  }
-}
 let modal3Div = document.getElementById('modal3').querySelector('div');
-window.onscroll = throttle(function(e){
-  let distance = modal3.getBoundingClientRect().bottom;
-  let ratio = window.innerHeight / distance;
-  modal3Div.style.backgroundPosition = `0% ${-5*ratio}vh`;
-}, 150);
+// window.onscroll = throttle(function(e){
+//   let distance = modal3.getBoundingClientRect().bottom;
+//   let ratio = window.innerHeight / distance;
+//   modal3Div.style.backgroundPosition = `0% ${-5*ratio}vh`;
+// }, 150)
 
 
 const form = document.getElementById('contactform');

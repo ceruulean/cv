@@ -5,7 +5,9 @@ var concatCss = require('gulp-concat-css');
 var sourcemaps = require('gulp-sourcemaps');
 var cleanCSS = require('gulp-clean-css');
 var HTMLmin = require('gulp-htmlmin');
+var rename = require("gulp-rename");
 var del = require('del');
+var fs = require('fs');
 
 
 function rollupJS(){
@@ -29,12 +31,30 @@ gulp.task('bundle', gulp.series(rollupJS, 'bundleCSS'));
 
 gulp.task('index', function() {
   console.log("d")
+  let siren = fs.readFileSync('./src/siren.html', 'utf8');
     return gulp.src('./src/index.html')
     .pipe(replace('./includes/entoyment.css', 'dist.css'))
+    .pipe(replace('{SIREN}', siren))
     .pipe(HTMLmin())
         .pipe(gulp.dest('public/'));
 });
 
+
+let pages = ['commissions', 'terms'];
+
+pages.forEach(function(pagename) {
+  gulp.task(pagename, function() {
+    return gulp.src(`./src/${pagename}.html`)
+    .pipe(replace('./includes/entoyment.css', 'dist.css'))
+    .pipe(HTMLmin())
+    .pipe(rename({
+      dirname: pagename,
+      basename: "index",
+      extname: ".html"
+    }))
+        .pipe(gulp.dest(`public/`));
+  });
+});
 
 gulp.task('static', function() {
   console.log("Static move to dist")
@@ -42,4 +62,4 @@ gulp.task('static', function() {
       .pipe(gulp.dest('public/static'));
 });
 
-gulp.task('default', gulp.series('index','bundle'));
+gulp.task('default', gulp.series('index','bundle', gulp.parallel(pages)));

@@ -352,6 +352,19 @@ z-index:2;
   background-color: var(--accent1Color);
 }
 
+.underline.extend{
+  width:100%;
+  max-width:100%;
+}
+
+.underline .inner{
+  position:relative;
+  margin:4px auto 0 auto;
+  padding-bottom:1rem;
+  width:100%;
+}
+
+
 .underline-reveal{
   position:relative;
   display:flex;

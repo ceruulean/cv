@@ -1,6 +1,6 @@
 import "./src/includes/smooth-scroll.polyfills.min.js";
 import * as Entoyment from "./src/includes/entoyment.js";
-import "./src/includes/periodic.js";
+//import "./src/includes/periodic.js";
 import 'social-icon/dile-social-icon.js';
 import '@riverside/form-serialize';
 import MicroModal from 'micromodal';
@@ -100,11 +100,11 @@ function throttle(callback, interval) {
   }
 }
 let modal3Div = document.getElementById('modal3').querySelector('div');
-window.onscroll = throttle(function(e){
-  let distance = modal3.getBoundingClientRect().bottom;
-  let ratio = window.innerHeight / distance;
-  modal3Div.style.backgroundPosition = `0% ${-5*ratio}vh`;
-}, 150)
+// window.onscroll = throttle(function(e){
+//   let distance = modal3.getBoundingClientRect().bottom;
+//   let ratio = window.innerHeight / distance;
+//   modal3Div.style.backgroundPosition = `0% ${-5*ratio}vh`;
+// }, 150)
 
 
 const form = document.getElementById('contactform');
