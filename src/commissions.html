@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Commissions - The Gale</title>
-      <meta name="author" content="Diana">
+    {HEADER}
+      <title>Commissions - The Gale</title>
       <meta name="description" content="Gale's Commission Info">
       <meta name="keywords" content="portfolio, cv, gale, commission, prices">
-      <link rel="shortcut icon" href="favicon.ico" type="">
-      <link rel="stylesheet" href="dist.css?version=1" type="text/css">
   </head>
   <body>
     <style>
-        img{max-width:100vw;}
+        img{max-height:100%;max-width:100%;}
         .indent {margin-left:2em;}
         .green {color:green;}
-        .width100{width:100%;}
+        .width100{width:100%;text-align:center}
         .width22{max-width:22em;margin:0}
         .container {
           overflow-x:hidden;
@@ -27,73 +22,128 @@
         .container img {max-width:22em;max-height:33em;}
         .container2{display:flex;justify-content:space-evenly;flex-flow:row wrap;align-items:center; margin:1em 0;}
         h2 {width:100%; text-align:center;}
-        h4 {text-align:center;}
+        h3, h4 {text-align:center;}
+        #modal-1 img{
+          max-width:100%;
+          max-height:100%;
+        }
+        button.twitch{
+          background-color:#6441a5;
+          border-color:white;
+          border-style: solid;
+          padding:0.5rem;
+        }
+        [id$='-content']{
+          overflow:auto !important;
+          flex-wrap:wrap !important;
+        }
       </style>
-    <main class="container">
-          <div class="width100 ">
-              <h2>Vector Illustrations</h2>
-                <p>Final image product by default is .PNG exported to 300 DPI.
-                <br/>On request, I can send a specific size, DPI, or format (such as SVG).
-                <br/>SVG optimization of art is not done unless requested or for web use.
-          <br/> PLEASE let me know if you intend to print physically.
-                </p>
-            </div>
-      <h2 style="text-align:center;">Fullbody (typically $60)</h2>
-        <div class="width100 container2">
-            <div>
-                <img src="https://api.the-gale.com/uploads/_/originals/naofumi_duel.png"/>
-            </div>
-            <div>
-                <img src="https://api.the-gale.com/uploads/_/originals/FshipE_display.png"/>
-            </div>
-        </div>
-      <div class="container2">
-          <div class="width22">
-              <h4>Lineart</h4>
-                <div style="background-color:grey;"><img src="https://api.the-gale.com/uploads/_/originals/com_1_transparent.png"></div>
+    <main>
+      <section class="container">
+          <div class="width100">
+              <h1>Vector Illustrations</h1>
+              <p>Final image product by default is .PNG exported to 300 DPI.
+              <br/>On request, I can send a specific size, DPI, or format (such as SVG).
+              <br/>SVG optimization of art is not done unless requested or for web use.
+              <br/> PLEASE let me know if you intend to print physically.
+              </p>
+          </div>
+    
+            <div class="container2" style="align-items:baseline;">
+              <div class="container2" data-micromodal-trigger="modal-2">
+                  <h2>Fullbody</h2>
+                  <span class="width100">$60 (no background)</span>
+                    <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/naofumi_duel.png" alt="Naofumi Yugioh crossover"/>
+                    <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/FshipE_display.png" alt="Firefox and Internet Explorer anthropomorphized and kissing"/>
               </div>
+              <div class="container2" style="flex-direction:column;" data-micromodal-trigger="modal-4">
+                  <h2>Headshots/Icons</h2>
+                  <p>$30</p>
+                  <img class="lazy" style="width:200px" src="/static/loader.svg" data-src="http://api.the-gale.com/uploads/_/originals/sample_1_headshot.png" alt="Headshot with circle background" />
+                  <img class="lazy" style="width:200px" src="/static/loader.svg" data-src="http://api.the-gale.com/uploads/_/originals/penguin_2.png" alt="Shy baby penguin"/>
+                </div>
+            </div>
+    
+          <div class="container2"  data-micromodal-trigger="modal-3">
+            <h2>Detail and Color Level</h2>
+            <span class="width100">Reduced price for less shade-intensive processes or a simpler style.</span>
+              <div class="width22">
+                  <h4>Lineart</h4>
+                    <div style="background-color:grey;"><img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/com_1_transparent.png" alt="chibi character line art"/></div>
+                  </div>
               <div class="width22">
                   <h4>Flat Color</h4>
-                  <img src="https://api.the-gale.com/uploads/_/originals/sample_0.png"/>
+                  <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/sample_0.png" alt="chibi character in flat color"/>
               </div>
               <div class="width22">
                   <h4>Cell Shaded</h4>
-                  <img src="https://api.the-gale.com/uploads/_/originals/sample_1.png"/>
+                  <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/sample_1.png" alt="chibi character cell shaded"/>
               </div>
-      </div>
-
-      
-      
-        <h4 class="width100">Full Coloring</h4>
-      <div class="width100 container2">
-        <div>
-            <img src="https://api.the-gale.com/uploads/_/originals/bubble_tea.png"/>
-        </div>
-        <div>
-            <img src="https://api.the-gale.com/uploads/_/originals/frappe.png"/>
-        </div>
-        <div>
-            <img src="https://api.the-gale.com/uploads/_/originals/mango_strawberry_smoothie.png"/>
-        </div>
-      </div>
-        <div class="width100 container2">
-          <div>
-              <img src=" https://api.the-gale.com/uploads/_/originals/lineless_etu_animation.gif"/>
+              <div class="container2" style="flex-direction:column;">
+                  <h4 class="width100">Full Shading</h4>
+                  <div>
+                      <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/bubble_tea.png" alt="bubble tea"/>
+                  </div>
+                  <div>
+                      <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/frappe.png" alt="frappe"/>
+                  </div>
+                  <div>
+                      <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/mango_strawberry_smoothie.png" alt="mango strawberry smoothie"/>
+                  </div>
+                </div>
           </div>
-          <!--<div>
-            <h4>Check out the</h4><h2><a href="/gallery">Complete Gallery</a></h2>
-          </div>-->
-          <div>
-          <h4>Behind-the-scenes</h4><h2><a href="https://www.instagram.com/galegone/">Instagram</a></h2>
-          </div>
-          <div>
-            <h4><a href="/terms">Terms and Conditions</a></h4>
-          </div>
-
-        <div class="width100" style="text-align:center">
-            <img style="max-height:100%;max-width:100%;" src="https://api.the-gale.com/uploads/_/originals/twitch_ad.png" alt="Twitch graphics pricing: Unique icons $60, Badge 5-pack $60, a similar design of an existing order reduced to $18."/>
+    
+    
+            <div class="width100 container2">
+              <h2 class="width100">Miscellaneous</h2>
+              <div>
+                  <h4>Animation</h4>
+                  <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/lineless_etu_animation.gif"/>
+                  <p>$35+ 
+                    <br/>(depends on complexity)</p>
+              </div>
+              <!--<div>
+                <h4>Check out the</h4><h2><a href="/gallery">Complete Gallery</a></h2>
+              </div>-->
+              <button class="twitch" data-micromodal-trigger="modal-1" tabIndex="0"
+              aria-labelledby="aj34768">
+                  <h2 id="aj34768">
+                    Twitch Pricing
+                  </h2>
+                </button>
+              <div>
+                <h4><a href="/terms">Terms and Conditions</a></h4>
+              </div>    
+      </section>
+      <section aria-label="Contact Info">
+        <div class="container2">
+            <h2><a href="/#contact">Contact Me</a></h2>
         </div>
+      </section>
       </main>
-        
+        <div id="m-blocker" class="hide">
+<!--MODALS-->
+            <section id="modal-1" class="modal" aria-hidden="true">
+              <div tabindex="-1" class='m-blocker' data-micromodal-close>
+                <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+                  <header>
+                    <h2 id="modal-1-title">
+                      Twitch Pacakge Info
+                    </h2>
+                    <button aria-label="Close modal" class="close" data-micromodal-close></button>
+                  </header>
+                  <div class="container2" id="modal-1-content">
+                      <img class="lazy" src="/static/loader.svg" data-src="https://api.the-gale.com/uploads/_/originals/twitch_ad.png" alt="Twitch graphics pricing: Unique icons $30, Badge 5-pack $60, a similar design of an existing order reduced to $18."/>
+                      <img class="lazy" src="/static/loader.svg" data-src="http://api.the-gale.com/uploads/_/originals/card_misterfoxx.jpg" alt="Client examples: MisterFoxx"/>
+                      <img class="lazy" src="/static/loader.svg" data-src="http://api.the-gale.com/uploads/_/originals/cardtre.jpg" alt="Client examples: Treacher0usTV"/>
+                    </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+
+      {FOOTER}
+      <script src="/dist.min.js?version={jsVERSION}"></script>
   </body>
 </html>

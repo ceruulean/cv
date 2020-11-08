@@ -3299,80 +3299,82 @@ customElements.define('dile-social-icon', DileSocialIcon);/**
     show,
     close
   };
-})();let jengas = init('jenga-reveal');
-// jengas[1].show();
+})();init('jagger');
 init('dot-menu', 1);
 new SmoothScroll('a[href*="#"]',{
   easing:'easeInQuad'
 });
-init('jagger');
-
-let u = init('underline-reveal', {
+/*
+ let jengas = Entoyment.init('jenga-reveal');
+let u = Entoyment.init('underline-reveal', {
   threshold:[0,1],
 });
+*/
 
+// function loadSrc(ele, callback) {
+//   new Promise((resolve, reject) => {
+//     let req = new XMLHttpRequest();
+//     req.onload = () => resolve(req.responseText);
+//     req.onerror = () => reject(req.statusText);
+//     req.open("GET", ele.dataset.src, true);
+//     req.setRequestHeader('Content-type', 'text/html');
+//     req.send();
+//   }).then((res) => {
+//     callback(...arguments);
+//   }).catch(err=>{
+//     console.log(err);
+//   })
+// }
 
-function loadSrc(ele, callback) {
-  new Promise((resolve, reject) => {
-    let req = new XMLHttpRequest();
-    req.onload = () => resolve(req.responseText);
-    req.onerror = () => reject(req.statusText);
-    req.open("GET", ele.dataset.src, true);
-    req.setRequestHeader('Content-type', 'text/html');
-    req.send();
-  }).then((res) => {
-    callback(...arguments);
-  }).catch(err=>{
-    console.log(err);
-  });
-}
+// function observeLazyLoaders(){
+//   let removePlaceholder = (ele) =>{
+//     ele.classList.add('transition');
+//     setTimeout(()=>{
+//       ele.classList.remove('transition');
+//       setTimeout(()=>{
+//         ele.classList.remove('placeholder');
+//       })
+//     }, 500)
+//   }
 
-function observeLazyLoaders(){
-  let removePlaceholder = (ele) =>{
-    ele.classList.add('transition');
-    setTimeout(()=>{
-      ele.classList.remove('transition');
-      setTimeout(()=>{
-        ele.classList.remove('placeholder');
-      });
-    }, 500);
-  };
+//   let onintersect = (entries, observer) => {
+//     entries.forEach(entry=>{
+//       if (entry.isIntersecting) {
+//         let ele = entry.target;
+//         loadSrc(ele, function(){
+//           ele.src = ele.dataset.src;
+//           ele.onload = removePlaceholder(ele);
+//         });
+//         // no more lazy load observation
+//         ob.unobserve(entry.target);
+//       }
+//     })
+//   }
+//   let ob = new IntersectionObserver(onintersect, {
+//     threshold:[0,0.10,0.25,0.5,0.8,1]
+//   })
 
-  let onintersect = (entries, observer) => {
-    entries.forEach(entry=>{
-      if (entry.isIntersecting) {
-        let ele = entry.target;
-        loadSrc(ele, function(){
-          ele.src = ele.dataset.src;
-          ele.onload = removePlaceholder(ele);
-        });
-        // no more lazy load observation
-        ob.unobserve(entry.target);
-      }
-    });
-  };
-  let ob = new IntersectionObserver(onintersect, {
-    threshold:[0,0.10,0.25,0.5,0.8,1]
-  });
+//   let lazie = document.querySelectorAll('.lazy');
+//   for (let l of lazie.values()){
+//     ob.observe(l);
+//   };
+// }
 
-  let lazie = document.querySelectorAll('.lazy');
-  for (let l of lazie.values()){
-    ob.observe(l);
-  }}
-
-observeLazyLoaders();
+// observeLazyLoaders();
 
 let blocker = document.getElementById('m-blocker');
 MicroModal.init({
   onShow: (modal, trigger) => {
     blocker.classList.remove('hide');
     modal.focus();
+    document.body.classList.add('noscroll');
   }, // [1]
   onClose: modal => {
     blocker.classList.add('hide');
     modal.focus();
+    document.body.classList.remove('noscroll');
   },
-  disableScroll: true, // [5]
+  disableScroll: false, // [5]
   awaitOpenAnimation: false, // [7]
   awaitCloseAnimation: false, // [8]
 });

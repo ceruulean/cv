@@ -1,4 +1,5 @@
 @import '../static/font/texgyreadventor.css';
+@import '../static/font/galecomic.css';
 @import url('https://fonts.googleapis.com/css?family=Martel&display=swap');
 
 :root{
@@ -30,10 +31,15 @@ html, body {
 }
 
 body{
+  position:relative;
   background-color: var(--bgColor);
   font-family: "Martel", 'Times New Roman', Times, serif;
-  line-height:1.3rem;
+  line-height:1.3em;
   color:var(--accent2Color);
+}
+
+body.noscroll{
+    overflow:hidden;
 }
 
 header h1{
@@ -71,6 +77,11 @@ h1, h2, h3, h4, h5, h6 {
 #about p{
   margin:1em;
   max-width:76ch;
+}
+
+main section{
+  padding-left:1vw;
+  padding-right:1vw;
 }
 
 #contact{
@@ -120,6 +131,16 @@ nav{
   margin:0 auto;
 }
 
+.inner{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+}
+
+.inner img{
+  max-width:100%;
+}
+
 
 
 @media only screen and (min-width:750px){
@@ -128,7 +149,29 @@ nav{
   }
 }
 
+.navlogo{
+  position:absolute;
+  width: 9rem;
+  height: 9rem;
+  filter: drop-shadow(0px 4px 3px black);
+}
 
+.navlogo>span{
+  display: block;
+  filter: drop-shadow(9rem 0 blue);
+  background-image:url('https://the-gale.com/assets/griffin_cartoon2_silhouette_opt.svg');
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: -100% 0;
+  margin-left: -9rem;
+  width:9rem;
+  height:9rem;
+}
+
+object{
+  max-width:100%;
+  max-height:100%;
+}
 
 
 /*FOOTER*/
@@ -168,20 +211,25 @@ footer{
   padding:1rem 0;
 }
 
-footer .social{
+
+footer .footer{
   display:flex;
   flex-flow:row wrap;
-  justify-content: center;
-  margin:1rem auto 2rem auto;
+  justify-content:space-around;
 }
 
 footer caption.inner{
   background-color:var(--bgColor);
 }
 
+footer li{
+  list-style-type: none;
+}
+
+footer a{  text-decoration: none;}
+
 .cr{
   margin:2rem auto 1rem auto;
-  width: 10rem;
   text-align: center;
 }
 
@@ -255,18 +303,19 @@ font-style: italic;
   background-color:var(--secondaryColor);
 }
 .jagger section:first-child div{
-  background-image:url('http://api.the-gale.com/uploads/_/originals/HYPE_raster.png');
+  background-image:url('./assets/HYPE_raster.png');
   background-position:35% -20%;
 }
 
 .jagger section:nth-child(3) div{
-  background-image:url('https://api.the-gale.com/uploads/_/originals/card_misterfoxx.png');
-  background-position:center center;
+  background-image:url('https://api.the-gale.com/uploads/_/originals/FshipE_display.png');
+  background-position:right top;
+
 }
 
 .jagger section:nth-child(5) div{
-  background-image:url('https://api.the-gale.com/uploads/_/originals/FshipE_display.png');
-  background-position:right top;
+  background-image:url('http://api.the-gale.com/uploads/_/originals/tohcover-notext-01.jpg');
+  background-position:center top;
 }
 
 /* Image by Pexels on Pixabay */
@@ -311,7 +360,7 @@ font-style: italic;
   flex-shrink:1;
 }
 /*Close Ctrl F*/
-.modal button[data-micromodal-close]{
+.modal .close{
   background: transparent;
   position:absolute;
   border:none;
@@ -320,7 +369,7 @@ font-style: italic;
   padding: 1vh 2vw 1vh 1vw
 }
 
-.modal button[data-micromodal-close]:after{
+.modal .close:after{
   content: '×';
   font-size:2em;
   color:var(--linkColor);
@@ -333,18 +382,13 @@ display:flex;
 flex-flow:row nowrap;
 border-radius:3px;
 overflow:hidden;
-max-height:calc(98vh);
+height:88vh;
+justify-content: center;
 }
 
 [aria-modal="true"]{
   margin:0 3vw 1vh 3vw;
   position: relative;
-}
-
-.modal .lazy{
-  width:100%;
-  min-height:50vh;
-  display:none;
 }
 
 #calendar{
@@ -357,8 +401,8 @@ max-height:calc(98vh);
 }
 
 #parrotframe{
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   max-width:100%;
   max-height: calc(100vw + 4rem);
 }
@@ -426,6 +470,10 @@ form input, form textarea{
 label[for="message"]{
   width:100%;
   color:transparent;
+}
+
+label input{
+  font-family:var(--headerFont);
 }
 
 textarea{

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Diana">
+<link rel="shortcut icon" href="favicon.ico" type="">
+<link rel="preload" href="/dist.css?version=5" as="style">
+<link rel="preload" href="/scripts/lazyload.min.js" as="script">
+<link rel="stylesheet" href="/dist.css?version=5" type="text/css">
+<link rel="preconnect" href="https://api.the-gale.com">
+    <title>Gallery - The Gale</title>
+  <meta name="description" content="Gallery Gale">
+  <meta name="keywords" content="portfolio, Gallery, samples, gale">
+  <style>
+    .body{
+      overflow-x:hidden;
+    }
+      .desc{
+        padding: 25px 0px;
+      /*   background-color: #eee; */
+        letter-spacing: 0.1em;
+        font-size: 15px;
+      }
+      
+      /*dgallery*/
+      .dgallery{
+        padding-top: 25px;
+        display:flex; 
+        flex-wrap: wrap;
+        max-width:1600px;
+        justify-content: flex-start;
+        position: relative;
+        box-sizing: border-box;
+        margin:auto;
+      }
+      .dgallery-item {
+        max-width:100vw;
+        max-height:100vw;
+        width:200px;
+        height:200px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin: 1vw auto;
+        transition: 200ms ease-in-out;
+        border-radius: 10px;
+        opacity: 0.7;
+        z-index: 1;
+        box-shadow: 0 2px 10px 3px var(--accent1Color);
+      }
+      .dgallery-item:hover{
+      /*    outline: 7px dotted #f9b618; */
+        opacity: 1;
+      }
+      .dgallery-item:focus{
+        transform: scale(1.14);
+        z-index: 2;
+        box-shadow: 0 3px 10px 5px rgba(0,0,0,0.8);
+        border: 1px solid var(--accent2Color);
+        opacity: 1;
+      }
+      
+      .dgallery-item img{ 
+        object-fit: cover;
+        width:100%;
+        height:100%;
+         transition: 300ms ease-in-out;
+      }
+      
+      .dgallery-item img:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      
+      .overlay{
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+      }
+      
+      .modal{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+        transition: opacity 0.5s, visibility 0s 0.5s;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 300ms ease-in-out;
+        overflow: hidden;
+        background-color:rgba(0,0,0,0.8);
+      }
+      .modal img{
+        max-height: 100%;
+        max-width:95vw;
+        transition: 150ms ease-in-out;
+        z-index: 5;
+      }
+      
+      .next, .prev{
+        background-color: var(--accent1Color);
+        border-radius:50%;
+        border:none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        z-index: 5;
+        font-size: 25px;
+      }
+      
+      .next:hover, .prev:hover{
+        filter: brightness(80%);
+        cursor: pointer;
+      }
+
+      .prev{
+        left: 25px;
+        top: 49%;
+      }.prev:before{
+        content: '';
+height: 0;
+width: 0;
+position: absolute;
+border-right: 1rem solid var(--secondaryColor);
+border-top: 0.5rem solid transparent;
+border-bottom: 0.5rem solid transparent;
+top: 48%;
+transform: translate(0,-50%);
+left: 0.6rem;
+      }
+      .next{
+        right: 25px;
+        top: 49%;
+      }.next:after{
+        content: '';
+height: 0;
+width: 0;
+position: absolute;
+border-left: 1rem solid var(--secondaryColor);
+border-top: 0.5rem solid transparent;
+border-bottom: 0.5rem solid transparent;
+top: 48%;
+transform: translate(0,-50%);
+right: 0.6rem;
+      }
+      
+      .overlay.show, .modal.show{ 
+        display:flex;
+        opacity: 1;
+          visibility: visible;
+          -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+      }
+
+      @media (orientation:portrait), screen and (max-width:500px){
+        .dgallery-item{
+          max-width:100%;
+          min-width:50%;
+          margin: auto;
+        }
+      }
+
+      
+      </style>
+  </head>
+  <body>
+
+          <div class="modal" tabindex="-1">
+              <div class="overlay"> </div>
+              <img id="image" class="lazy" src="">
+              <button class="prev"></button>
+              <button class="next"></button>
+            <button class="close" aria-label="Close modal"></button>
+
+          </div>
+
+          <section id="galleries">
+            <h1>Gallery</h1>
+            <p id="about"></p>
+            <div class="dgallery">
+            </div>
+            
+          </section>
+
+  <!--
+<div id="about"><p>Sorry, this page is under construction. For now, you can check out my <a href="https://www.instagram.com/galegone/">Instagram</a>.</p>
+<p>Thank you for your patience!</p></div>-->
+          <footer role="contentinfo">
+    <section class="footer">
+      <div class="underline extend"></div>
+      <nav>
+        <ul role="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/commissions">Commissions</a></li>
+          <!--<li><a href="/freebies">Freebies</a></li>-->
+          <li><a href="/terms">Terms</a></li>
+        </ul>
+      </nav>
+      <h2 style="display:none">Socials</h2>
+ 
+      <div aria-hidden="false" class="inner" tabindex="0">
+         <div class="social">
+           <!--<a href="https://github.com/ceruulean/"
+           aria-label="github"><dile-social-icon icon="github"/></a>
+           <a href="https://www.linkedin.com/in/diana-w-215219100/"
+           aria-label="linkedin"><dile-social-icon icon="linkedin"/></a>-->
+ 
+           <a href="https://www.instagram.com/galegone/" aria-label="instagram">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160 C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48 h192c61.76,0,112,50.24,112,112V352z"></path><path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336 c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"></path><circle cx="393.6" cy="118.4" r="17.056"></circle></svg>
+            </a>
+           <a href="https://www.youtube.com/channel/UCB2e2hHqVItPad1c_yzoRfQ" aria-label="youtube">
+            <svg version="1.1" class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.75 97.75">
+              <path d="M39.969,59.587c7.334-3.803,14.604-7.571,21.941-11.376c-7.359-3.84-14.627-7.63-21.941-11.447
+                C39.969,44.398,39.969,51.954,39.969,59.587z"></path>
+              <path d="M48.875,0C21.883,0,0,21.882,0,48.875S21.883,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.867,0,48.875,0z
+                 M82.176,65.189c-0.846,3.67-3.848,6.377-7.461,6.78c-8.557,0.957-17.217,0.962-25.842,0.957c-8.625,0.005-17.287,0-25.846-0.957
+                c-3.613-0.403-6.613-3.11-7.457-6.78c-1.203-5.228-1.203-10.933-1.203-16.314s0.014-11.088,1.217-16.314
+                c0.844-3.67,3.844-6.378,7.457-6.782c8.559-0.956,17.221-0.961,25.846-0.956c8.623-0.005,17.285,0,25.841,0.956
+                c3.615,0.404,6.617,3.111,7.461,6.782c1.203,5.227,1.193,10.933,1.193,16.314S83.379,59.962,82.176,65.189z"></path></svg>
+          </a>
+           <a href="https://www.twitch.tv/ceruulean/" aria-label="twitch"><svg width="118px" class="social-icon" height="138px" viewBox="0 0 118 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+             <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+             <title>logo / glitch / black</title>
+             <desc>Created with Sketch.</desc>
+             <g id="logo-/-glitch-/-black" stroke="none" stroke-width="1" fill-rule="evenodd">
+                 <g id="logo-/-glitch" transform="translate(0.000000, 0.000000)">
+                     <path d="M117.605,0 L117.605,68.605 L73.503,112.704 L53.904,112.704 L29.401,137.207 L29.401,112.704 L8.52651283e-14,112.704 L8.52651283e-14,24.502 L24.5,0 L117.605,0 Z M107.805,9.801 L29.401,9.801 L29.401,83.304 L51.452,83.304 L51.452,100.454 L68.605,83.304 L88.206,83.304 L107.805,63.703 L107.805,9.801 Z M93.1042,26.9518 L93.1042,56.3518 L83.3042,56.3518 L83.3042,26.9518 L93.1042,26.9518 Z M66.1532,26.9518 L66.1532,56.3518 L56.3532,56.3518 L56.3532,26.9518 L66.1532,26.9518 Z" id="Combined-Shape"></path>
+                 </g>
+             </g>
+         </svg>
+             </a>
+         </div>
+       </div>
+   </section>
+     <div class="cr">
+       Copyright © 2020
+       <br>The Gale (Diana Wu)
+     </div>
+ </footer>
+ <script src="/scripts/lazyload.min.js"></script>
+ <script>
+    var lazyLoadInstance = new LazyLoad({
+// Your custom settings go here
+});
+    </script>
+  <script src="/scripts/gallery.js"></script>
+  </body>
+</html>
