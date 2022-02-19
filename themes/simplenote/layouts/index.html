@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="note note-detail-markdown"
+  style="display:flex;flex-flow:row wrap;justify-content:space-around;">
+  <aside style="flex-grow:1">
+    <h3>Posts</h3>
+    <ul>
+    {{- range (where .Site.RegularPages.ByTitle "Section" "posts" ) }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{- end }}
+  </ul></aside>
+  <article style="flex-grow:3">
+    {{ .Content }}
+  </article>
+</main>
+{{ end }}

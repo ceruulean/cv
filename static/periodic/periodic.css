@@ -1,0 +1,219 @@
+/* Periodic Table of Stacks */
+:root{
+  --cellH:6rem;
+  --cellW:5rem;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+.periodic {
+  max-width:calc(9 * var(--cellW));
+  display:grid;
+  grid-template-columns:repeat(8, minmax(5%, var(--cellW)));
+  grid-template-rows:repeat(5, minmax(5%, var(--cellH)));
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+  grid-template-areas:
+  "k . . . . . . n"
+  "k i . . . o h n"
+  "k i t t t o h n"
+  "k i t t t o h n"
+  ". x x x x . . .";
+  justify-content:center;
+}
+
+div[class^="g"]{
+  cursor:pointer;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.periodic .gk{
+  grid-area:k;
+}
+.periodic .gi{
+  grid-area: i;
+}
+.periodic .gt{
+  grid-area:t;
+}
+.periodic .gh{
+  grid-area:h;
+}
+.periodic .gn{
+  grid-area:n;
+}
+.periodic .gx{
+  grid-area:x;
+}
+.periodic .go{
+  grid-area:o;
+}
+
+.periodic a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+div[class*="g"] > div{
+  position:relative;
+  border:1px solid black;
+  max-width:100%;
+  width:var(--cellW);
+  height:var(--cellH);
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position:center;
+  transition: opacity 100ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: background-color 200ms linear;
+  box-sizing: border-box;
+}
+
+.periodic div[class^="g"] > div:not(.fav){
+  filter:grayscale(0.6);
+  opacity:0.4;
+}
+
+.periodic div[class^="g"] > div:hover, .periodic div[class^="g"] > div:focus{
+  filter:none;
+  opacity:1;
+  transform:scale(1.1);
+  /* background-color:rgba(255,255,255,1); */
+}
+
+.periodic .fav{
+  opacity:1;
+  z-index:1;
+  /* background-color:rgba(255,255,255,1); */
+}
+
+.periodic aside{
+  visibility:hidden;
+  /* position:relative;
+  opacity:0; */
+  /* transition:opacity 0.3s linear; */
+  padding-bottom: 125%;
+  text-align:center;
+}
+
+.periodic caption{
+  display:none;
+}
+
+#apache{
+  background-image: url('./icon-apache.svg');
+}
+div[id^="ado"]{
+  background-size: 632% !important;
+  background-image: url('./adobe-icons.png');
+}
+#adoai{
+  background-position:44.3% -8%;
+}
+#adops{
+  background-position:22% -8%;
+}
+#adoindesign{
+  background-position:66.3% -8%;
+}
+#adopremiere{
+  background-position:88.5% -8%;
+}
+#css3{
+  background-size: cover;
+  background-image: url('./icon-css3.svg');
+}
+#directus{
+  background-image: url('./icon-directus.svg');
+}
+#electron{
+  background-image: url('./icon-electron.svg');
+}
+#eclipse{
+  background-image: url('./icon-eclipse.png');
+}
+#figma{
+  background-size: 170%;
+  background-image: url('./icon-figma.svg');
+}
+#gimp{
+  background-image: url('./icon-gimp.png');
+}
+#git{
+  background-image: url('./icon-git.svg');
+}
+#gulp{
+  background-image: url('./icon-gulp.svg');
+}
+#html5{
+  background-size: cover;
+  background-image: url('./icon-html5.svg');
+}
+#inkscape{
+  background-image: url('./icon-inkscape.svg');
+}
+#java{
+  background-image: url('./icon-java.svg');
+}
+#js{
+  background-image: url('./icon-js.svg');
+}
+#node{
+  background-image: url('./icon-node.svg');
+}
+#php{
+  background-size: cover;
+  background-image: url('./icon-php.svg');
+}
+#python{
+  background-position: 0% -80%;
+  background-size: 430%;
+  background-image: url('./icon-python.svg');
+}
+#react{
+  background-image: url('./icon-react.svg');
+}
+#sql{
+  background-size: cover;
+  background-image: url('./icon-sql.png');
+}
+#ts{
+  background-image: url('./icon-ts.svg');
+}
+#visualcode{
+  background-image: url('./icon-visualcode.svg');
+}
+#vue{
+  background-image: url('./icon-vue.svg');
+}
+#w3c{
+  background-image: url('./icon-w3c.svg');
+}
+#webpack{
+  background-image: url('./icon-webpack.svg');
+}
+#wordpress{
+  background-image: url('./icon-wordpress.svg');
+}
+
+@media only screen and (max-width:750px){
+  .periodic{
+    display:flex;
+    flex-flow:row nowrap;
+  }
+
+  .periodic div[class*="g"]{
+    display:flex;
+    flex-flow:row wrap;
+    align-content:flex-start;
+    width:10vw;
+    min-width:2rem;
+  }
+}

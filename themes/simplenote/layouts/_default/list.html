@@ -1,0 +1,10 @@
+
+{{ define "main" }}
+<article class="published-wrap no-ad-size">
+  <ul>
+    {{- range .Pages }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{- end }}
+  </ul>
+</article>
+{{ end }}
