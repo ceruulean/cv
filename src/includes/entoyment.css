@@ -1,0 +1,528 @@
+
+/*
+ELEMENT Declarations
+*/
+
+
+button{
+  cursor:pointer;
+}
+
+h1, h2 {
+  text-transform:uppercase;
+}
+
+h3, h4, h5, h6{
+  font-weight:400;
+}
+
+p{
+  width:var(--paragraphLength);
+}
+
+caption{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-evenly;
+}
+
+/*Dot Menu*/
+
+.dot-menu{
+  position:fixed;
+  z-index:10;
+  top:40%;
+  transform:translate(0, -40%);
+}
+.dot-menu ul{
+  position:relative;
+  list-style: none;
+}
+.dot-menu ul:before{
+  position:absolute;
+  opacity:0;
+  height:0;
+  width:0;
+  transition: all 300ms ease-in-out;
+  z-index:-1;
+}
+.dot-menu:focus ul:before, .dot-menu:hover ul:before{
+  opacity:1;
+  content:'';
+  width:calc(100% + 2em);
+  height:calc(100% + 10em);
+  top:-5em;
+  left:-1em;
+  position:absolute;
+  border-radius: 0px 50px 20px 0;
+  background-color:var(--bgColor);
+  z-index:-1;
+}
+
+.dot-menu li{
+  position:relative;
+  margin:0.5em auto 0.5em 1em;
+  height:1em;
+}
+
+.dot-menu a{
+  position:relative;
+  text-decoration:none;
+  text-transform:uppercase;
+  color:var(--accent1Color);
+  font-size:1.3rem;
+}
+
+.dot-menu .ghost{
+  transition: all 200ms ease-out;
+  visibility:hidden;
+  opacity:0;
+}
+
+.dot-menu li:before{
+  position:absolute;
+  content:'';
+  height:1em;
+  width:1em;
+  border-radius:50%;
+  top:-2px;
+  left:-1.5em;
+  background-color:rgba(100,100,100,0.7);
+}
+
+.dot-menu .visited.active li:before{
+  background-color:var(--accent2Color);
+}
+
+.dot-menu .visited.active .ghost{
+  color:var(--accent2Color);
+}
+
+
+.jenga-reveal h2{
+  z-index:1;
+}
+
+/*Tabby micktabtab*/
+.tabby{
+  height:4rem;
+  width:4rem;
+  border-radius: 50%;
+  background-color:#e7f6ff;
+  border: none;
+  position:relative;
+  box-shadow: 0 1px 3px var(--defaultShadow);
+}
+.tabby:after{
+  content:'';
+  height:0;
+  width:0;
+  position:absolute;
+  border-left:var(--tabbyArrowSize) solid var(--tabbyArrowColor);
+  border-top:var(--tabbyArrowSize) solid transparent;
+  border-bottom:var(--tabbyArrowSize) solid transparent;
+  top:50%;
+  transform:translate(0, -50%);
+  right:0.9rem;
+}
+
+/* Jagger Display */
+
+.jagger {
+  display:grid;
+  grid-template-areas:
+  "a b c d"
+  "e e e e";
+  grid-auto-rows: auto;
+  grid-auto-columns: min-content;
+  margin:3rem auto;
+  width:min-content;
+}
+
+.jagger section{
+  width:20vw;
+  cursor:pointer;
+  order:1;
+  transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.jagger section:first-child{
+  grid-area: a;
+}.jagger section:nth-child(3){
+  grid-area: b;
+}.jagger section:nth-child(5){
+  grid-area: c;
+}.jagger section:nth-child(7){
+  grid-area: d;
+}
+
+.jagger section > div{
+  height:500px;
+  width:100%;
+  background-color:pink;
+  opacity:0.4;
+  filter:blur(3px);
+  transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.jagger section:first-child > div{
+  transform:translate(1vw);
+  clip-path: polygon(0% 30%, 90% 20%, 97% 100%, 20% 96%);
+  -webkit-clip-path: polygon(0% 30%, 90% 20%, 97% 100%, 20% 96%);
+}
+
+.jagger section:nth-child(3) > div{
+  clip-path: polygon(4% 10%, 76% 0%, 87% 98%, 2% 90%);
+  -webkit-clip-path: polygon(4% 10%, 76% 0%, 87% 98%, 2% 90%);
+  transform:translate(3vw);
+}
+
+.jagger section:nth-child(5) > div{
+  clip-path: polygon(0% 0%, 90% 3%, 80% 93%, 7% 100%);
+  -webkit-clip-path: polygon(0% 0%, 90% 3%, 80% 93%, 7% 100%);
+  transform:translate(1vw);
+}
+
+.jagger section:nth-child(7) > div{
+  clip-path: polygon(20% 20%, 90% 15%, 97% 100%, 2% 96%);
+  -webkit-clip-path: polygon(20% 20%, 90% 15%, 97% 100%, 2% 96%);
+  transform:translate(-2vw);
+}
+
+/* .jagger section:focus, .jagger section:hover{
+  transform:scale(1.1);
+}
+
+.jagger section:focus > div, .jagger section:hover > div{
+filter:none;
+opacity:1;
+}.jagger section:focus + aside, .jagger section:hover + aside{
+  opacity:1;
+  visibility:visible;
+}
+
+.jagger section:hover + aside{
+  z-index:2;
+} */
+
+.jagger h2{
+  top:-3rem;
+}
+
+.jagger aside{
+  grid-area: e;
+  order:5;
+  visibility:hidden;
+  opacity:0;
+  transition:opacity 300ms cubic-bezier(0.19, 1, 0.22, 1);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+/*
+      Jenga Reveal
+*/
+
+.tabby:before{
+  content:'';
+  height:0;
+  width:0;
+  position:absolute;
+  border-right:var(--tabbyArrowSize) solid var(--tabbyArrowColor);
+  border-top:var(--tabbyArrowSize) solid transparent;
+  border-bottom:var(--tabbyArrowSize) solid transparent;
+  top:50%;
+  transform:translate(0, -50%);
+  left:0.9rem;
+}
+.jenga-reveal{
+  position:relative;
+  width:100%;
+  background-color:var(--primaryColor);
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+}
+
+.jenga-reveal .outer{
+  position:absolute;
+}
+
+.jenga-reveal .title{
+  text-transform: capitalize;
+  text-align:center;
+  position:absolute;
+}
+
+.jenga-reveal button{
+  position:absolute;
+  z-index:1;
+}
+
+.jenga-reveal button.left{
+  top:50%;
+  transform:translate(0, -50%);
+  right:-2rem;
+}
+.jenga-reveal button.right{
+  top:50%;
+  transform:translate(0, -50%);
+  left:-2rem;
+}
+.jenga-reveal button.top{
+  left:50%;
+  transform:translate(-50%) rotate(90deg);
+  bottom:-2rem;
+}
+.jenga-reveal button.bottom{
+  left:50%;
+  transform:translate(-50%) rotate(90deg);
+  top:-2rem;
+}
+
+.jenga-reveal:not(.active) button {
+  opacity: 0.7;
+}
+.jenga-reveal button:hover, .jenga-reveal button:focus{
+  opacity:1;
+}
+
+.jenga-reveal .swatch{
+position:relative;
+width:100%;
+height:100%;
+background-color:rgb(26, 26, 26);
+transition:transform var(--jengaRevealTransitionDuration) ease-in-out;
+box-shadow: 0 3px 6px var(--defaultShadow) inset;
+position:relative;
+height:100%;
+min-height:4rem;
+margin:0 5vw 0 5vw;
+z-index:2;
+}
+
+.jenga-reveal .inner{
+  max-width:var(--paragraphLength);
+  margin:1rem auto;
+  padding:1rem 2rem;
+}
+
+.jenga-reveal.active .swatch {
+  transform:initial;
+}
+
+.jenga-reveal.left .swatch {
+  transform:translate(-100%);
+}
+.jenga-reveal.right .swatch {
+  transform:translate(100%);
+}
+.jenga-reveal.top .swatch {
+  transform:translate(0, -100%);
+}
+.jenga-reveal.bottom .swatch {
+  transform:translate(0, 100%);
+}
+
+
+
+/*
+ Underline Reveal
+*/
+
+.underline-reveal:before{
+  content:'';
+  position:absolute;
+  top:0px;
+  height:5px;
+  width:100%;
+  border-radius:10px;
+}
+
+[class*="underline"]{
+  width:5rem;
+  height:5px;
+  margin:0 auto 0 auto;
+  transition-property: width, height;
+  transition-duration:var(--underlineRevealTransitionDuration);
+  transition-timing-function:cubic-bezier(1, 0.3, 0, 1);
+  background-color: var(--accent1Color);
+}
+
+.underline.extend{
+  width:100%;
+  max-width:100%;
+}
+
+.underline .inner{
+  position:relative;
+  margin:4px auto 0 auto;
+  padding-bottom:1rem;
+  width:100%;
+}
+
+
+.underline-reveal{
+  position:relative;
+  display:flex;
+  flex-flow:column nowrap;
+  overflow:hidden;
+}
+
+.underline-reveal.extend{
+  width:100%;
+  max-width:100%;
+}
+
+.underline-reveal caption[aria-hidden="true"]{
+  display:none;
+}
+
+.underline-reveal caption{
+  position:relative;
+  margin:4px auto 0 auto;
+  padding-bottom:1rem;
+  width:100%;
+}
+
+@keyframes slide-right-in {
+  0%{
+    transform:translate(-100%, 0);
+    display:block;
+  }
+  100%{
+    transform:translate(0, 0);
+    display:block;
+  }
+}
+
+/*Thanks https://stackoverflow.com/questions/42966641/how-to-transform-black-into-any-given-color-using-only-css-filters/43960991#43960991*/
+
+/* the container used to hide the original bg */
+
+.icon {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.squish{
+  transform:scale(0.5, 1);
+}
+/* the content */
+.icon.green>span {
+  -webkit-filter: drop-shadow(60px 0px green);
+  filter: drop-shadow(60px 0px green);
+}
+
+.icon.red>span {
+  -webkit-filter: drop-shadow(60px 0px red);
+  filter: drop-shadow(60px 0px red);
+}
+
+.icon>span {
+  -webkit-filter: drop-shadow(60px 0px black);
+  filter: drop-shadow(60px 0px black);
+  margin-left: -60px;
+  display: block;
+  width: 61px; /* +1px for chrome bug...*/
+  height: 60px;
+  background-repeat:no-repeat;
+  background-image: url('../static/star.svg');
+}
+
+.dot-menu ul{
+  transition:all 300ms linear;
+  left:-1em;
+}
+
+.dot-menu:focus ul{
+
+  max-width:initial;
+}
+
+@media only screen and (min-width:1000px){
+  /* .dot-menu .active .ghost,
+  li:hover .ghost,
+  li:focus .ghost{
+  visibility:visible;
+  opacity:1;
+  } */
+  .dot-menu:hover ul{
+    left:-1em;
+    max-width:initial;
+  }
+  .dot-menu:hover .ghost{
+    visibility:visible;
+    opacity:1;
+    color:var(--accent1Color);
+  }
+}
+
+
+@media only screen and (max-width:999px){
+  .dot-menu:before{
+    content:'';
+    height:0;
+    width:0;
+    position:absolute;
+    border-left:2.5em solid var(--accent1Color);
+    border-top:1.5em solid transparent;
+    border-bottom:1.5em solid transparent;
+    top:-3em;
+    left:0rem;
+    filter:drop-shadow(0px 2px 3px var(--defaultShadow));
+    cursor:pointer;
+    transition:transform 200ms linear, border-left 200ms linear;
+  }
+
+  .dot-menu ul{
+    left:-2.5em;
+    max-width:1em;
+  }
+
+  .dot-menu:hover:not(:focus) ul:before{
+    display:none;
+  }
+
+  .dot-menu li{
+    margin:0.8em auto 0.5em 1em;
+  }
+
+  .dot-menu li:before{
+    background-color:rgba(100,100,100,1);
+  }
+
+  .dot-menu a{
+    font-size:2rem;
+  }
+
+  .ghost{
+    text-overflow: clip;
+    max-width:1rem;
+    overflow:hidden;
+  }
+
+  .dot-menu:focus .ghost{
+    visibility:visible;
+    opacity:1;
+  }
+
+  .dot-menu:focus:before{
+    border-left:2.5em solid var(--accent2Color);
+    transform:translate(0.4rem);
+  }
+}
+
+@media only screen and (max-width:500px){
+  .dot-menu{
+    top:10vh;
+    transform:initial;
+  }
+}
+
+
+ 

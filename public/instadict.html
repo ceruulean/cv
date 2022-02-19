@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+    <title>InstaDictionary</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <style>
+.padded{
+  padding:1em;
+}
+.no-display{
+  display:none;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="ui grid padded">
+      <div class="row" style="position:fixed;z-index:2;background-color:rgb(255,255,255);">
+        <div class="column">
+            <h1>InstaDictionary</h1>
+            <div class="ui fluid input left icon" id="searchLoader">
+                <input id="searchBar" type="text" placeholder="Search..." value="apple">
+                <i class="search icon"></i>
+              </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:10em;">
+        <div class="column">
+          <div class="ui cards" id="cardInsertion">
+
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        
+        <!-- When this element enters the viewport, it will trigger a network request-->
+        <div id="endDetector" style="height:50vh;width:100%;position:absolute;bottom:0;"
+        class="no-display">
+
+        </div>
+      </div>
+    </div>
+
+  <template id="phCard">
+  <div class="ui card">
+    <div class="image">
+      <div class="ui placeholder lazy">
+        <div class="square image"></div>
+      </div>
+    </div>
+      <div class="content">
+        <div class="ui placeholder caption">
+          <div class="paragraph">
+            <div class="full line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </template>
+
+
+    <script src="instadict.js">
+    </script>
+  </body>
+</html>
