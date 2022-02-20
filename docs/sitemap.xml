@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/portfolio/open-source/</loc>
+    <loc>https://ceruulean.github.io/cvage/portfolio/open-source/</loc>
     <lastmod>2022-02-19T15:54:44-05:00</lastmod>
   </url><url>
-    <loc>http://example.org/portfolio/accessibility/</loc>
+    <loc>https://ceruulean.github.io/cvage/portfolio/accessibility/</loc>
     <lastmod>2022-02-19T14:08:43-05:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://ceruulean.github.io/cvage/</loc>
     <lastmod>2022-02-19T18:37:22-05:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://ceruulean.github.io/cvage/posts/</loc>
     <lastmod>2022-02-19T18:37:22-05:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/resume/</loc>
+    <loc>https://ceruulean.github.io/cvage/posts/resume/</loc>
     <lastmod>2022-02-19T18:37:22-05:00</lastmod>
   </url><url>
-    <loc>http://example.org/portfolio/</loc>
+    <loc>https://ceruulean.github.io/cvage/portfolio/</loc>
     <lastmod>2022-02-19T15:54:44-05:00</lastmod>
   </url><url>
-    <loc>http://example.org/portfolio/how-to-port-forwarding/</loc>
+    <loc>https://ceruulean.github.io/cvage/portfolio/how-to-port-forwarding/</loc>
     <lastmod>2022-02-15T23:53:08-05:00</lastmod>
   </url><url>
-    <loc>http://example.org/portfolio/wordless/</loc>
+    <loc>https://ceruulean.github.io/cvage/portfolio/wordless/</loc>
     <lastmod>2020-11-12T06:43:00-05:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://ceruulean.github.io/cvage/categories/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://ceruulean.github.io/cvage/tags/</loc>
   </url>
 </urlset>

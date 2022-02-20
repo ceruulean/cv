@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://ceruulean.github.io/cvage/'
 languageCode = 'en-us'
 title = 'Diana Wu'
 theme = 'simplenote'

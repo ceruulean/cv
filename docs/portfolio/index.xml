@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portfolios on Diana Wu</title>
-    <link>http://example.org/portfolio/</link>
+    <link>https://ceruulean.github.io/cvage/portfolio/</link>
     <description>Recent content in Portfolios on Diana Wu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Feb 2022 15:54:44 -0500</lastBuildDate><atom:link href="http://example.org/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Feb 2022 15:54:44 -0500</lastBuildDate><atom:link href="https://ceruulean.github.io/cvage/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Open Source</title>
-      <link>http://example.org/portfolio/open-source/</link>
+      <link>https://ceruulean.github.io/cvage/portfolio/open-source/</link>
       <pubDate>Sat, 19 Feb 2022 15:54:44 -0500</pubDate>
       
-      <guid>http://example.org/portfolio/open-source/</guid>
+      <guid>https://ceruulean.github.io/cvage/portfolio/open-source/</guid>
       <description>Write in Markdown, then automate manuscript formatting to be ready for publisher submissions.</description>
     </item>
     
     <item>
       <title>HTML5 Accessibility</title>
-      <link>http://example.org/portfolio/accessibility/</link>
+      <link>https://ceruulean.github.io/cvage/portfolio/accessibility/</link>
       <pubDate>Sat, 19 Feb 2022 14:08:43 -0500</pubDate>
       
-      <guid>http://example.org/portfolio/accessibility/</guid>
+      <guid>https://ceruulean.github.io/cvage/portfolio/accessibility/</guid>
       <description>1. Use named element tags These tags are more descriptive than &amp;lt;div&amp;gt;.
 &amp;lt;header&amp;gt; &amp;lt;nav&amp;gt;
 &amp;lt;main&amp;gt; &amp;lt;section&amp;gt; &amp;lt;article&amp;gt; &amp;lt;aside&amp;gt; &amp;lt;form&amp;gt; &amp;lt;blockquote&amp;gt;
@@ -34,10 +34,10 @@
     
     <item>
       <title>Enable Port Forwarding for IPFS on a Fios router</title>
-      <link>http://example.org/portfolio/how-to-port-forwarding/</link>
+      <link>https://ceruulean.github.io/cvage/portfolio/how-to-port-forwarding/</link>
       <pubDate>Tue, 15 Feb 2022 23:53:08 -0500</pubDate>
       
-      <guid>http://example.org/portfolio/how-to-port-forwarding/</guid>
+      <guid>https://ceruulean.github.io/cvage/portfolio/how-to-port-forwarding/</guid>
       <description>.note img{border:1px solid black;} If you use an IPv4 address and want to share files using the InterPlanetary File System protocol on your home network, the recommended way is to set port forwarding.
 Port forwarding on the router is manufacturer-specific, so this quick guide shows how to do it with Verizon Fios.
 Typically most routers use https://192.168.1.1/ as their admin access IP address.
@@ -46,10 +46,10 @@ Typically most routers use https://192.168.1.1/ as their admin access IP address
     
     <item>
       <title>Wordless Instructions</title>
-      <link>http://example.org/portfolio/wordless/</link>
+      <link>https://ceruulean.github.io/cvage/portfolio/wordless/</link>
       <pubDate>Thu, 12 Nov 2020 06:43:00 -0500</pubDate>
       
-      <guid>http://example.org/portfolio/wordless/</guid>
+      <guid>https://ceruulean.github.io/cvage/portfolio/wordless/</guid>
       <description>Create an instruction set for a hypothetical machine that can make plants grow. Cannot use words.  Direct link to PDF.
 Drawn with Adobe Illustrator.</description>
     </item>
