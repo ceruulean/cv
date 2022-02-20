@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* CSS compiled from SCSS - Do not edit .css directly.  Styles © Simperium  */
+html { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; }
+time {font-size:0.8em;opacity:0.6;}
+a { color: #4895d9; }
+
+.published-wrap { margin: 0 auto; }
+.published-wrap.ad-size { max-width: 971px; }
+.published-wrap.no-ad-size { max-width: 832px; }
+.published-wrap img { max-width: 100%; height: auto; }
+
+.published-top { color: #333333; font-size: 14px; text-align: center; padding: 12px 10px 100px; }
+.published-top a, .published-top a:link, .published-top a:visited { color: #333333; border-bottom: none; font-weight: normal; text-decoration: none; }
+
+.logo { background: url(/img/logo.png) no-repeat left top; background-size: 18px; padding: 0px 0 9px 25px; margin: -9px 0; }
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (min-width: 600px) { .logo { background: url(/img/logo@2x.png) no-repeat left top; background-size: 18px; } }
+
+.wrapper { position: relative; }
+
+.note { position: relative; padding: 40px 20px; font-size: 18px; line-height: 1.6em; min-height: 440px; }
+.ad-size .note { margin-left: 139px; }
+.note .tab { width: 2em; display: inline-block; }
+@media print { .note { /* make sure background graphics get printed */ }
+  .note li.checklist-item span { -webkit-print-color-adjust: exact !important; /* Chrome, Safari */ color-adjust: exact !important; /*Firefox*/ } }
+
+#published_footer { position: static; margin-top: 16px; padding-bottom: 15px; text-align: center; }
+#published_footer .footer-copyright { width: 100%; margin: 0 auto 10px; text-align: center; float: none; }
+#published_footer li { float: none; display: inline-block; }
+#published_footer .first-footer-link { clear: both; }
+
+.note-detail-markdown { user-select: auto; font-size: 18px; line-height: 1.7; word-wrap: break-word; }
+.note-detail-markdown h1, .note-detail-markdown h2, .note-detail-markdown h3, .note-detail-markdown h4, .note-detail-markdown h5, .note-detail-markdown h6, .note-detail-markdown #title { line-height: 1.15; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; margin: 1.7em 0 1em 0; }
+.note-detail-markdown h1, .note-detail-markdown #title { font-size: 2.2em; }
+.note-detail-markdown h1:first-of-type, .note-detail-markdown #title:first-of-type { margin-top: 0; }
+.note-detail-markdown h2 { font-size: 1.8em; }
+.note-detail-markdown h3 { font-size: 1.4em; }
+.note-detail-markdown h4 { font-size: 1.2em; }
+.note-detail-markdown h5, .note-detail-markdown h6 { font-size: 1em; text-transform: uppercase; }
+.note-detail-markdown #title { margin-bottom: 0.5em; font-weight: bold; }
+.note-detail-markdown p, .note-detail-markdown ul, .note-detail-markdown ol, .note-detail-markdown blockquote, .note-detail-markdown pre, .note-detail-markdown table, .note-detail-markdown img { margin-bottom: 1.7em; box-sizing: border-box; }
+.note-detail-markdown hr { border: 0; margin: 3.4em 0; color: #4895d9; height: 1em; }
+.note-detail-markdown hr:before { content: '...'; display: block; width: 100%; letter-spacing: 2em; text-indent: 2em; z-index: 1; line-height: .5; text-align: center; }
+.note-detail-markdown blockquote { border-left: 4px solid currentColor; margin-left: 0; padding-left: 1.7em; font-family: 'Noto Serif', serif;}
+.note-detail-markdown code { font-size: 85%; background: #f1f2f3; border-radius: 3px; background: #f6f7f8; overflow-x: auto; display: inline; }
+.note-detail-markdown p code { display: inline; padding: 4px; color: #616870; }
+.note-detail-markdown pre { padding: 1em; border-radius: 3px; background: #f6f7f8; }
+.note-detail-markdown pre code { color: #616870; background: transparent; display: block; padding: 1em; }
+.note-detail-markdown table { border-collapse: collapse; border-spacing: 0; display: block; width: 100%; }
+.note-detail-markdown table tr:nth-child(2n) { background-color: #f6f7f8; }
+.note-detail-markdown table th, .note-detail-markdown table td { border: 1px solid #c0c4c8; padding: 6px 13px; }
+.note-detail-markdown table th { font-weight: 600; }
+.note-detail-markdown > ul { /* outer-most lists align to the left of the page */ margin-left: -40px; /* align the text with normal (non-checklist) lists; 28px is the size of the left padding */ }
+.note-detail-markdown > ul > li.checklist-item { margin-left: -28px; }
+.note-detail-markdown ul ul, .note-detail-markdown li p { /* remove padding from blocks within list items */ margin-bottom: 0; }
+.note-detail-markdown li p:last-child { margin-bottom: 1.7em; }
+.note-detail-markdown li.checklist-item { list-style: none; margin-left: 0; }
+.note-detail-markdown span.task-list-item-unchecked { background-image: url(/img/circle.svg); background-repeat: no-repeat; background-position: left center; background-size: 24px; padding-left: 28px; }
+.note-detail-markdown span.task-list-item-checked { background-image: url(/img/checkmark.svg); background-repeat: no-repeat; background-position: left center; background-size: 24px; padding-left: 28px; }
+@media only screen and (max-width: 480px) { .note-detail-markdown { font-size: 16px; }
+  .note-detail-markdown h1, .note-detail-markdown h2, .note-detail-markdown h3, .note-detail-markdown h4, .note-detail-markdown h5, .note-detail-markdown h6, .note-detail-markdown #title { margin: 1.19em 0 0.7em 0; }
+  .note-detail-markdown #title { margin-bottom: 0; } }
+
+img[src$='#floatleft']
+{
+float:left;
+margin:10px 15px;
+}
+
+img[src$='#floatright']
+{
+float:right;
+margin:10px 15px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  clear:both;
+}
