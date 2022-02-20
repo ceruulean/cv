@@ -30,7 +30,7 @@ function setAttributes(element, attrList){
 let programs = [
 ["html5","k",``,],
 ["figma","k","",],
-["adoai","k","",],
+["adoai","k","", "/portfolio/wordless"],
 ["inkscape","k","",],
 
 ["w3c","i","",],
@@ -46,17 +46,17 @@ let programs = [
 ["directus","t","",],
 ["python","t","",],
 
-["git","x","",],
+["git","x","","https://github.com/ceruulean"],
 ["java","x","",],
 ["sql","x","",],
-["apache", "x","",],
+["linkedin", "x","","https://www.linkedin.com/in/dcwu/"],
 
-["wordpress","o","",],
+["word","o","","/portfolio/how-to-port-forwarding/"],
 ["gulp","o","",],
 ["electron","o","",],
 
 ["vue","h","",],
-["react","h","",],
+["gep","h","", "/posts/resume/"],
 ["webpack","h","",],
 
 ["css3","n","",],
@@ -97,11 +97,11 @@ let cells = [];
 
 let caption = "";
 
-let createDiv = (name, block, text, fav) => {
+let createDiv = (name, block, text, link) => {
   let c = createElementAttr('div',
   {
-    id: name,
-    class: (fav ? 'fav': null),
+    id: link? name : '',
+    // class: (fav ? 'fav': null),
    // tabIndex: -1,
     role: `cell`,
     'aria-label':name,
@@ -109,12 +109,14 @@ let createDiv = (name, block, text, fav) => {
   sect[block].appendChild(c);
   cells.push(c);
 
-  let uh = createElementAttr('a', {
-    'aria-label': `aside`,
-  })
-
-  uh.innerHTML = text;
-  c.appendChild(uh);
+  if (link) {
+    let uh = createElementAttr('a', {
+      'aria-label': `aside`,
+      'href': (link? link : "#")
+    })
+    uh.innerHTML = text;
+    c.appendChild(uh);
+  }
   caption += ` ${name}`;
 }
 

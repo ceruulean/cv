@@ -25,7 +25,6 @@
 }
 
 div[class^="g"]{
-  cursor:pointer;
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -143,6 +142,11 @@ div[id^="ado"]{
   background-size: 170%;
   background-image: url('./icon-figma.svg');
 }
+#gep{
+  background-position: 0.6% 0%;
+  background-size: 570%;
+  background-image: url('./icon-gep.svg');
+}
 #gimp{
   background-image: url('./icon-gimp.png');
 }
@@ -164,6 +168,9 @@ div[id^="ado"]{
 }
 #js{
   background-image: url('./icon-js.svg');
+}
+#linkedin{
+  background-image: url('./icon-linkedin.svg');
 }
 #node{
   background-image: url('./icon-node.svg');
@@ -198,6 +205,9 @@ div[id^="ado"]{
 }
 #webpack{
   background-image: url('./icon-webpack.svg');
+}
+#word{
+  background-image: url('./icon-word.svg');
 }
 #wordpress{
   background-image: url('./icon-wordpress.svg');

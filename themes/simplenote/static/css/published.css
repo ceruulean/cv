@@ -59,3 +59,19 @@ a { color: #4895d9; }
 @media only screen and (max-width: 480px) { .note-detail-markdown { font-size: 16px; }
   .note-detail-markdown h1, .note-detail-markdown h2, .note-detail-markdown h3, .note-detail-markdown h4, .note-detail-markdown h5, .note-detail-markdown h6, .note-detail-markdown #title { margin: 1.19em 0 0.7em 0; }
   .note-detail-markdown #title { margin-bottom: 0; } }
+
+img[src$='#floatleft']
+{
+float:left;
+margin:10px 15px;
+}
+
+img[src$='#floatright']
+{
+float:right;
+margin:10px 15px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  clear:both;
+}

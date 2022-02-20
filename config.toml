@@ -1,7 +1,8 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Diana Wu'
 theme = 'simplenote'
+description = '進める'
 
 [markup]
   [markup.goldmark]
