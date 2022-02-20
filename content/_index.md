@@ -1,3 +1,5 @@
-# I've gotten better at it
+# What's in
+
+an entry level portfolio
 
 {{< periodic >}}

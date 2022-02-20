@@ -30,7 +30,7 @@ function setAttributes(element, attrList){
 let programs = [
 ["html5","k",``,],
 ["figma","k","",],
-["adoai","k","", "/portfolio/wordless"],
+["adoai","k","", "/cvage/portfolio/wordless"],
 ["inkscape","k","",],
 
 ["w3c","i","",],
@@ -51,12 +51,12 @@ let programs = [
 ["sql","x","",],
 ["linkedin", "x","","https://www.linkedin.com/in/dcwu/"],
 
-["word","o","","/portfolio/how-to-port-forwarding/"],
+["word","o","","/cvage/portfolio/how-to-port-forwarding/"],
 ["gulp","o","",],
 ["electron","o","",],
 
 ["vue","h","",],
-["gep","h","", "/posts/resume/"],
+["gep","h","", "/cvage/posts/resume/"],
 ["webpack","h","",],
 
 ["css3","n","",],

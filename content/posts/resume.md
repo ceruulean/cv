@@ -3,6 +3,8 @@ title: "Resume"
 date: 2022-02-19T18:37:22-05:00
 ---
 
+[Download PDF Resume](/cvage/portfolio/2022-02_resume_lit.pdf)
+
 ## GEP Worldwide
 
 *Intern* March 2021 - Present
@@ -17,7 +19,7 @@ Write bite-sized explanations of GEP Software's current engineering projects. Sh
 
 #### Patent drafter
 
-The inventor should provide math equations in LaTeX notation. Alternatively, you can send over a Markdown document with Tex equations. See [Upmath Markdown & LaTeX Editor](https://upmath.me/).
+The inventor should provide math equations in LaTeX notation. Alternatively, they can send over a Markdown document with Tex equations. See [Upmath Markdown & LaTeX Editor](https://upmath.me/).
 
 Use [Upmath Online Editor](https://i.upmath.me/) to generate high quality SVGs from LaTeX.
 
