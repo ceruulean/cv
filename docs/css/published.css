@@ -39,7 +39,7 @@ a { color: #4895d9; }
 .note-detail-markdown #title { margin-bottom: 0.5em; font-weight: bold; }
 .note-detail-markdown p, .note-detail-markdown ul, .note-detail-markdown ol, .note-detail-markdown blockquote, .note-detail-markdown pre, .note-detail-markdown table, .note-detail-markdown img { margin-bottom: 1.7em; box-sizing: border-box; }
 .note-detail-markdown hr { border: 0; margin: 3.4em 0; color: #4895d9; height: 1em; }
-.note-detail-markdown hr:before { content: '...'; display: block; width: 100%; letter-spacing: 2em; text-indent: 2em; z-index: 1; line-height: .5; text-align: center; }
+.note-detail-markdown hr:before { content: '\273B\273B\273B'; display: block; width: 100%; letter-spacing: 2em; text-indent: 2em; z-index: 1; line-height: .5; text-align: center; }
 .note-detail-markdown blockquote { border-left: 4px solid currentColor; margin-left: 0; padding-left: 1.7em; font-family: 'Noto Serif', serif;}
 .note-detail-markdown code { font-size: 85%; background: #f1f2f3; border-radius: 3px; background: #f6f7f8; overflow-x: auto; display: inline; }
 .note-detail-markdown p code { display: inline; padding: 4px; color: #616870; }
@@ -49,7 +49,7 @@ a { color: #4895d9; }
 .note-detail-markdown table tr:nth-child(2n) { background-color: #f6f7f8; }
 .note-detail-markdown table th, .note-detail-markdown table td { border: 1px solid #c0c4c8; padding: 6px 13px; }
 .note-detail-markdown table th { font-weight: 600; }
-.note-detail-markdown > ul { /* outer-most lists align to the left of the page */ margin-left: -40px; /* align the text with normal (non-checklist) lists; 28px is the size of the left padding */ }
+.note-detail-markdown > ul { /* outer-most lists align to the left of the page */ margin-left: -1rem; /* align the text with normal (non-checklist) lists; 28px is the size of the left padding */ }
 .note-detail-markdown > ul > li.checklist-item { margin-left: -28px; }
 .note-detail-markdown ul ul, .note-detail-markdown li p { /* remove padding from blocks within list items */ margin-bottom: 0; }
 .note-detail-markdown li p:last-child { margin-bottom: 1.7em; }

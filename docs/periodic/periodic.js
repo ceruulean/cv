@@ -28,9 +28,9 @@ function setAttributes(element, attrList){
 }
 
 let programs = [
-["html5","k",``,],
+["html5","k","Accessibility in HTML5","/cvage/pages/accessibility"],
 ["figma","k","",],
-["adoai","k","", "/cvage/portfolio/wordless"],
+["adoai","k","Wordless Help Manual", "/cvage/portfolio/wordless"],
 ["inkscape","k","",],
 
 ["w3c","i","",],
@@ -40,29 +40,30 @@ let programs = [
 ["adoindesign","t","",],
 ["eclipse", "t","",],
 
-["adopremiere","t","",],
-["visualcode", "t","",],
+["word","t","Port forwarding user guide","/cvage/portfolio/how-to-port-forwarding/"],
+["visualcode", "t","No link for this.","/cvage/pages/resume/"],
 
 ["directus","t","",],
-["python","t","",],
+["node","t","",],
 
 ["git","x","","https://github.com/ceruulean"],
 ["java","x","",],
 ["sql","x","",],
 ["linkedin", "x","","https://www.linkedin.com/in/dcwu/"],
 
-["word","o","","/cvage/portfolio/how-to-port-forwarding/"],
-["gulp","o","",],
-["electron","o","",],
+["powershell","o","","/cvage/portfolio/powershell/"],
+["gulp","o","",""],
+["adopremiere","o","",],
 
-["vue","h","",],
-["gep","h","", "/cvage/posts/resume/"],
+
+["python","h","", "/cvage/portfolio/python"],
+["gep","h","Currently working at GEP", "/cvage/pages/resume/"],
 ["webpack","h","",],
 
-["css3","n","",],
-["js","n","",],
+["css3","n","No page for this.","/cvage/pages/resume/"],
+["js","n","JavaScript project","/cvage/portfolio/js/"],
 ["ts","n","",],
-["node","n","",],
+["vue","n","Vue project", "/cvage/portfolio/zdog-scope/"],
 ]
 
 // "k . . . . . . n"
@@ -112,9 +113,10 @@ let createDiv = (name, block, text, link) => {
   if (link) {
     let uh = createElementAttr('a', {
       'aria-label': `aside`,
-      'href': (link? link : "#")
+      'href': (link? link : "#"),
+      'title': (text? text : name)
     })
-    uh.innerHTML = text;
+    // uh.innerHTML = text;
     c.appendChild(uh);
   }
   caption += ` ${name}`;

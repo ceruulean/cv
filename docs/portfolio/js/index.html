@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us"><meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript Projects - Diana Wu</title>
+<meta name="description" content=""><meta name="robots" content="index, follow"><link rel="shortcut icon" href="https://ceruulean.github.io/cvage/favicon.ico">
+<link rel="stylesheet" href='https://ceruulean.github.io/cvage/css/published.css'><body>
+        <div id="content published-wrap">
+<article class="published-wrap no-ad-size">
+  <div class="note note-detail-markdown">
+    <h1>JavaScript Projects</h1>
+    <p>Click and drag to rotate.</p>
+<style>
+.zdog-canvas {
+background: transparent;
+cursor: move;
+}</style>
+
+
+<canvas class="zdog-canvas" width="600px" height="600px"></canvas>
+<table>
+  <tr>
+    <th>
+      Pose
+    </th>
+    <td>
+      <button value="reset" onclick="Polly.animation.transition.standFlat()">Stand Flat</button>
+      <button value="reset" onclick="flightForm()">In Flight</button>
+      <button value="reset" onclick="Polly.animation.leg.curlToes()">Curl Toes</button>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Wings
+    </th>
+    <td>
+      <button value="fold" onclick="foldWings()">Fold Wings</button>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Mouth
+    </th>
+    <td>
+      <button value="reset" onclick="Polly.animation.face.chew()">Chew</button>
+      <button value="reset" onclick="Polly.animation.head.nod()">Nod</button>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Loops
+    </th>
+    <td>
+      <button value="reset" onclick="Polly.animation.face.blinkLoop()">Blink Loop</button>
+      <button value="reset" onclick="Polly.animation.idle.default()">Idle Loop</button>
+    </td>
+  </tr>
+</table>
+
+<button value="reset" onclick="Polly.reset()">Reset</button>
+
+
+<script src='https://ceruulean.github.io/cvage/zdog/zdog.dist.min.js'></script>
+<script src='https://ceruulean.github.io/cvage/zdog/anim_util.js'></script>
+<script src='https://ceruulean.github.io/cvage/zdog/anime.min.js'></script>
+<script src='https://ceruulean.github.io/cvage/zdog/ola.js'></script>
+<script src='https://ceruulean.github.io/cvage/zdog/parrot.js'></script>
+<script>
+  Polly.animation.face.blinkLoop();
+  Polly.animation.idle.default();
+  Polly.animation.transition.standFlat();
+</script>
+</body>
+</html>
+<hr>
+<p>Another abandoned personal project. Supposed to be a virtual pet, got distracted with design and modeling.</p>
+<h3 id="uses-these-libraries">Uses these libraries</h3>
+<ul>
+<li><a href="https://zzz.dog/">Zdog</a></li>
+<li><a href="https://github.com/franciscop/ola/">Ola</a></li>
+<li><a href="https://animejs.com/">anime js</a></li>
+</ul>
+
+    <time datetime="2020-11-15 21:08:44 -0500 EST">Sunday, Nov 15, 2020</time>
+  </div>
+</article>
+
+
+        </div><footer style="display:flex;justify-content:center;padding-bottom:5rem;">
+  <a href="https://ceruulean.github.io/cvage/">Home</a>
+</footer>
+    </body>
+</html>
