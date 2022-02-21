@@ -2,6 +2,9 @@
 :root{
   --cellH:6rem;
   --cellW:5rem;
+  --borderInactive: 2px solid rgba(0,0,0,0.1);
+  --cellBg: white;
+  --gFrontEnd: #2f69fc;
 }
 
 * {
@@ -35,6 +38,9 @@ div[class^="g"]{
 .periodic .gk{
   grid-area:k;
 }
+/* .periodic .gk > div{
+  border-color:#ef8145;
+} */
 .periodic .gi{
   grid-area: i;
 }
@@ -47,9 +53,18 @@ div[class^="g"]{
 .periodic .gn{
   grid-area:n;
 }
+/* .periodic .gn > div{
+  border-color:var(--gFrontEnd)
+}
+#html5{
+  border-color:var(--gFrontEnd)
+} */
 .periodic .gx{
   grid-area:x;
 }
+/* .periodic .gx > div{
+  border-color:#efb3ea;
+} */
 .periodic .go{
   grid-area:o;
 }
@@ -62,29 +77,33 @@ div[class^="g"]{
 
 div[class*="g"] > div{
   position:relative;
-  border:1px solid black;
+  border:var(--borderInactive);
   max-width:100%;
   width:var(--cellW);
   height:var(--cellH);
   background-repeat:no-repeat;
   background-size: contain;
   background-position:center;
-  transition: opacity 100ms ease-in;
-  transition: transform 200ms ease-in;
-  transition: background-color 200ms linear;
+  background-color:var(--cellBg);
+  transition: opacity 50ms ease-in, transform 100ms ease-in, background-color 100ms linear;
   box-sizing: border-box;
 }
 
 .periodic div[class^="g"] > div:not(.fav){
   filter:grayscale(0.6);
-  opacity:0.4;
+  /* opacity:0.4; */
+
 }
 
 .periodic div[class^="g"] > div:hover, .periodic div[class^="g"] > div:focus{
   filter:none;
   opacity:1;
   transform:scale(1.1);
+  border-width:2px;
+  border-style: solid;
+  border-color: var(--gFrontEnd);
   /* background-color:rgba(255,255,255,1); */
+  z-index:3;
 }
 
 .periodic .fav{
@@ -179,9 +198,12 @@ div[id^="ado"]{
   background-size: cover;
   background-image: url('./icon-php.svg');
 }
+#powershell{
+  background-image: url('./icon-powershell.svg');
+}
 #python{
-  background-position: 0% -80%;
-  background-size: 430%;
+  background-position: 0 -60%;
+  background-size: 129%;
   background-image: url('./icon-python.svg');
 }
 #react{
@@ -223,7 +245,14 @@ div[id^="ado"]{
     display:flex;
     flex-flow:row wrap;
     align-content:flex-start;
-    width:10vw;
+    width:11vw;
     min-width:2rem;
+  }
+
+  .periodic div[role="cell"]:not(:last-child){
+    border-bottom: 0;
+  }
+  .periodic div[role="cell"]:hover{
+    border-bottom: var(--border);
   }
 }

@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Diana Wu'
 theme = 'simplenote'
 description = '進める'
+canonifyURLs = true
 
 [markup]
   [markup.goldmark]

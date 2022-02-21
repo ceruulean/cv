@@ -2,9 +2,9 @@
 <main class="note note-detail-markdown"
   style="display:flex;flex-flow:row wrap;justify-content:space-around;">
   <aside style="flex-grow:1">
-    <h3>Posts</h3>
+    <h3>Pages</h3>
     <ul>
-    {{- range (where .Site.RegularPages.ByTitle "Section" "posts" ) }}
+    {{- range (where .Site.RegularPages.ByTitle "Section" "pages" ) }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{- end }}
   </ul></aside>
@@ -12,4 +12,8 @@
     {{ .Content }}
   </article>
 </main>
+{{ end }}
+
+{{ define "footer" }}
+<!---->
 {{ end }}

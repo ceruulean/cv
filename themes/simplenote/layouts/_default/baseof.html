@@ -2,10 +2,10 @@
 <html lang="{{ .Site.LanguageCode | default "en" }}">
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
+        {{- block "header" . }}{{- partial "header.html" . -}}{{- end }}
         <div id="content published-wrap">
         {{- block "main" . }}{{- end }}
         </div>
-        {{- partial "footer.html" . -}}
+        {{- block "footer" . }}{{- partial "footer.html" . -}}{{- end }}
     </body>
 </html>

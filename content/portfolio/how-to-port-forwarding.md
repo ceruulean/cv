@@ -22,7 +22,7 @@ Typically most routers use `https://192.168.1.1/` as their admin access IP addre
 
 ## Create a rule for IPFS
 
-Under **Create new port forwarding rule:** select your device’s name. If you don’t know the device name, please refer to the article Look Up Your Computer's Device Name.
+Under **Create new port forwarding rule:** select your device’s name. If you don’t know the device name, please refer to the article [Look Up Your Computer's Device Name](https://it.cornell.edu/citsg/look-your-computers-device-name).
 
 In the second dropdown, select **Custom Ports** **TCP** and set it to `4001` (the default IPFS port)
 

@@ -58,7 +58,7 @@ If you cannot use HTML tag names for some reason, or you need additional specifi
 
 ### 2a. Labels
 
-Use `aria-label="Close"` to lavel the purpose of interactive elements and buttons without inner text.
+Use `aria-label="Close"` to label the purpose of interactive elements and buttons without inner text. In this case, `"Close"` for a button that closes something.
 
 `<Element aria-labelledby="idOfAnotherElement" />` if another element contains text that describes this element.
 

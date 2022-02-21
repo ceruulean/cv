@@ -1,0 +1,62 @@
+<style>
+.zdog-canvas {
+background: transparent;
+cursor: move;
+}</style>
+
+
+<canvas class="zdog-canvas" width="600px" height="600px"></canvas>
+<table>
+  <tr>
+    <th>
+      Pose
+    </th>
+    <td>
+      <button value="reset" onclick="Polly.animation.transition.standFlat()">Stand Flat</button>
+      <button value="reset" onclick="flightForm()">In Flight</button>
+      <button value="reset" onclick="Polly.animation.leg.curlToes()">Curl Toes</button>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Wings
+    </th>
+    <td>
+      <button value="fold" onclick="foldWings()">Fold Wings</button>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Mouth
+    </th>
+    <td>
+      <button value="reset" onclick="Polly.animation.face.chew()">Chew</button>
+      <button value="reset" onclick="Polly.animation.head.nod()">Nod</button>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Loops
+    </th>
+    <td>
+      <button value="reset" onclick="Polly.animation.face.blinkLoop()">Blink Loop</button>
+      <button value="reset" onclick="Polly.animation.idle.default()">Idle Loop</button>
+    </td>
+  </tr>
+</table>
+
+<button value="reset" onclick="Polly.reset()">Reset</button>
+
+
+<script src='{{ "zdog/zdog.dist.min.js" | absURL }}'></script>
+<script src='{{ "zdog/anim_util.js" | absURL }}'></script>
+<script src='{{ "zdog/anime.min.js" | absURL }}'></script>
+<script src='{{ "zdog/ola.js" | absURL }}'></script>
+<script src='{{ "zdog/parrot.js" | absURL }}'></script>
+<script>
+  Polly.animation.face.blinkLoop();
+  Polly.animation.idle.default();
+  Polly.animation.transition.standFlat();
+</script>
+</body>
+</html>
