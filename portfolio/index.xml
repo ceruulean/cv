@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Portfolios on Diana Wu</title><link>https://ceruulean.github.io/cvage/portfolio/</link><description>Recent content in Portfolios on Diana Wu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 20 Feb 2022 22:48:00 -0500</lastBuildDate><atom:link href="https://ceruulean.github.io/cvage/portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>PowerShell Projects</title><link>https://ceruulean.github.io/cvage/portfolio/powershell/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/powershell/</guid><description>Prose Grinder Pandoc Templates Contributor of PowerShell port.
+Premade scripts to format text for traditional (book) publishing, using Pandoc&amp;rsquo;s templating features.
+Formatted nonfiction and fiction manuscripts looks suspiciously similar to Markdown. Hence, in order to make the process less tedious for authors, we recommend writing in Markdown in the first place. Many authors use Windows, so a Windows-compatible port of the Prose Grinder utilities are needed.</description></item><item><title>Python Projects</title><link>https://ceruulean.github.io/cvage/portfolio/python/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/python/</guid><description>Confluence Stale Reminder (WIP) This is a utility for finding stale pages (pages which are over 6 months old) and emailing people to update them.
+Source
+Future: Archiving capabilities.
+MkDocs Material Codelab Theme This theme is perfect for all task-based documentation: procedures, cookbooks, tutorials, and checklists.
+👉 Demo
+It is a derivation of Hugo Codelab Themes (which are clones of an older version of Google Codelabs), which can integrate and look consistent with MkDocs Material Theme.</description></item><item><title>Enable Port Forwarding for IPFS on a Fios router</title><link>https://ceruulean.github.io/cvage/portfolio/how-to-port-forwarding/</link><pubDate>Tue, 15 Feb 2022 23:53:08 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/how-to-port-forwarding/</guid><description>.note img{border:1px solid black;} If you use an IPv4 address and want to share files using the InterPlanetary File System protocol on your home network, the recommended way is to set port forwarding.
+Port forwarding on the router is manufacturer-specific, so this quick guide shows how to do it with Verizon Fios.
+Typically most routers use https://192.168.1.1/ as their admin access IP address.
+Open a browser and go to the address https://192.</description></item><item><title>Zdog Scope</title><link>https://ceruulean.github.io/cvage/portfolio/zdog-scope/</link><pubDate>Sat, 17 Apr 2021 19:33:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/zdog-scope/</guid><description>Create Zdog graphics with a 3D editor.
+Figure 1: A sphere that shows the major axis.
+Demo of Editor Press the &amp;ldquo;Demo&amp;rdquo; button on the top to load a sample model. GitHub Page
+Features Import/Export JSON Tree view w/ draggable sort Assign name and edit properties (double click) Controls Zoom: Mousewheel Panning: Shift + drag or MMB + drag Rotate: Click + drag Undo: Ctrl + Z Redo: Ctrl + Y or Ctrl + Shift + Z Generate code embed In the left panel, click on &amp;ldquo;Embed Dream&amp;rdquo; under the tree view Copy HTML output and paste into a document.</description></item><item><title>JavaScript Projects</title><link>https://ceruulean.github.io/cvage/portfolio/js/</link><pubDate>Sun, 15 Nov 2020 21:08:44 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/js/</guid><description>Click and drag to rotate.
+.zdog-canvas {
+background: transparent;
+cursor: move;
+}
+Pose
+Stand Flat
+In Flight
+Curl Toes
+Wings
+Fold Wings
+Mouth
+Chew
+Nod
+Loops
+Blink Loop
+Idle Loop
+Reset
+Polly.animation.face.blinkLoop();
+Polly.animation.idle.default();
+Polly.animation.transition.standFlat();
+Another abandoned personal project.</description></item><item><title>Wordless Instructions</title><link>https://ceruulean.github.io/cvage/portfolio/wordless/</link><pubDate>Thu, 12 Nov 2020 06:43:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/wordless/</guid><description>Create an instruction set for a hypothetical machine that can make plants grow. Cannot use words. Direct link to PDF.
+Drawn with Adobe Illustrator.</description></item></channel></rss>

@@ -1,0 +1,66 @@
+<!doctype html><html lang=en-us><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>HTML5 Accessibility - Diana Wu</title>
+<meta name=description content><meta name=robots content="index, follow"><link rel="shortcut icon" href=https://ceruulean.github.io/cvage/favicon.ico>
+<link rel=stylesheet href=https://ceruulean.github.io/cvage/css/published.css><body>
+<div id="content published-wrap">
+<article class="published-wrap no-ad-size">
+<div class="note note-detail-markdown">
+<h1>HTML5 Accessibility</h1>
+<p>Quick checklist to cover most use cases.</p>
+<h2 id=1-use-named-element-tags>1. Use named element tags</h2>
+<p>These tags are more descriptive than <code>&lt;div></code>.</p>
+<p><code>&lt;header></code>
+<code>&lt;nav></code></p>
+<p><code>&lt;main></code>
+<code>&lt;section></code>
+<code>&lt;article></code>
+<code>&lt;aside></code>
+<code>&lt;form></code>
+<code>&lt;blockquote></code></p>
+<p><code>&lt;caption></code>
+<code>&lt;figure></code>
+<code>&lt;figcaption></code></p>
+<p><code>&lt;footer></code></p>
+<h3 id=1a-forms-and-inputs>1a. Forms and Inputs</h3>
+<p>If the element functions as a button, use <code>&lt;button></code> (as opposed to just <code>&lt;a></code> or <code>&lt;div></code>). Buttons have inbuilt keyboard controls for focusing, selecting and clicking.</p>
+<p><code>&lt;label for="MYName"></code> to assign a label to the input with the same name: <code>&lt;input name="MYName"></code></p>
+<h3 id=1b-keyboard-access>1b. Keyboard Access</h3>
+<p><code>tabIndex="0"</code> to make an element tabbable.</p>
+<p><code>tabIndex="-1"</code> removes an element from default navigation; focus must be assigned with JavaScript (usually for modals or self-contained components).</p>
+<p>Setting tabIndex to a value greater than 0 is how you manually set tab order, regardless of the document flow and tree.</p>
+<pre tabindex=0><code>&lt;div tabIndex=&quot;2&quot;&gt;Orange&lt;/div&gt;
+&lt;div tabIndex=&quot;1&quot;&gt;Banana&lt;/div&gt;
+&lt;div tabIndex=&quot;3&quot;&gt;Pear&lt;/div&gt;
+</code></pre><p>Even if the divs are logically ordered 2,1,3, tab access will follow Banana, Orange, Pear.</p>
+<h3 id=1c-image-attributes>1c. Image attributes</h3>
+<p><code>&lt;img></code> has the attributes <code>alt="Caption"</code> and <code>title="Title of Image Here"</code></p>
+<h2 id=2-use-aria-attributes-complete-referencehttpswwww3orgtrwai-aria-11>2. Use ARIA Attributes <a href=https://www.w3.org/TR/wai-aria-1.1/>(complete reference)</a></h2>
+<p>If you cannot use HTML tag names for some reason, or you need additional specifications, these attributes can help define the role of each tag.
+<code>role="roletype"</code></p>
+<h3 id=2a-labels>2a. Labels</h3>
+<p>Use <code>aria-label="Close"</code> to label the purpose of interactive elements and buttons without inner text. In this case, <code>"Close"</code> for a button that closes something.</p>
+<p><code>&lt;Element aria-labelledby="idOfAnotherElement" /></code> if another element contains text that describes this element.</p>
+<pre tabindex=0><code>&lt;video src=&quot;link-to-video&quot; aria-labelledby=&quot;caption123&quot;&gt;&lt;/video&gt;
+&lt;p id=&quot;caption123&quot;&gt;This video is about science&lt;/p&gt;
+</code></pre><h3 id=2b-validation>2b. Validation</h3>
+<p>For fields that have an asterisk<span style=color:red>*</span> <code>aria-required="true"</code></p>
+<p>For fields which become greyed and whose attribute is set to disabled: <code>aria-disabled="true"</code></p>
+<h3 id=2c-dynamic-content>2c. Dynamic content</h3>
+<p>Set <code>aria-live="off|polite|assertive"</code> for reactive content updates. See <a href=https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions>ARIA live regions</a> for more details.</p>
+<p><code>role="alert"</code> assigns the <code>aria-live</code> and <code>aria-atomic</code> attributes automatically.</p>
+<p><code>aria-atomic</code> indicates whether the component contains nested pieces which will receive updates. If an element is set to <code>aria-atomic="true"</code>, screenreaders will read out the entire text. This is common when only changing <code>&lt;span></code> elements:</p>
+<pre tabindex=0><code>&lt;aside aria-atomic=&quot;true&quot; aria-live=&quot;polite&quot;&gt;
+  Status:
+  &lt;span id=&quot;updateMe&quot;&gt;Green, no problems detected.&lt;/span&gt;
+&lt;/aside&gt;
+</code></pre>
+<time datetime="2022-02-19 14:08:43 -0500 -0500">Saturday, Feb 19, 2022</time>
+</div>
+</article>
+</div><footer style=display:flex;justify-content:center;padding-bottom:5rem>
+<a href=https://ceruulean.github.io/cvage/>Home</a>
+</footer>
+</body>
+</html>
