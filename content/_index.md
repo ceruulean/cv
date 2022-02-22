@@ -16,7 +16,7 @@ Please see [Port Forwarding](/portfolio/how-to-port-forwarding/) and [Purely Ill
 
 ### 3D Graphics
 
-Please see [this](/portfolio/zdog-scope/) and [parrot](/portfolio/js/).
+Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/).
 
 
 ![Signature of Diana Wu](sig.jpg#floatright)

@@ -14,8 +14,11 @@ Future: Archiving capabilities.
 
 ## MkDocs Material Codelab Theme
 
-A derivation of [Hugo Codelab Themes](https://hugothemesfree.com/tag/codelabs/) (clones of [Google Codelabs](https://github.com/googlecodelabs/tools)), which can integrate and look consistent with [MkDocs Material Theme](https://squidfunk.github.io/mkdocs-material/).
+This theme is perfect for all task-based documentation: procedures, cookbooks, tutorials, and checklists.
 
-[Demo](https://kibblab.gitlab.io/codelab-theme-mkdocs-material/guide/)
+
+👉 [Demo](https://kibblab.gitlab.io/codelab-theme-mkdocs-material/guide/)
+
+It is a derivation of [Hugo Codelab Themes](https://hugothemesfree.com/tag/codelabs/) (which are clones of an older version of [Google Codelabs](https://github.com/googlecodelabs/tools)), which can integrate and look consistent with [MkDocs Material Theme](https://squidfunk.github.io/mkdocs-material/).
 
 [Source](https://gitlab.com/kibblab/codelab-theme-mkdocs-material)

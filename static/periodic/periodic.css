@@ -133,7 +133,8 @@ div[id^="ado"]{
   background-image: url('./adobe-icons.png');
 }
 #adoai{
-  background-position:44.3% -8%;
+  background-size: 500px !important;
+  background-position:44.3% -5.5%;
 }
 #adops{
   background-position:22% -8%;
@@ -162,7 +163,7 @@ div[id^="ado"]{
   background-image: url('./icon-figma.svg');
 }
 #gep{
-  background-position: 0.6% 0%;
+  background-position: 0.4% center;
   background-size: 570%;
   background-image: url('./icon-gep.svg');
 }
@@ -202,8 +203,6 @@ div[id^="ado"]{
   background-image: url('./icon-powershell.svg');
 }
 #python{
-  background-position: 0 -60%;
-  background-size: 129%;
   background-image: url('./icon-python.svg');
 }
 #react{
@@ -239,6 +238,7 @@ div[id^="ado"]{
   .periodic{
     display:flex;
     flex-flow:row nowrap;
+    grid-column-gap: 1px;
   }
 
   .periodic div[class*="g"]{

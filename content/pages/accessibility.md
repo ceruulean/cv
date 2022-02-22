@@ -4,6 +4,8 @@ date: 2022-02-19T14:08:43-05:00
 weight: 3
 ---
 
+Quick checklist to cover most use cases.
+
 ## 1. Use named element tags
 
 These tags are more descriptive than `<div>`.
