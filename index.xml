@@ -5,12 +5,12 @@
 &amp;lt;caption&amp;gt; &amp;lt;figure&amp;gt; &amp;lt;figcaption&amp;gt;
 &amp;lt;footer&amp;gt;
 1a. Forms and Inputs If the element functions as a button, use &amp;lt;button&amp;gt; (as opposed to just &amp;lt;a&amp;gt; or &amp;lt;div&amp;gt;). Buttons have inbuilt keyboard controls for focusing, selecting and clicking.
-&amp;lt;label for=&amp;quot;MYName&amp;quot;&amp;gt; to assign a label to the input with the same name: &amp;lt;input name=&amp;quot;MYName&amp;quot;&amp;gt;</description></item><item><title>PowerShell Projects</title><link>https://ceruulean.github.io/cvage/portfolio/powershell/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/powershell/</guid><description>Prose Grinder Pandoc Templates Contributor of PowerShell port.
-Premade scripts to format text for traditional (book) publishing, using Pandoc&amp;rsquo;s templating features.
-Formatted nonfiction and fiction manuscripts looks suspiciously similar to Markdown. Hence, in order to make the process less tedious for authors, we recommend writing in Markdown in the first place. Many authors use Windows, so a Windows-compatible port of the Prose Grinder utilities are needed.</description></item><item><title>Python Projects</title><link>https://ceruulean.github.io/cvage/portfolio/python/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/python/</guid><description>Confluence Stale Reminder (WIP) This is a utility for finding stale pages (pages which are over 6 months old) and emailing people to update them.
+&amp;lt;label for=&amp;quot;MYName&amp;quot;&amp;gt; to assign a label to the input with the same name: &amp;lt;input name=&amp;quot;MYName&amp;quot;&amp;gt;</description></item><item><title>PowerShell Projects</title><link>https://ceruulean.github.io/cvage/portfolio/powershell/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/powershell/</guid><description>Prose Grinder Pandoc Templates Contributor of PowerShell port
+Premade scripts to format manuscripts for traditional (book) publishing, using Pandoc&amp;rsquo;s templating features.
+Nonfiction and fiction manuscripts look plain and startingly similar to Markdown. Hence, in order to make the process less tedious for authors, we recommend writing your chapters with Markdown. Many authors use Windows, so a Windows-compatible port of the Prose Grinder utilities are needed.</description></item><item><title>Python Projects</title><link>https://ceruulean.github.io/cvage/portfolio/python/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/python/</guid><description>Confluence Stale Reminder (WIP) This is a utility for finding stale pages (pages which are over 6 months old) and emailing people to update them.
 Source
 Future: Archiving capabilities.
-MkDocs Material Codelab Theme This theme is perfect for all task-based documentation: procedures, cookbooks, tutorials, and checklists.
+MkDocs Material Codelab Theme This theme is perfect for task-based documentation: procedures, cookbooks, tutorials, and checklists.
 👉 Demo
 It is a derivation of Hugo Codelab Themes (which are clones of an older version of Google Codelabs), which can integrate and look consistent with MkDocs Material Theme.</description></item><item><title>Resume</title><link>https://ceruulean.github.io/cvage/pages/resume/</link><pubDate>Sat, 19 Feb 2022 18:37:22 -0500</pubDate><guid>https://ceruulean.github.io/cvage/pages/resume/</guid><description>Download PDF
 GEP Worldwide Technical Writer Intern March 2021 - Present
@@ -25,6 +25,8 @@ Features Import/Export JSON Tree view w/ draggable sort Assign name and edit pro
 .zdog-canvas {
 background: transparent;
 cursor: move;
+border:1px solid black;
+max-width:100%;
 }
 Pose
 Stand Flat
@@ -40,7 +42,5 @@ Blink Loop
 Idle Loop
 Reset
 Polly.animation.face.blinkLoop();
-Polly.animation.idle.default();
-Polly.animation.transition.standFlat();
-Another abandoned personal project.</description></item><item><title>Wordless Instructions</title><link>https://ceruulean.github.io/cvage/portfolio/wordless/</link><pubDate>Thu, 12 Nov 2020 06:43:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/wordless/</guid><description>Create an instruction set for a hypothetical machine that can make plants grow. Cannot use words. Direct link to PDF.
+Polly.</description></item><item><title>Wordless Instructions</title><link>https://ceruulean.github.io/cvage/portfolio/wordless/</link><pubDate>Thu, 12 Nov 2020 06:43:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/wordless/</guid><description>Create an instruction set for a hypothetical machine that can make plants grow. Cannot use words. Direct link to PDF.
 Drawn with Adobe Illustrator.</description></item></channel></rss>

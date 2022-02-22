@@ -239,6 +239,7 @@ div[id^="ado"]{
     display:flex;
     flex-flow:row nowrap;
     grid-column-gap: 1px;
+    margin:0;
   }
 
   .periodic div[class*="g"]{
