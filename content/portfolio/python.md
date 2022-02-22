@@ -14,7 +14,7 @@ Future: Archiving capabilities.
 
 ## MkDocs Material Codelab Theme
 
-This theme is perfect for all task-based documentation: procedures, cookbooks, tutorials, and checklists.
+This theme is perfect for task-based documentation: procedures, cookbooks, tutorials, and checklists.
 
 
 👉 [Demo](https://kibblab.gitlab.io/codelab-theme-mkdocs-material/guide/)
