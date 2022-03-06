@@ -1,18 +1,9 @@
 ---
 title: "Zdog Scope"
 date: 2021-04-17T19:33:00-05:00
+draft: true
 ---
 
-Create [Zdog](https://zzz.dog/) graphics with a 3D editor.
-
-![WIP 2: organizing the property panel and displaying axes](/portfolio/zdog-scope/wip2.jpg)
-_Figure 1: A sphere that shows the major axis._
-
-## [Demo of Editor](https://ceruulean.github.io/zdog-scope/)
-
-1. Press the "Demo" button on the top to load a sample model.
-
-[GitHub Page](https://github.com/ceruulean/zdog-scope)
 
 ## Features
 - Import/Export JSON
