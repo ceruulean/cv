@@ -1,5 +1,5 @@
 ---
-title: "CSS"
+title: "CSS Periodic Table"
 date: 2022-02-19T15:54:21-05:00
 ---
 
