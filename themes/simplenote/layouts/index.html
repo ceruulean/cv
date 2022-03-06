@@ -2,9 +2,9 @@
 <main class="note note-detail-markdown"
   style="display:flex;flex-flow:row wrap;justify-content:space-around;">
   <aside style="flex-grow:1">
-    <h3>Pages</h3>
+    <h3>Portfolio</h3>
     <ul>
-    {{- range (where .Site.RegularPages.ByTitle "Section" "pages" ) }}
+    {{- range (where .Site.RegularPages.ByTitle "Section" "portfolio" ) }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{- end }}
   </ul></aside>

@@ -1,6 +1,7 @@
 ---
 title: "Resume"
 date: 2022-02-19T18:37:22-05:00
+draft: true
 ---
 
 [Download PDF](/portfolio/2022-02_resume_lit.pdf)
