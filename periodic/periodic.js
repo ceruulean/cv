@@ -28,7 +28,7 @@ function setAttributes(element, attrList){
 }
 
 let programs = [
-["html5","k","Accessibility in HTML5","/cvage/pages/accessibility"],
+["html5","k","Accessibility in HTML5","/cvage/portfolio/accessibility"],
 ["figma","k","",],
 ["adoai","k","Wordless Help Manual", "/cvage/portfolio/wordless"],
 ["inkscape","k","",],
