@@ -6,7 +6,7 @@ weight: 3
 
 Quick checklist to cover most use cases.
 
-## 1. Use named element tags
+## 1. Use named element tags instead of `<div>`.
 
 These tags are more descriptive than `<div>`.
 
@@ -25,6 +25,8 @@ These tags are more descriptive than `<div>`.
 `<figcaption>`
 
 `<footer>`
+
+For an in-depth guide, please refer to [this article on the semantic meaning of each tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 ### 1a. Forms and Inputs
 
@@ -86,6 +88,48 @@ Set `aria-live="off|polite|assertive"` for reactive content updates. See [ARIA l
 ```
 <aside aria-atomic="true" aria-live="polite">
   Status:
-  <span id="updateMe">Green, no problems detected.</span>
+  <span id="updateMe">Green.</span>
 </aside>
 ```
+
+If `updateMe`'s inner text changes, the screenreader will say the entirety of the content, "Status: Green."
+
+Without atomicity (`aria-atmoic="false"`), if `updateMe` changes, the screen reader will only say, "Green," which is undesirable behavior in this context.
+
+
+#### Test it!
+
+1. Copy-paste the below code into an html file, such as **access.html**.
+
+```html
+<aside aria-atomic="true" aria-live="polite">
+  Status:
+  <span id="updateMeA">Green, no problems detected.</span>
+</aside>
+
+<aside aria-atomic="false" aria-live="polite">
+  Status:
+  <span id="updateMeB">Green, no problems detected.</span>
+</aside>
+
+<script>
+function atomictest(){
+  document.getElementById('updateMeA').innerText = 'Red, changes detected.'
+}
+
+function nonatomictest(){
+  document.getElementById('updateMeB').innerText = 'Yellow, warning.'
+}
+</script>
+```
+
+
+1. Turn on screen reader for your operating system.
+   - If you are running Ubuntu Linux, then the Orca screen reader comes pre-installed and can be activated by pressing **Super + Alt + S** (the [super key](https://help.ubuntu.com/stable/ubuntu-help/keyboard-key-super.html.en) depends on your keyboard's hardware manufacturer).
+2. Open the file (**access.html**) in your browser.
+3. Press F12 to open DevTools.
+4. Go to the **Console** tab.
+5. Type `atomictest()`
+6. You should hear, "Status: Red, changes detected."
+7. Type `nonatomictest()`
+8. You should hear, "Yellow, warning." (Note that "Status" is left out of the announcement).

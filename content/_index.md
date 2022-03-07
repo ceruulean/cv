@@ -72,7 +72,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 ## Directus CMS
 
-*Open-source Contributor* ([See my first Pull Request!](https://firstpr.me/#ceruulean))
+*Open-source Contributor* ([see my first Pull Request!](https://firstpr.me/#ceruulean))
 
 -  Documented database type variables
 -  Prototyped UI features
@@ -83,5 +83,10 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 **B.S. Technical Communications**   
 *Iowa State University*, 2020
 
+
+## Links
+
+- [LinkedIn](linkedin.com/in/dcwu/)
+- [GitHUb](https://github.com/ceruulean)
 
 ![Signature of Diana Wu](sig.jpg#floatright)
