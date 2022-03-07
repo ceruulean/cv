@@ -9,7 +9,7 @@
 <div class="note note-detail-markdown">
 <h1>HTML5 Accessibility</h1>
 <p>Quick checklist to cover most use cases.</p>
-<h2 id=1-use-named-element-tags>1. Use named element tags</h2>
+<h2 id=1-use-named-element-tags-instead-of-div>1. Use named element tags instead of <code>&lt;div></code>.</h2>
 <p>These tags are more descriptive than <code>&lt;div></code>.</p>
 <p><code>&lt;header></code>
 <code>&lt;nav></code></p>
@@ -23,6 +23,7 @@
 <code>&lt;figure></code>
 <code>&lt;figcaption></code></p>
 <p><code>&lt;footer></code></p>
+<p>For an in-depth guide, please refer to <a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element>this article on the semantic meaning of each tag</a>.</p>
 <h3 id=1a-forms-and-inputs>1a. Forms and Inputs</h3>
 <p>If the element functions as a button, use <code>&lt;button></code> (as opposed to just <code>&lt;a></code> or <code>&lt;div></code>). Buttons have inbuilt keyboard controls for focusing, selecting and clicking.</p>
 <p><code>&lt;label for="MYName"></code> to assign a label to the input with the same name: <code>&lt;input name="MYName"></code></p>
@@ -53,9 +54,47 @@
 <p><code>aria-atomic</code> indicates whether the component contains nested pieces which will receive updates. If an element is set to <code>aria-atomic="true"</code>, screenreaders will read out the entire text. This is common when only changing <code>&lt;span></code> elements:</p>
 <pre tabindex=0><code>&lt;aside aria-atomic=&quot;true&quot; aria-live=&quot;polite&quot;&gt;
   Status:
-  &lt;span id=&quot;updateMe&quot;&gt;Green, no problems detected.&lt;/span&gt;
+  &lt;span id=&quot;updateMe&quot;&gt;Green.&lt;/span&gt;
 &lt;/aside&gt;
-</code></pre>
+</code></pre><p>If <code>updateMe</code>&rsquo;s inner text changes, the screenreader will say the entirety of the content, &ldquo;Status: Green.&rdquo;</p>
+<p>Without atomicity (<code>aria-atmoic="false"</code>), if <code>updateMe</code> changes, the screen reader will only say, &ldquo;Green,&rdquo; which is undesirable behavior in this context.</p>
+<h4 id=test-it>Test it!</h4>
+<ol>
+<li>Copy-paste the below code into an html file, such as <strong>access.html</strong>.</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>aside</span> <span style=color:#a6e22e>aria-atomic</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;true&#34;</span> <span style=color:#a6e22e>aria-live</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;polite&#34;</span>&gt;
+  Status:
+  &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;updateMeA&#34;</span>&gt;Green, no problems detected.&lt;/<span style=color:#f92672>span</span>&gt;
+&lt;/<span style=color:#f92672>aside</span>&gt;
+
+&lt;<span style=color:#f92672>aside</span> <span style=color:#a6e22e>aria-atomic</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;false&#34;</span> <span style=color:#a6e22e>aria-live</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;polite&#34;</span>&gt;
+  Status:
+  &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;updateMeB&#34;</span>&gt;Green, no problems detected.&lt;/<span style=color:#f92672>span</span>&gt;
+&lt;/<span style=color:#f92672>aside</span>&gt;
+
+&lt;<span style=color:#f92672>script</span>&gt;
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>atomictest</span>(){
+  document.<span style=color:#a6e22e>getElementById</span>(<span style=color:#e6db74>&#39;updateMeA&#39;</span>).<span style=color:#a6e22e>innerText</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Red, changes detected.&#39;</span>
+}
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>nonatomictest</span>(){
+  document.<span style=color:#a6e22e>getElementById</span>(<span style=color:#e6db74>&#39;updateMeB&#39;</span>).<span style=color:#a6e22e>innerText</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Yellow, warning.&#39;</span>
+}
+&lt;/<span style=color:#f92672>script</span>&gt;
+</code></pre></div><ol>
+<li>Turn on screen reader for your operating system.
+<ul>
+<li>If you are running Ubuntu Linux, then the Orca screen reader comes pre-installed and can be activated by pressing <strong>Super + Alt + S</strong> (the <a href=https://help.ubuntu.com/stable/ubuntu-help/keyboard-key-super.html.en>super key</a> depends on your keyboard&rsquo;s hardware manufacturer).</li>
+</ul>
+</li>
+<li>Open the file (<strong>access.html</strong>) in your browser.</li>
+<li>Press F12 to open DevTools.</li>
+<li>Go to the <strong>Console</strong> tab.</li>
+<li>Type <code>atomictest()</code></li>
+<li>You should hear, &ldquo;Status: Red, changes detected.&rdquo;</li>
+<li>Type <code>nonatomictest()</code></li>
+<li>You should hear, &ldquo;Yellow, warning.&rdquo; (Note that &ldquo;Status&rdquo; is left out of the announcement).</li>
+</ol>
 <time datetime="2022-02-19 14:08:43 -0500 -0500">Saturday, Feb 19, 2022</time>
 </div>
 </article>
