@@ -25,7 +25,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 - Support migration efforts and developing an online help center.
 - Organize content strategy matrix and maintain confidentiality.
-- Create fowcharts and diagrams for software architecture in patents.
+- Create flowcharts and diagrams for software architecture in patents.
 - Coordinate with teams spanning across three continents.
 - Rearrange and refresh internal onboarding guides.
 
@@ -54,6 +54,8 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 - Recommended paper products and solutions to customers.
 - Collected packages and printed shipping labels for UPS and FedEx.
 - Unjammed printers so you don’t have to.
+- Set up mail merge for tags, ID badges, paper pads, calendars, and other physical materials.
+- Basic formatting with Adobe InDesign.
 
 ## Iowa State Daily 
 
@@ -74,9 +76,9 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 *Open-source Contributor* ([see my first Pull Request!](https://firstpr.me/#ceruulean))
 
--  Documented database type variables
--  Prototyped UI features
--  Implemented auto-junction for M2M
+-  Documented database type variables.
+-  Prototyped UI features.
+-  Implemented an auto-junction feature in the frontend that allows users to create a many-to-many (M2M) relation with a single checkbox.
 
 ## 🎓 Education
 
@@ -86,7 +88,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 ## Links
 
-- [LinkedIn](linkedin.com/in/dcwu/)
-- [GitHUb](https://github.com/ceruulean)
+- [LinkedIn](https://www.linkedin.com/in/dcwu/)
+- [GitHub](https://github.com/ceruulean)
 
 ![Signature of Diana Wu](sig.jpg#floatright)

@@ -83,7 +83,7 @@ Set `aria-live="off|polite|assertive"` for reactive content updates. See [ARIA l
 
 `role="alert"` assigns the `aria-live` and `aria-atomic` attributes automatically.
 
-`aria-atomic` indicates whether the component contains nested pieces which will receive updates. If an element is set to `aria-atomic="true"`, screenreaders will read out the entire text. This is common when only changing `<span>` elements:
+`aria-atomic` indicates whether any nested children should be considered part of the whole. If an element is set to `aria-atomic="true"`, a screen reader will read out the entire text. This is common when only changing `<span>` elements:
 
 ```
 <aside aria-atomic="true" aria-live="polite">
@@ -132,4 +132,5 @@ function nonatomictest(){
 5. Type `atomictest()`
 6. You should hear, "Status: Red, changes detected."
 7. Type `nonatomictest()`
-8. You should hear, "Yellow, warning." (Note that "Status" is left out of the announcement).
+8. You should hear, "Yellow, warning."
+   - Note that "Status" is left out of the announcement.
