@@ -51,7 +51,7 @@
 <h3 id=2c-dynamic-content>2c. Dynamic content</h3>
 <p>Set <code>aria-live="off|polite|assertive"</code> for reactive content updates. See <a href=https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions>ARIA live regions</a> for more details.</p>
 <p><code>role="alert"</code> assigns the <code>aria-live</code> and <code>aria-atomic</code> attributes automatically.</p>
-<p><code>aria-atomic</code> indicates whether the component contains nested pieces which will receive updates. If an element is set to <code>aria-atomic="true"</code>, screenreaders will read out the entire text. This is common when only changing <code>&lt;span></code> elements:</p>
+<p><code>aria-atomic</code> indicates whether any nested children should be considered part of the whole. If an element is set to <code>aria-atomic="true"</code>, a screen reader will read out the entire text. This is common when only changing <code>&lt;span></code> elements:</p>
 <pre tabindex=0><code>&lt;aside aria-atomic=&quot;true&quot; aria-live=&quot;polite&quot;&gt;
   Status:
   &lt;span id=&quot;updateMe&quot;&gt;Green.&lt;/span&gt;
@@ -93,7 +93,11 @@
 <li>Type <code>atomictest()</code></li>
 <li>You should hear, &ldquo;Status: Red, changes detected.&rdquo;</li>
 <li>Type <code>nonatomictest()</code></li>
-<li>You should hear, &ldquo;Yellow, warning.&rdquo; (Note that &ldquo;Status&rdquo; is left out of the announcement).</li>
+<li>You should hear, &ldquo;Yellow, warning.&rdquo;
+<ul>
+<li>Note that &ldquo;Status&rdquo; is left out of the announcement.</li>
+</ul>
+</li>
 </ol>
 <time datetime="2022-02-19 14:08:43 -0500 -0500">Saturday, Feb 19, 2022</time>
 </div>

@@ -63,7 +63,7 @@ let programs = [
 ["css3","n","No page for this.","/cvage/under-construction/"],
 ["js","n","JavaScript project","/cvage/portfolio/js/"],
 ["ts","n","",],
-["vue","n","Vue project", "/cvage/portfolio/zdog-scope/"],
+["vue","n","Vue project", "/cvage/portfolio/js#3d-editor"],
 ]
 
 // "k . . . . . . n"
