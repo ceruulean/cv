@@ -29,13 +29,22 @@
 <p><code>&lt;label for="MYName"></code> to assign a label to the input with the same name: <code>&lt;input name="MYName"></code></p>
 <h3 id=1b-keyboard-access>1b. Keyboard Access</h3>
 <p><code>tabIndex="0"</code> to make an element tabbable.</p>
-<p><code>tabIndex="-1"</code> removes an element from default navigation; focus must be assigned with JavaScript (usually for modals or self-contained components).</p>
-<p>Setting tabIndex to a value greater than 0 is how you manually set tab order, regardless of the document flow and tree.</p>
-<pre tabindex=0><code>&lt;div tabIndex=&quot;2&quot;&gt;Orange&lt;/div&gt;
-&lt;div tabIndex=&quot;1&quot;&gt;Banana&lt;/div&gt;
-&lt;div tabIndex=&quot;3&quot;&gt;Pear&lt;/div&gt;
-</code></pre><p>Even if the divs are logically ordered 2,1,3, tab access will follow Banana, Orange, Pear.</p>
-<h3 id=1c-image-attributes>1c. Image attributes</h3>
+<p><code>tabIndex="-1"</code> removes an element from default navigation; focus must then be assigned with JavaScript (usually for modals or self-contained components).</p>
+<p>Setting <code>tabIndex</code> to a value greater than <code>0</code> is how you manually set tab order, regardless of the document flow and tree.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>tabIndex</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;2&#34;</span>&gt;Orange&lt;/<span style=color:#f92672>div</span>&gt;
+&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>tabIndex</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1&#34;</span>&gt;Banana&lt;/<span style=color:#f92672>div</span>&gt;
+&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>tabIndex</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;3&#34;</span>&gt;Pear&lt;/<span style=color:#f92672>div</span>&gt;
+</code></pre></div><p>Even if the divs are logically ordered 2,1,3, tab access will follow Banana, Orange, Pear.</p>
+<h4 id=try-it>Try it!</h4>
+<p>Refresh the page with <strong>F5</strong>, then press <strong>Tab</strong></p>
+<style>.focusdemo:focus{outline:3px solid purple;transform:scale(1.025)}</style>
+<div tabindex=2 class=focusdemo style=background-color:orange>Orange</div>
+<div tabindex=1 class=focusdemo style=background-color:#ff0>Banana</div>
+<div tabindex=3 class=focusdemo style=background-color:green>Pear</div>
+<p>(<strong>Alt + Tab</strong> to go backwards)</p>
+<p><strong>CSS</strong></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#a6e22e>focusdemo</span>:<span style=color:#a6e22e>focus</span>{<span style=color:#66d9ef>outline</span>:<span style=color:#ae81ff>3</span><span style=color:#66d9ef>px</span> <span style=color:#66d9ef>solid</span> <span style=color:#66d9ef>purple</span>;<span style=color:#66d9ef>transform</span>:scale(<span style=color:#ae81ff>1.025</span>);}
+</code></pre></div><h3 id=1c-image-attributes>1c. Image attributes</h3>
 <p><code>&lt;img></code> has the attributes <code>alt="Caption"</code> and <code>title="Title of Image Here"</code></p>
 <h2 id=2-use-aria-attributes-complete-referencehttpswwww3orgtrwai-aria-11>2. Use ARIA Attributes <a href=https://www.w3.org/TR/wai-aria-1.1/>(complete reference)</a></h2>
 <p>If you cannot use HTML tag names for some reason, or you need additional specifications, these attributes can help define the role of each tag.
@@ -95,10 +104,12 @@
 <li>Type <code>nonatomictest()</code></li>
 <li>You should hear, &ldquo;Yellow, warning.&rdquo;
 <ul>
-<li>Note that &ldquo;Status&rdquo; is left out of the announcement.</li>
+<li>Note how &ldquo;Status&rdquo; is not part of the announcement.</li>
 </ul>
 </li>
 </ol>
+<script>document.addEventListener('keyup',function(){console.log(document.activeElement)})</script><blockquote>
+</blockquote>
 <time datetime="2022-02-19 14:08:43 -0500 -0500">Saturday, Feb 19, 2022</time>
 </div>
 </article>
