@@ -1,5 +1,5 @@
 ---
-title: "Contract and Freelance"
+title: "Contracting"
 date: 2022-02-22T12:09:08-05:00
 draft: true
 ---

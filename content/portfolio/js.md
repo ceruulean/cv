@@ -28,6 +28,18 @@ _Figure 1: A sphere that shows the major axis._
 
 Press the "Demo" button on the top bar to load a sample model!
 
+#### Controls
+
+- Zoom: Mousewheel
+- Panning: Shift + drag or MMB + drag
+- Rotate: Click + drag
+- Undo: Ctrl + Z
+- Redo: Ctrl + Y or Ctrl + Shift + Z
+
+1. Generate code embed by clicking on "Embed Dream"
+2. Copy/paste output into an HTML document.
+3. Include `<script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>` within `<head></head>`.
+
 **Uses these libraries:**
 
 - [Vue](https://zzz.dog/)

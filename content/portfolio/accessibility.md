@@ -38,11 +38,11 @@ If the element functions as a button, use `<button>` (as opposed to just `<a>` o
 
 `tabIndex="0"` to make an element tabbable.
 
-`tabIndex="-1"` removes an element from default navigation; focus must be assigned with JavaScript (usually for modals or self-contained components).
+`tabIndex="-1"` removes an element from default navigation; focus must then be assigned with JavaScript (usually for modals or self-contained components).
 
-Setting tabIndex to a value greater than 0 is how you manually set tab order, regardless of the document flow and tree.
+Setting `tabIndex` to a value greater than `0` is how you manually set tab order, regardless of the document flow and tree.
 
-```
+```html
 <div tabIndex="2">Orange</div>
 <div tabIndex="1">Banana</div>
 <div tabIndex="3">Pear</div>
@@ -50,6 +50,23 @@ Setting tabIndex to a value greater than 0 is how you manually set tab order, re
 
 Even if the divs are logically ordered 2,1,3, tab access will follow Banana, Orange, Pear.
 
+#### Try it!
+
+Refresh the page with **F5**, then press **Tab**
+
+<style>.focusdemo:focus{outline:3px solid purple;transform:scale(1.025);}</style>
+
+<div tabIndex="2" class="focusdemo" style="background-color:orange">Orange</div>
+<div tabIndex="1" class="focusdemo" style="background-color:yellow">Banana</div>
+<div tabIndex="3" class="focusdemo" style="background-color:green">Pear</div>
+
+(**Alt + Tab** to go backwards)
+
+**CSS**
+
+```css
+.focusdemo:focus{outline:3px solid purple;transform:scale(1.025);}
+```
 
 ### 1c. Image attributes
 
@@ -133,4 +150,9 @@ function nonatomictest(){
 6. You should hear, "Status: Red, changes detected."
 7. Type `nonatomictest()`
 8. You should hear, "Yellow, warning."
-   - Note that "Status" is left out of the announcement.
+   - Note how "Status" is not part of the announcement.
+
+
+<script>
+  document.addEventListener('keyup', function() {console.log(document.activeElement)})
+</script>
