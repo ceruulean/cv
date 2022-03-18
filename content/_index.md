@@ -17,7 +17,7 @@ Please see [Port Forwarding](/portfolio/how-to-port-forwarding/) and [Purely Ill
 Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 
-[Download Resume PDF](/portfolio/2022-02_resume_lit.pdf)
+[Download Resume PDF](/portfolio/2022-03_resume_cv.pdf)
 
 ## GEP Worldwide
 
