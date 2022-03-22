@@ -21,7 +21,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 ## GEP Worldwide
 
-*Technical Writer Intern* (March 2021 - Present)
+*Technical Writer* (March 2021 - Present)
 
 - Support migration efforts and developing an online help center.
 - Organize content strategy matrix and maintain confidentiality.
@@ -29,7 +29,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 - Coordinate with teams spanning across three continents.
 - Rearrange and refresh internal onboarding guides.
 
-**Marketing Outreach Scripts**
+**Client Tech Video Scripts**
 
 - Write bite-sized explanations of GEP Software's current engineering projects.
 - Showcase the department's cutting edge practices and innovations.
