@@ -16,10 +16,9 @@ Please see [Port Forwarding](/portfolio/how-to-port-forwarding/) and [Purely Ill
 
 Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
-
-[Download Resume PDF](/portfolio/2022-03_resume_cv.pdf)
-
 ## GEP Worldwide
+
+<img src="twmeme1.png#floatright" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press."/>
 
 *Technical Writer* (March 2021 - Present)
 
@@ -29,11 +28,11 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 - Coordinate with teams spanning across three continents.
 - Rearrange and refresh internal onboarding guides.
 
-**Client Tech Video Scripts**
+<!-- **Client Tech Video Scripts**
 
 - Write bite-sized explanations of GEP Software's current engineering projects.
 - Showcase the department's cutting edge practices and innovations.
-- Limitations: video length of around 1 minute - 70 seconds per topic.
+- Limitations: video length of around 1 minute - 70 seconds per topic. -->
 
 
 <!-- 
@@ -78,7 +77,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 -  Documented database type variables.
 -  Prototyped UI features.
--  Implemented an auto-junction feature in the frontend that allows users to create a many-to-many (M2M) relation with a single checkbox.
+-  Implemented an auto‑junction feature in the frontend that allows users to create a many‑to‑many (M2M) relation with a single checkbox.
 
 ## 🎓 Education
 
@@ -91,4 +90,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 - [LinkedIn](https://www.linkedin.com/in/dcwu/)
 - [GitHub](https://github.com/ceruulean)
 
-![Signature of Diana Wu](sig.jpg#floatright)
+<img src="sig.jpg#floatright" alt="Signature of Diana Wu"/>
+
+[📥 Download Resume PDF](/portfolio/2022-03_resume_cv.pdf)
+

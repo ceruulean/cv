@@ -2,9 +2,10 @@
 /* CSS compiled from SCSS - Do not edit .css directly.  Styles © Simperium  */
 html { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; }
 time {font-size:0.8em;opacity:0.6;}
-a { color: #4895d9; }
+a { color: #2474b9; }
 img{ max-width: 100%; }
 body {margin:0;padding:0;}
+p,li {max-width: 76ch;}
 
 .published-wrap { margin: 0 auto; }
 .published-wrap.ad-size { max-width: 971px; }
@@ -62,18 +63,13 @@ body {margin:0;padding:0;}
   .note-detail-markdown h1, .note-detail-markdown h2, .note-detail-markdown h3, .note-detail-markdown h4, .note-detail-markdown h5, .note-detail-markdown h6, .note-detail-markdown #title { margin: 1.19em 0 0.7em 0; }
   .note-detail-markdown #title { margin-bottom: 0; } }
 
-img[src$='#floatleft']
-{
-float:left;
-margin:10px 15px;
+img[src$='#floatleft'] { float:left; margin:10px 15px; }
+img[src$='#floatright'] { float:right; margin:10px 15px; }
+img[src$='#center'] { display:block; margin:10px auto; }
+
+@media screen and (max-width: 850px) {
+  img[src$='#floatleft'] { float:none; clear:both; margin-left: auto; margin-right: auto;}
+  img[src$='#floatright'] { float:none; clear:both; margin-left: auto; margin-right: auto; }
 }
 
-img[src$='#floatright']
-{
-float:right;
-margin:10px 15px;
-}
-
-h1,h2,h3,h4,h5,h6{
-  clear:both;
-}
+h1,h2,h3,h4,h5,h6 { clear:both; }

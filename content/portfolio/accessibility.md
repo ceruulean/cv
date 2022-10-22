@@ -1,6 +1,6 @@
 ---
 title: "HTML5 Accessibility"
-date: 2022-02-19T14:08:43-05:00
+date: 2022-10-21T21:29:17-04:00
 weight: 3
 ---
 
@@ -17,12 +17,11 @@ These tags are more descriptive than `<div>`.
 `<section>`
 `<article>`
 `<aside>`
-`<form>`
-`<blockquote>`
+`<blockquote>`  
+`<form>` `<fieldset>`  
 
-`<caption>`
-`<figure>`
-`<figcaption>`
+
+`<figure>` `<figcaption>`
 
 `<footer>`
 
@@ -83,7 +82,7 @@ Use `aria-label="Close"` to label the purpose of interactive elements and button
 
 `<Element aria-labelledby="idOfAnotherElement" />` if another element contains text that describes this element.
 
-```
+```html
 <video src="link-to-video" aria-labelledby="caption123"></video>
 <p id="caption123">This video is about science</p>
 ```
@@ -102,7 +101,7 @@ Set `aria-live="off|polite|assertive"` for reactive content updates. See [ARIA l
 
 `aria-atomic` indicates whether any nested children should be considered part of the whole. If an element is set to `aria-atomic="true"`, a screen reader will read out the entire text. This is common when only changing `<span>` elements:
 
-```
+```html
 <aside aria-atomic="true" aria-live="polite">
   Status:
   <span id="updateMe">Green.</span>
