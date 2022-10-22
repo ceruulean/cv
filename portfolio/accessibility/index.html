@@ -17,11 +17,9 @@
 <code>&lt;section></code>
 <code>&lt;article></code>
 <code>&lt;aside></code>
-<code>&lt;form></code>
-<code>&lt;blockquote></code></p>
-<p><code>&lt;caption></code>
-<code>&lt;figure></code>
-<code>&lt;figcaption></code></p>
+<code>&lt;blockquote></code><br>
+<code>&lt;form></code> <code>&lt;fieldset></code></p>
+<p><code>&lt;figure></code> <code>&lt;figcaption></code></p>
 <p><code>&lt;footer></code></p>
 <p>For an in-depth guide, please refer to <a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element>this article on the semantic meaning of each tag</a>.</p>
 <h3 id=1a-forms-and-inputs>1a. Forms and Inputs</h3>
@@ -52,20 +50,20 @@
 <h3 id=2a-labels>2a. Labels</h3>
 <p>Use <code>aria-label="Close"</code> to label the purpose of interactive elements and buttons without inner text. In this case, <code>"Close"</code> for a button that closes something.</p>
 <p><code>&lt;Element aria-labelledby="idOfAnotherElement" /></code> if another element contains text that describes this element.</p>
-<pre tabindex=0><code>&lt;video src=&quot;link-to-video&quot; aria-labelledby=&quot;caption123&quot;&gt;&lt;/video&gt;
-&lt;p id=&quot;caption123&quot;&gt;This video is about science&lt;/p&gt;
-</code></pre><h3 id=2b-validation>2b. Validation</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>video</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;link-to-video&#34;</span> <span style=color:#a6e22e>aria-labelledby</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;caption123&#34;</span>&gt;&lt;/<span style=color:#f92672>video</span>&gt;
+&lt;<span style=color:#f92672>p</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;caption123&#34;</span>&gt;This video is about science&lt;/<span style=color:#f92672>p</span>&gt;
+</code></pre></div><h3 id=2b-validation>2b. Validation</h3>
 <p>For fields that have an asterisk<span style=color:red>*</span> <code>aria-required="true"</code></p>
 <p>For fields which become greyed and whose attribute is set to disabled: <code>aria-disabled="true"</code></p>
 <h3 id=2c-dynamic-content>2c. Dynamic content</h3>
 <p>Set <code>aria-live="off|polite|assertive"</code> for reactive content updates. See <a href=https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions>ARIA live regions</a> for more details.</p>
 <p><code>role="alert"</code> assigns the <code>aria-live</code> and <code>aria-atomic</code> attributes automatically.</p>
 <p><code>aria-atomic</code> indicates whether any nested children should be considered part of the whole. If an element is set to <code>aria-atomic="true"</code>, a screen reader will read out the entire text. This is common when only changing <code>&lt;span></code> elements:</p>
-<pre tabindex=0><code>&lt;aside aria-atomic=&quot;true&quot; aria-live=&quot;polite&quot;&gt;
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>aside</span> <span style=color:#a6e22e>aria-atomic</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;true&#34;</span> <span style=color:#a6e22e>aria-live</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;polite&#34;</span>&gt;
   Status:
-  &lt;span id=&quot;updateMe&quot;&gt;Green.&lt;/span&gt;
-&lt;/aside&gt;
-</code></pre><p>If <code>updateMe</code>&rsquo;s inner text changes, the screenreader will say the entirety of the content, &ldquo;Status: Green.&rdquo;</p>
+  &lt;<span style=color:#f92672>span</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;updateMe&#34;</span>&gt;Green.&lt;/<span style=color:#f92672>span</span>&gt;
+&lt;/<span style=color:#f92672>aside</span>&gt;
+</code></pre></div><p>If <code>updateMe</code>&rsquo;s inner text changes, the screenreader will say the entirety of the content, &ldquo;Status: Green.&rdquo;</p>
 <p>Without atomicity (<code>aria-atmoic="false"</code>), if <code>updateMe</code> changes, the screen reader will only say, &ldquo;Green,&rdquo; which is undesirable behavior in this context.</p>
 <h4 id=test-it>Test it!</h4>
 <ol>
@@ -110,7 +108,7 @@
 </ol>
 <script>document.addEventListener('keyup',function(){console.log(document.activeElement)})</script><blockquote>
 </blockquote>
-<time datetime="2022-02-19 14:08:43 -0500 -0500">Saturday, Feb 19, 2022</time>
+<time datetime="2022-10-21 21:29:17 -0400 -0400">Friday, Oct 21, 2022</time>
 </div>
 </article>
 </div><footer style=display:flex;justify-content:center;padding-bottom:5rem>
