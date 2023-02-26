@@ -16,9 +16,9 @@ Please see [Port Forwarding](/portfolio/how-to-port-forwarding/) and [Purely Ill
 
 Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
-## GEP Worldwide
+<img src="twmeme1.png" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press."/>
 
-<img src="twmeme1.png#floatright" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press."/>
+## GEP Worldwide
 
 *Technical Writer* (March 2021 - Present)
 
