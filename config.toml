@@ -5,6 +5,10 @@ theme = 'simplenote'
 description = '進める'
 canonifyURLs = true
 
+
+
+sectionPagesMenu = 'portfolio'
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

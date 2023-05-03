@@ -4,7 +4,7 @@
   <aside style="flex-grow:1">
     <h3>Portfolio</h3>
     <ul>
-    {{- range (where .Site.RegularPages.ByTitle "Section" "portfolio" ) }}
+    {{- range (where .Site.RegularPages.ByWeight "Section" "portfolio" ) }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{- end }}
   </ul></aside>

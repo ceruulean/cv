@@ -1,6 +1,6 @@
-# Resume
+# Diana's Experience
 
-*Technical Writer:* 👋 Hey there, I write about technology and offer web publishing as a service.
+👋 Hey there, I write and edit and format stuff to be readable and recyclable.
 <!-- 
 ### Help Guides
 
@@ -16,7 +16,7 @@ Please see [Port Forwarding](/portfolio/how-to-port-forwarding/) and [Purely Ill
 
 Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
-<img src="twmeme1.png" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press."/>
+<img src="twmeme1.png" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press." style="text-align:center;display:block;margin:0 auto;"/>
 
 ## GEP Worldwide
 

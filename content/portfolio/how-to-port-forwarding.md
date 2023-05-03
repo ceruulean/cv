@@ -1,6 +1,8 @@
 ---
+menu: portfolio
 title: "Enable Port Forwarding for IPFS on a Fios router"
 date: 2022-02-15T23:53:08-05:00
+weight: 2
 ---
 
 <style>.note img{border:1px solid black;}</style>

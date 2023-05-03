@@ -1,4 +1,5 @@
 ---
+menu: portfolio
 title: "JavaScript Projects"
 date: 2020-11-15T21:08:44-05:00
 ---

@@ -1,6 +1,8 @@
 ---
+menu: portfolio
 title: "Wordless Instructions"
 date: 2020-11-12T06:43:00-05:00
+weight: 2
 ---
 
 - Create an instruction set for a hypothetical machine that can make plants grow.

@@ -1,7 +1,8 @@
 ---
+menu: portfolio
 title: "HTML5 Accessibility"
 date: 2022-10-21T21:29:17-04:00
-weight: 3
+weight: 1
 ---
 
 Quick checklist to cover most use cases.

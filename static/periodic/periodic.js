@@ -41,7 +41,7 @@ let programs = [
 ["eclipse", "t","",],
 
 ["word","t","Port forwarding user guide","/cvage/portfolio/how-to-port-forwarding/"],
-["visualcode", "t","No link for this.","/cvage/under-construction/"],
+["visualcode", "t","",""],
 
 ["directus","t","",],
 ["node","t","",],
@@ -60,7 +60,7 @@ let programs = [
 ["gep","h","Currently working at GEP", "/cvage/pages/resume/"],
 ["webpack","h","",],
 
-["css3","n","No page for this.","/cvage/under-construction/"],
+["css3","n","",""],
 ["js","n","JavaScript project","/cvage/portfolio/js/"],
 ["ts","n","",],
 ["vue","n","Vue project", "/cvage/portfolio/js#3d-editor"],
