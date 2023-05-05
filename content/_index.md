@@ -92,5 +92,5 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 <img src="sig.jpg#floatright" alt="Signature of Diana Wu"/>
 
-[📥 Download Resume PDF](/portfolio/2022-03_resume_cv.pdf)
+[📥 Download Resume PDF](/portfolio/resume.pdf)
 
