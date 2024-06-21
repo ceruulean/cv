@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Diana Wu</title><link>https://ceruulean.github.io/cvage/</link><description>Recent content on Diana Wu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 21 Oct 2022 21:29:17 -0400</lastBuildDate><atom:link href="https://ceruulean.github.io/cvage/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML5 Accessibility</title><link>https://ceruulean.github.io/cvage/portfolio/accessibility/</link><pubDate>Fri, 21 Oct 2022 21:29:17 -0400</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/accessibility/</guid><description>Quick checklist to cover most use cases.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Diana Wu</title><link>https://ceruulean.github.io/cvage/</link><description>Recent content on Diana Wu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 21 Oct 2022 21:29:17 -0400</lastBuildDate><atom:link href="https://ceruulean.github.io/cvage/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML5 Accessibility Quick Guide</title><link>https://ceruulean.github.io/cvage/portfolio/accessibility/</link><pubDate>Fri, 21 Oct 2022 21:29:17 -0400</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/accessibility/</guid><description>Quick checklist to cover most use cases.
 1. Use named element tags instead of &amp;lt;div&amp;gt;. These tags are more descriptive than &amp;lt;div&amp;gt;.
 &amp;lt;header&amp;gt; &amp;lt;nav&amp;gt;
 &amp;lt;main&amp;gt; &amp;lt;section&amp;gt; &amp;lt;article&amp;gt; &amp;lt;aside&amp;gt; &amp;lt;blockquote&amp;gt;
@@ -10,32 +10,11 @@ For an in-depth guide, please refer to this article on the semantic meaning of e
 Port forwarding on the router is manufacturer-specific, so this quick guide shows how to do it with Verizon Fios.
 Typically most routers use https://192.168.1.1/ as their admin access IP address.
 Open a browser and go to the address https://192.</description></item><item><title>Wordless Instructions</title><link>https://ceruulean.github.io/cvage/portfolio/wordless/</link><pubDate>Thu, 12 Nov 2020 06:43:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/wordless/</guid><description>Create an instruction set for a hypothetical machine that can make plants grow. Cannot use words. Direct link to PDF.
-Drawn with Adobe Illustrator.</description></item><item><title>CSS Periodic Table</title><link>https://ceruulean.github.io/cvage/portfolio/css/</link><pubDate>Sat, 19 Feb 2022 15:54:21 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/css/</guid><description>It is available on desktop and collapsed on mobile.</description></item><item><title>Under Construction</title><link>https://ceruulean.github.io/cvage/under-construction/</link><pubDate>Sun, 06 Mar 2022 18:09:35 -0500</pubDate><guid>https://ceruulean.github.io/cvage/under-construction/</guid><description>Hey, if you&amp;rsquo;re here, you probably clicked on an icon that represents a tool that doesn&amp;rsquo;t have a specific body of work.
-Visual Studio Code CSS Um, I don&amp;rsquo;t know what else to say here other than I know them.</description></item><item><title>PowerShell Projects</title><link>https://ceruulean.github.io/cvage/portfolio/powershell/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/powershell/</guid><description>Prose Grinder Pandoc Templates Contributor of PowerShell port
-Premade scripts to format manuscripts for traditional (book) publishing, using Pandoc&amp;rsquo;s templating features.
-Nonfiction and fiction manuscripts look plain and startingly similar to Markdown. Hence, in order to make the process less tedious for authors, we recommend writing your chapters with Markdown. Many authors use Windows, so a Windows-compatible port of the Prose Grinder utilities are needed.</description></item><item><title>Python Projects</title><link>https://ceruulean.github.io/cvage/portfolio/python/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/python/</guid><description>Confluence Stale Reminder (WIP) This is a utility for finding stale pages (pages which are over 6 months old) and emailing people to update them.
-Source
-Future: Archiving capabilities.
-MkDocs Material Codelab Theme This theme is perfect for task-based documentation: procedures, cookbooks, tutorials, and checklists.
+Drawn with Adobe Illustrator.</description></item><item><title>Under Construction</title><link>https://ceruulean.github.io/cvage/under-construction/</link><pubDate>Sun, 06 Mar 2022 18:09:35 -0500</pubDate><guid>https://ceruulean.github.io/cvage/under-construction/</guid><description>Hey, if you&amp;rsquo;re here, you probably clicked on an icon that represents a tool that doesn&amp;rsquo;t have a specific body of work.
+Visual Studio Code CSS Um, I don&amp;rsquo;t know what else to say here other than I know them.</description></item><item><title>Python Projects</title><link>https://ceruulean.github.io/cvage/portfolio/python/</link><pubDate>Sun, 20 Feb 2022 22:48:00 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/python/</guid><description>MkDocs Material Codelab Theme This theme is perfect for task-based documentation: procedures, cookbooks, tutorials, and checklists.
 👉 Demo
-It is a derivation of Hugo Codelab Themes (which are clones of an older version of Google Codelabs), which can integrate and look consistent with MkDocs Material Theme.</description></item><item><title>JavaScript Projects</title><link>https://ceruulean.github.io/cvage/portfolio/js/</link><pubDate>Sun, 15 Nov 2020 21:08:44 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/js/</guid><description>Parrot Another abandoned personal project. Supposed to be a virtual pet, got distracted with design and modeling. Click and drag to rotate.
-.zdog-canvas {
-background: transparent;
-cursor: move;
-border:1px solid black;
-max-width:100%;
-}
-Pose
-Stand Flat
-In Flight
-Curl Toes
-Wings
-Fold Wings
-Mouth
-Chew
-Nod
-Loops
-Blink Loop
-Idle Loop
-Reset
-Polly.</description></item></channel></rss>
+It is a derivation of Hugo Codelab Themes (which are clones of an older version of Google Codelabs), which can integrate and look consistent with MkDocs Material Theme.
+Source
+Confluence Stale Reminder (WIP) A utility for finding stale pages (pages which are over 6 months old) and emailing people to update them.</description></item><item><title>JavaScript Projects</title><link>https://ceruulean.github.io/cvage/portfolio/js/</link><pubDate>Sun, 15 Nov 2020 21:08:44 -0500</pubDate><guid>https://ceruulean.github.io/cvage/portfolio/js/</guid><description>img{border:1px solid black;} 3D Editor Create Zdog graphics with a 3D editor.
+👉 Demo of Editor Press the &amp;ldquo;Demo&amp;rdquo; button on the top bar to load a sample model!
+Controls Zoom: Mousewheel Panning: Shift + drag or MMB + drag Rotate: Click + drag Undo: Ctrl + Z Redo: Ctrl + Y or Ctrl + Shift + Z Generate code embed by clicking on &amp;ldquo;Embed Dream&amp;rdquo; Copy/paste output into an HTML document.</description></item></channel></rss>
