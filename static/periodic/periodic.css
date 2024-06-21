@@ -234,6 +234,41 @@ div[id^="ado"]{
   background-image: url('./icon-wordpress.svg');
 }
 
+@-webkit-keyframes flash {
+  0% {
+    background-position: -468px 0
+  }
+  100% {
+    background-position: 468px 0
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-position: -468px 0
+  }
+  100% {
+    background-position: 468px 0
+  }
+}
+
+.animated-background {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  -webkit-background-size: 800px 104px;
+  position: relative;      
+}
+
 @media only screen and (max-width:750px){
   .periodic{
     display:flex;

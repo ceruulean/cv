@@ -1,4 +1,4 @@
-# Diana's Experience
+# Diana's CV
 
 👋 Hey there, I write and edit and format stuff to be readable and recyclable.
 <!-- 
@@ -16,17 +16,24 @@ Please see [Port Forwarding](/portfolio/how-to-port-forwarding/) and [Purely Ill
 
 Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
-<img src="twmeme1.png" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press." style="text-align:center;display:block;margin:0 auto;"/>
 
-## GEP Worldwide
+<img src="twmeme1.png" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press." style="display:block;"/>
 
-*Technical Writer* (March 2021 - Present)
 
-- Support migration efforts and developing an online help center.
-- Organize content strategy matrix and maintain confidentiality.
-- Create flowcharts and diagrams for software architecture in patents.
-- Coordinate with teams spanning across three continents.
-- Rearrange and refresh internal onboarding guides.
+<style>
+    h2 { border-bottom: 1px rgba(0,0,0,0.2) solid; }
+</style>
+
+## Work Experience
+
+### Technical Writer — GEP
+March 2021 - June 2024
+
+- Supported migration and developing a digital help center.
+- Managed release notes and user manuals for 3 product lines in supply chain software.
+- Organized demos and webinars monthly, coordinating with teams spanning across three continents.
+- Created diagrams of software architecture and formatted LaTeX for IP patent submissions.
+
 
 <!-- **Client Tech Video Scripts**
 
@@ -46,38 +53,47 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 >
 > Import the equation into your graphics program of choice. -->
 
-## Copyworks
-
-*Customer Service* (May 2019 - May 2020)
+### Order Fulfillment & Customer Service — Copyworks
+May 2019 - May 2020
 
 - Recommended paper products and solutions to customers.
-- Collected packages and printed shipping labels for UPS and FedEx.
-- Unjammed printers so you don’t have to.
-- Set up mail merge for tags, ID badges, paper pads, calendars, and other physical materials.
-- Basic formatting with Adobe InDesign.
+- Collected packages and validated shipping labels for UPS and FedEx dropoffs.
+- Unjammed and operated large-scale printers.
+- Set up bleed margins, aligment, or data mail merge for tags, ID badges, paper pads, calendars, and flyers using programs such as Adobe InDesign, MS Word, and proprietary systems.
 
-## Iowa State Daily 
 
-*Reporter* (Jun 2018 - August 2018)
-
-- [Interviewed people for event coverage and stories.](https://www.iowastatedaily.com/news/ames-community-comes-together-for-fireworks-celebration/article_b406183a-7f3e-11e8-878d-b307a8286134.html)
-- Published in ISD “Need to Know” Aug ’18 edition.
-
-## Iowa Able Foundation
-
-*Grant Writer* (October 2017 - December 2018)
+### Grant Writer Intern — Iowa Able Foundation
+October 2017 - December 2018
 
 - Reached out to corporations for opportunities and partnerships.
 - Created assets required for grant proposals (infographics, charts).
 - Wrote letters of inquiry to connect with potential sponsors.
 
-## Directus CMS
+## Publications
 
-*Open-source Contributor* ([see my first Pull Request!](https://firstpr.me/#ceruulean))
+### Fiction
+
+- Short stories published in *Dark Drabbles*, *Slouching Beast*, and *Sci-fi Lampoon* literary magazines (under a pen name).
+
+### Reporter — Iowa State Daily 
+
+- "[Multicultural groups](https://iowastatedaily.com/33037/news/ames-community-comes-together-for-fireworks-celebration/)." *Need to Know*, Iowa State Daily, August 2018.
+- "[Ames community comes together for fireworks celebration](https://www.iowastatedaily.com/news/ames-community-comes-together-for-fireworks-celebration/article_b406183a-7f3e-11e8-878d-b307a8286134.html)." *Iowa State Daily*, July 2018.
+
+## Open Source Contributions
+
+### [Prose Grinder Pandoc Templates](https://github.com/prosegrinder/pandoc-templates)
+
+- Ported Bash to PowerShell.
+
+A set of Bash and Powershell scripts to convert Markdown into Shunn Manuscript Format (a widely accepted format when submitting to publishers).
+
+### Directus CMS
 
 -  Documented database type variables.
 -  Prototyped UI features.
--  Implemented an auto‑junction feature in the frontend that allows users to create a many‑to‑many (M2M) relation with a single checkbox.
+-  Implemented an auto‑junction feature in the frontend to create a many‑to‑many (M2M) relation.
+
 
 ## 🎓 Education
 
@@ -85,7 +101,8 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 *Iowa State University*, 2020
 
 
-## Links
+
+## Profile Links
 
 - [LinkedIn](https://www.linkedin.com/in/dcwu/)
 - [GitHub](https://github.com/ceruulean)

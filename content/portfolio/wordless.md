@@ -12,4 +12,4 @@ weight: 2
 
 <embed src="/portfolio/wordlessinstructions.pdf" type="application/pdf" width="100%" height="2000px" />
 
-**Drawn with** Adobe Illustrator.
+Drawn with **Adobe Illustrator.**

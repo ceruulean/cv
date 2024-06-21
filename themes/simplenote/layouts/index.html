@@ -1,14 +1,14 @@
 {{ define "main" }}
 <main class="note note-detail-markdown"
   style="display:flex;flex-flow:row wrap;justify-content:space-around;">
-  <aside style="flex-grow:1">
+  <aside style="flex-grow:0">
     <h3>Portfolio</h3>
     <ul>
     {{- range (where .Site.RegularPages.ByWeight "Section" "portfolio" ) }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{- end }}
   </ul></aside>
-  <article style="flex-grow:3;min-width:0;">
+  <article style="flex-grow:3;min-width:0;max-width:96ch;margin: auto">
     {{ .Content }}
   </article>
 </main>

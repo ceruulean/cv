@@ -57,7 +57,7 @@ let programs = [
 
 
 ["python","h","", "/cvage/portfolio/python"],
-["gep","h","Currently working at GEP", "/cvage/pages/resume/"],
+["xxx","h","", ""],
 ["webpack","h","",],
 
 ["css3","n","",""],

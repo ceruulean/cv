@@ -1,6 +1,6 @@
 ---
 menu: portfolio
-title: "HTML5 Accessibility"
+title: "HTML5 Accessibility Quick Guide"
 date: 2022-10-21T21:29:17-04:00
 weight: 1
 ---
