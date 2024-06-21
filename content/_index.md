@@ -29,10 +29,11 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 ### Technical Writer — GEP
 March 2021 - June 2024
 
-- Supported migration and developing a digital help center.
-- Managed release notes and user manuals for 3 product lines in supply chain software.
-- Organized demos and webinars monthly, coordinating with teams spanning across three continents.
-- Created diagrams of software architecture and formatted LaTeX for IP patent submissions.
+- Migrated content while developing a digital help center using Madcap Flare.
+- Created and updated user manuals and data dictionaries for procurement and supply chain software.
+- Managed release notes for 3 product lines, in accordance with  the software development lifecycle (SDLC).
+- Organized demos and webinars monthly, coordinating with teams spanning across 3 continents.
+- Visualized software architecture flows and formatted LaTeX for IP patent submissions.
 
 
 <!-- **Client Tech Video Scripts**
@@ -56,18 +57,25 @@ March 2021 - June 2024
 ### Order Fulfillment & Customer Service — Copyworks
 May 2019 - May 2020
 
-- Recommended paper products and solutions to customers.
-- Collected packages and validated shipping labels for UPS and FedEx dropoffs.
+- Satisfy customers with the fidelity and presentation of their design projects and deliverables.
+- Set up bleed margins, alignment, or data mail merge using graphic design programs.
+- Collected packages and validated shipping for UPS and FedEx drop-offs.
 - Unjammed and operated large-scale printers.
-- Set up bleed margins, aligment, or data mail merge for tags, ID badges, paper pads, calendars, and flyers using programs such as Adobe InDesign, MS Word, and proprietary systems.
-
 
 ### Grant Writer Intern — Iowa Able Foundation
 October 2017 - December 2018
 
-- Reached out to corporations for opportunities and partnerships.
-- Created assets required for grant proposals (infographics, charts).
+- Researched and analyzed grant opportunities pertaining to the organization's mission.
+- Created assets that are required for, or enhance, grant proposals (infographics, charts).
 - Wrote letters of inquiry to connect with potential sponsors.
+
+
+### Food Service — ISU Dining
+August 2016 - December 2018
+
+- Resolved complaints and inventory shortages with clientele.
+- Sanitized and disinfected industrial machines to uphold quality, safety and health standards.
+- Processed, packaged and delivered bulk inventory through temperature-controlled environments.
 
 ## Publications
 
