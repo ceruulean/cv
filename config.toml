@@ -1,6 +1,6 @@
 baseURL = 'https://ceruulean.github.io/cv/'
 languageCode = 'en-us'
-title = 'Diana Wu'
+title = 'CV of Diana Wu'
 theme = 'simplenote'
 description = '進める'
 canonifyURLs = true

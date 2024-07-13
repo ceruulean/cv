@@ -22,6 +22,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 <style>
     h2 { border-bottom: 1px rgba(0,0,0,0.2) solid; }
+    .icon { height:3em; padding: 0 10px; }
 </style>
 
 ## Work Experience
@@ -54,13 +55,13 @@ March 2021 - June 2024
 >
 > Import the equation into your graphics program of choice. -->
 
-### Order Fulfillment & Customer Service — Copyworks
+### Printing & Customer Service — Copyworks
 May 2019 - May 2020
 
-- Satisfy customers with the fidelity and presentation of their design projects and deliverables.
+- Unjammed and operated large-scale printers to fulfill orders.
+- Advised customers about achieving fidelity of their design projects and deliverables.
 - Set up bleed margins, alignment, or data mail merge using graphic design programs.
-- Collected packages and validated shipping for UPS and FedEx drop-offs.
-- Unjammed and operated large-scale printers.
+- Collected packages and validated shipping labels for UPS and FedEx drop-offs.
 
 ### Grant Writer Intern — Iowa Able Foundation
 October 2017 - December 2018
@@ -85,8 +86,8 @@ August 2016 - December 2018
 
 ### Reporter — Iowa State Daily 
 
-- "[Multicultural groups](https://iowastatedaily.com/33037/news/ames-community-comes-together-for-fireworks-celebration/)." *Need to Know*, Iowa State Daily, August 2018.
-- "[Ames community comes together for fireworks celebration](https://www.iowastatedaily.com/news/ames-community-comes-together-for-fireworks-celebration/article_b406183a-7f3e-11e8-878d-b307a8286134.html)." *Iowa State Daily*, July 2018.
+- Wu, Diana. 2018. "[Multicultural groups](https://iowastatedaily.com/33463/uncategorized/need-to-know-multicultural-groups/)." *Need to Know*, Iowa State Daily.
+- Leeson, Devyn, Diana Wu, and Beverton Rayan. "[Ames community comes together for fireworks celebration](https://iowastatedaily.com/33037/news/ames-community-comes-together-for-fireworks-celebration/)." *Iowa State Daily*, July 3, 2018.
 
 ## Open Source Contributions
 
@@ -105,17 +106,19 @@ A set of Bash and Powershell scripts to convert Markdown into Shunn Manuscript F
 
 ## 🎓 Education
 
-**B.S. Technical Communications**   
+**B.S. Technical Communication**   
 *Iowa State University*, 2020
 
 
 
 ## Profile Links
+<div style="display:flex;align-items:center;height:3em;">
+<a href="https://www.linkedin.com/in/dcwu/"><img class="icon" src="/periodic/icon-linkedin.svg" alt="LinkedIn Profile"/></a>
+<a href="https://github.com/ceruulean"><img class="icon" src="/periodic/github-mark.svg" alt="GitHub Profile"/></a>
+<a href="/portfolio/resume-dcwu-2024.pdf"><img class="icon" src="/periodic/pdf-file-svgrepo.svg" alt="PDF Resume"/></a>
+</div>
 
-- [LinkedIn](https://www.linkedin.com/in/dcwu/)
-- [GitHub](https://github.com/ceruulean)
+
 
 <img src="sig.jpg#floatright" alt="Signature of Diana Wu"/>
-
-[📥 Download Resume PDF](/portfolio/resume.pdf)
 
