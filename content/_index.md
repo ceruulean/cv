@@ -54,17 +54,16 @@ March 2021 - July 2024
 May 2019 - May 2020
 
 - Unjammed and operated large-scale printers to fulfill orders.
-- Advised customers about achieving fidelity of their design projects and deliverables.
+- Advised customers about achieving fidelity of their project deliverables.
 - Set up bleed margins, alignment, or data mail merge using graphic design programs.
 - Collected packages and validated shipping labels for UPS and FedEx drop-offs.
 
 ### Grant Writer Intern — Iowa Able Foundation
 October 2017 - December 2018
 
-- Researched and analyzed grant opportunities pertaining to the organization's mission.
-- Created assets that are required for, or enhance, grant proposals (infographics, charts).
-- Wrote letters of inquiry to connect with potential sponsors.
-
+- Submitted to grant opportunities pertaining to financial access for the underserved and disabled.
+- Created assets for proposals and outreach (infographics, organization charts, flyers).
+- Wrote letters of inquiry (LOIs) and drafted requests for proposals (RFPs).
 
 ### Food Service — ISU Dining
 August 2016 - December 2018
