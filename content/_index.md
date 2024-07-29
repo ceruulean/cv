@@ -63,7 +63,7 @@ October 2017 - December 2018
 
 - Submitted to grant opportunities pertaining to financial access for the underserved and disabled.
 - Created assets for proposals and outreach (infographics, organization charts, flyers).
-- Wrote letters of inquiry (LOIs) and drafted requests for proposals (RFPs).
+- Wrote letters of inquiry (LOIs) and drafted proposal sections.
 
 ### Food Service — ISU Dining
 August 2016 - December 2018
@@ -87,7 +87,7 @@ August 2016 - December 2018
 
 ### [Prose Grinder Pandoc Templates](https://github.com/prosegrinder/pandoc-templates)
 
-A set of Bash and Powershell scripts to convert Markdown into Shunn Manuscript Format (for submitting massive texts to editors).
+A set of Bash and Powershell scripts to convert Markdown into Shunn Manuscript Format (for submitting massive texts to editors at publishing houses).
 
 - Ported Bash to PowerShell.
 
