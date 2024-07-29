@@ -70,6 +70,9 @@ img[src$='#center'] { display:block; margin:10px auto; }
 @media screen and (max-width: 850px) {
   img[src$='#floatleft'] { float:none; clear:both; margin-left: auto; margin-right: auto;}
   img[src$='#floatright'] { float:none; clear:both; margin-left: auto; margin-right: auto; }
+  .meme { text-align: center; margin: 0 auto; display: block; }
 }
 
 h1,h2,h3,h4,h5,h6 { clear:both; }
+h2 { border-bottom: 1px rgba(0,0,0,0.2) solid; }
+img.icon { height:3em; padding: 0 10px; }
