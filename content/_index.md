@@ -28,7 +28,7 @@ Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 ## Work Experience
 
 ### Technical Writer — GEP
-March 2021 - June 2024
+March 2021 - July 2024
 
 - Migrated content while developing a digital help center using Madcap Flare.
 - Created and updated user manuals and data dictionaries for procurement and supply chain software.
@@ -97,7 +97,7 @@ August 2016 - December 2018
 
 A set of Bash and Powershell scripts to convert Markdown into Shunn Manuscript Format (a widely accepted format when submitting to publishers).
 
-### Directus CMS
+### [Directus CMS](https://firstpr.me/#ceruulean)
 
 -  Documented database type variables.
 -  Prototyped UI features.
