@@ -41,5 +41,3 @@ The rule should appears in the list below the button.
 You have now enabled port forwarding, and your IPFS node will properly receive incoming requests.
 
 ---
-
-Originally written in **MS Office Word**

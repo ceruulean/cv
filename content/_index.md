@@ -17,15 +17,10 @@ Please see [Port Forwarding](/portfolio/how-to-port-forwarding/) and [Purely Ill
 Please see [editor](/portfolio/zdog-scope/) and [parrot](/portfolio/js/). -->
 
 
-<img src="twmeme1.png" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press." style="display:block;"/>
+<img src="twmeme1.png" alt="Meme of two buttons labeled 'indexes' and 'indices,' and a man sweating while choosing which button to press." class="meme"/>
 
 
-<style>
-    h2 { border-bottom: 1px rgba(0,0,0,0.2) solid; }
-    .icon { height:3em; padding: 0 10px; }
-</style>
-
-## Work Experience
+## 🔧 Work Experience
 
 ### Technical Writer — GEP
 March 2021 - July 2024
@@ -78,7 +73,7 @@ August 2016 - December 2018
 - Sanitized and disinfected industrial machines to uphold quality, safety and health standards.
 - Processed, packaged and delivered bulk inventory through temperature-controlled environments.
 
-## Publications
+## 📖 Publications
 
 ### Fiction
 
@@ -89,13 +84,14 @@ August 2016 - December 2018
 - Wu, Diana. 2018. "[Multicultural groups](https://iowastatedaily.com/33463/uncategorized/need-to-know-multicultural-groups/)." *Need to Know*, Iowa State Daily.
 - Leeson, Devyn, Diana Wu, and Beverton Rayan. "[Ames community comes together for fireworks celebration](https://iowastatedaily.com/33037/news/ames-community-comes-together-for-fireworks-celebration/)." *Iowa State Daily*, July 3, 2018.
 
-## Open Source Contributions
+## 🐞 Open Source Contributions
 
 ### [Prose Grinder Pandoc Templates](https://github.com/prosegrinder/pandoc-templates)
 
+A set of Bash and Powershell scripts to convert Markdown into Shunn Manuscript Format (for submitting massive texts to editors).
+
 - Ported Bash to PowerShell.
 
-A set of Bash and Powershell scripts to convert Markdown into Shunn Manuscript Format (a widely accepted format when submitting to publishers).
 
 ### [Directus CMS](https://firstpr.me/#ceruulean)
 
@@ -106,12 +102,12 @@ A set of Bash and Powershell scripts to convert Markdown into Shunn Manuscript F
 
 ## 🎓 Education
 
-**B.S. Technical Communication**   
-*Iowa State University*, 2020
+**B.S. Technical Communication  — Iowa State University**  
+August 2016 - November 2020
 
 
+---
 
-## Profile Links
 <div style="display:flex;align-items:center;height:3em;">
 <a href="https://www.linkedin.com/in/dcwu/"><img class="icon" src="/periodic/icon-linkedin.svg" alt="LinkedIn Profile"/></a>
 <a href="https://github.com/ceruulean"><img class="icon" src="/periodic/github-mark.svg" alt="GitHub Profile"/></a>

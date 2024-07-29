@@ -10,9 +10,11 @@ date: 2020-11-15T21:08:44-05:00
 
 Create [Zdog](https://zzz.dog/) graphics with a 3D editor.
 
-### 👉 [Demo of Editor](https://ceruulean.github.io/zdog-scope/)
+<span style="font-size:1.5em;text-align:center;">
+👉 <a href="https://kibblab.gitlab.io/codelab-theme-mkdocs-material/guide/">Demo</a> 👈
+</span>
 
-Press the "Demo" button on the top bar to load a sample model!
+(Press the "Try Demo" button under **Tree View** to load a sample model)
 
 
 #### Controls

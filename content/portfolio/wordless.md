@@ -7,9 +7,10 @@ weight: 2
 
 - Create an instruction set for a hypothetical machine that can make plants grow.
 - Cannot use words.
-
-[Direct link to PDF](/portfolio/wordlessinstructions.pdf).
+- Drawn with Adobe Illustrator.
 
 <embed src="/portfolio/wordlessinstructions.pdf" type="application/pdf" width="100%" height="2000px" />
 
-Drawn with **Adobe Illustrator.**
+<a href="/portfolio/wordlessinstructions.pdf"><img class="icon" src="/periodic/pdf-file-svgrepo.svg" alt="PDF icon"/> Download PDF of Wordless Instructions</a>
+
+---
