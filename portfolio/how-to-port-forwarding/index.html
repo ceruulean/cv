@@ -9,23 +9,33 @@
 <div class="note note-detail-markdown">
 <h1>Enable Port Forwarding for IPFS on a Fios router</h1>
 <style>.note img{border:1px solid #000}</style>
-<p>If you use an IPv4 address and want to share files using the InterPlanetary File System protocol on your home network, <a href=https://docs.ipfs.io/how-to/nat-configuration/>the recommended way is to set port forwarding</a>.</p>
-<p>Port forwarding on the router is manufacturer-specific, so this quick guide shows how to do it with Verizon Fios.</p>
-<p>Typically most routers use <code>https://192.168.1.1/</code> as their admin access IP address.</p>
+<p>If you use an IPv4 address and want to share files using the InterPlanetary File System protocol on your home network, <a href=https://docs.ipfs.io/how-to/nat-configuration/>the recommended way is to enable port forwarding</a>.</p>
+<p>Port forwarding on the router is manufacturer-specific, so this guide shows how to do it with Verizon Fios.</p>
+<p>Typically most routers use <code>https://192.168.1.1/</code> as the default admin login.</p>
 <ol>
 <li>Open a browser and go to the address <a href=https://192.168.1.1/>https://192.168.1.1/</a></li>
-<li>Log into your Verizon Fios admin account. Credentials are typically found on the router itself. Otherwise if you&rsquo;ve forgotten your password, please contact Verizon customer support.</li>
+<li>Log into your Verizon Fios admin account. Credentials are typically found on the bottom of the router.</li>
+</ol>
+<p><img src=https://ceruulean.github.io/cv/portfolio/port-forwarding-fios-5.png alt="Router credentials sticker"></p>
+<p>If you&rsquo;ve forgotten your password, please contact Verizon customer support.</p>
+<ol start=3>
+<li>When you are logged in the admin page, there are two ways to access Port Forwarding settings:</li>
 </ol>
 <p><img src=https://ceruulean.github.io/cv/portfolio/port-forwarding-fios-0.png#floatleft alt="Port Forwarding option under Quick Links"></p>
-<p>3a. Under <strong>Quick Links</strong> on the left menu, you may see a category called “Port Forwarding.” Click on it.</p>
-<p>3b. You may also access the page from the top menu by going to <strong>Firewall > Port Forwarding</strong>.</p>
-<h2 id=create-a-rule-for-ipfs>Create a rule for IPFS</h2>
-<p>Under <strong>Create new port forwarding rule:</strong> select your device’s name. If you don’t know the device name, please refer to the article <a href=https://it.cornell.edu/citsg/look-your-computers-device-name>Look Up Your Computer&rsquo;s Device Name</a>.</p>
-<p>In the second dropdown, select <strong>Custom Ports</strong> <strong>TCP</strong> and set it to <code>4001</code> (the default IPFS port)</p>
+<p>a. Under <strong>Quick Links</strong> on the left menu, click on the category <strong>Port Forwarding</strong>.</p>
+<p>b. From the top menu by going to <strong>Firewall > Port Forwarding</strong>.</p>
+<h2 id=create-a-rule>Create a rule</h2>
+<ol>
+<li>In the first dropdown (under <strong>Create new port forwarding rule:</strong>), select your device&rsquo;s name. If you don’t know the device name, please refer to the article <a href=https://it.cornell.edu/citsg/look-your-computers-device-name>Look Up Your Computer&rsquo;s Device Name</a>.</li>
+</ol>
 <p><img src=https://ceruulean.github.io/cv/portfolio/port-forwarding-fios-1.png alt="Setting the dropdowns"></p>
-<p>Click on the <strong>Add +</strong> button to add your new rule.</p>
+<ol start=2>
+<li>In the following dropdowns, select <strong>Custom Ports</strong> and <strong>TCP</strong>.</li>
+<li>Enter <code>4001</code> (the default IPFS port).</li>
+<li>Click the <strong>Add +</strong> button to finish adding the rule.</li>
+</ol>
 <p><img src=https://ceruulean.github.io/cv/portfolio/port-forwarding-fios-2.png alt="A red button that says &ldquo;Add&rdquo;"></p>
-<p>The rule should appears in the list below the button.</p>
+<p>The rule has been created and appears in the list.</p>
 <p><img src=https://ceruulean.github.io/cv/portfolio/port-forwarding-fios-3.png alt="The device has been added to the list."></p>
 <p>You have now enabled port forwarding, and your IPFS node will properly receive incoming requests.</p>
 <hr>
